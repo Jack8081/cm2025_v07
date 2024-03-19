@@ -1,0 +1,2037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config_file version="ZS303A_V1.0" size="5853" num_cfgs="95">
+
+<enum name="TYPE_REF_GAIN_COEF26" title="TYPE_REF_GAIN_COEF26" num_items="25">
+	<item name="REF_GAIN_COEF26_0DB"  title="0dB"  value="0x4000000"  />
+	<item name="REF_GAIN_COEF26_1DB"  title="1dB"  value="0x47ced91"  />
+	<item name="REF_GAIN_COEF26_2DB"  title="2dB"  value="0x50918e2"  />
+	<item name="REF_GAIN_COEF26_3DB"  title="3dB"  value="0x5a65df7"  />
+	<item name="REF_GAIN_COEF26_4DB"  title="4dB"  value="0x656d2e6"  />
+	<item name="REF_GAIN_COEF26_5DB"  title="5dB"  value="0x71cceee"  />
+	<item name="REF_GAIN_COEF26_6DB"  title="6dB"  value="0x8000000"  />
+	<item name="REF_GAIN_COEF26_7DB"  title="7dB"  value="0x8f9db22"  />
+	<item name="REF_GAIN_COEF26_8DB"  title="8dB"  value="0xa1231c5"  />
+	<item name="REF_GAIN_COEF26_9DB"  title="9dB"  value="0xb4cbbef"  />
+	<item name="REF_GAIN_COEF26_10DB" title="10dB" value="0xcada5ce"  />
+	<item name="REF_GAIN_COEF26_11DB" title="11dB" value="0xe399ddf"  />
+	<item name="REF_GAIN_COEF26_12DB" title="12dB" value="0x10000000" />
+	<item name="REF_GAIN_COEF26_13DB" title="13dB" value="0x11f3b645" />
+	<item name="REF_GAIN_COEF26_14DB" title="14dB" value="0x1424638b" />
+	<item name="REF_GAIN_COEF26_15DB" title="15dB" value="0x169977e1" />
+	<item name="REF_GAIN_COEF26_16DB" title="16dB" value="0x195b4b9f" />
+	<item name="REF_GAIN_COEF26_17DB" title="17dB" value="0x1c733bc2" />
+	<item name="REF_GAIN_COEF26_18DB" title="18dB" value="0x20000000" />
+	<item name="REF_GAIN_COEF26_19DB" title="19dB" value="0x23e76c8b" />
+	<item name="REF_GAIN_COEF26_20DB" title="20dB" value="0x2848c718" />
+	<item name="REF_GAIN_COEF26_21DB" title="21dB" value="0x2d32efc4" />
+	<item name="REF_GAIN_COEF26_22DB" title="22dB" value="0x32b69741" />
+	<item name="REF_GAIN_COEF26_23DB" title="23dB" value="0x38e67787" />
+	<item name="REF_GAIN_COEF26_24DB" title="24dB" value="0x40000000" />
+</enum>
+
+<enum name="TYPE_LC3_CALL_1CH_BITRATE" title="TYPE_LC3_CALL_1CH_BITRATE" num_items="5">
+	<item name="LC3_BITRATE_CALL_1CH_80KBPS" title="80kbps" value="0x0" />
+	<item name="LC3_BITRATE_CALL_1CH_78KBPS" title="78kbps" value="0x1" />
+	<item name="LC3_BITRATE_CALL_1CH_64KBPS" title="64kbps" value="0x2" />
+	<item name="LC3_BITRATE_CALL_1CH_48KBPS" title="48kbps" value="0x3" />
+	<item name="LC3_BITRATE_CALL_1CH_32KBPS" title="32kbps" value="0x4" />
+</enum>
+
+<enum name="TYPE_LC3_MUSIC_1CH_BITRATE" title="TYPE_LC3_MUSIC_1CH_BITRATE" num_items="3">
+	<item name="LC3_BITRATE_MUSIC_1CH_96KBPS" title="96kbps" value="0x0" />
+	<item name="LC3_BITRATE_MUSIC_1CH_80KBPS" title="80kbps" value="0x1" />
+	<item name="LC3_BITRATE_MUSIC_1CH_78KBPS" title="78kbps" value="0x2" />
+</enum>
+
+<enum name="TYPE_LC3_MUSIC_2CH_BITRATE" title="TYPE_LC3_MUSIC_2CH_BITRATE" num_items="5">
+	<item name="LC3_BITRATE_MUSIC_2CH_192KBPS" title="192kbps" value="0x0" />
+	<item name="LC3_BITRATE_MUSIC_2CH_184KBPS" title="184kbps" value="0x1" />
+	<item name="LC3_BITRATE_MUSIC_2CH_176KBPS" title="176kbps" value="0x2" />
+	<item name="LC3_BITRATE_MUSIC_2CH_160KBPS" title="160kbps" value="0x3" />
+	<item name="LC3_BITRATE_MUSIC_2CH_158KBPS" title="158kbps" value="0x4" />
+</enum>
+
+<enum name="TYPE_LC3_BIT_WIDTH" title="TYPE_LC3_BIT_WIDTH" num_items="2">
+	<item name="LC3_BIT_WIDTH_16" title="16位" value="0x0" />
+	<item name="LC3_BIT_WIDTH_24" title="24位" value="0x1" />
+</enum>
+
+<enum name="TYPE_LC3_INTERVAL" title="TYPE_LC3_INTERVAL" num_items="2">
+	<item name="LC3_INTERVAL_10000US" title="10ms"  value="0x0" />
+	<item name="LC3_INTERVAL_7500US"  title="7.5ms" value="0x1" />
+</enum>
+
+<enum name="TYPE_BTCALL_NOISE_REDUCE" title="TYPE_BTCALL_NOISE_REDUCE" num_items="2">
+	<item name="BTCALL_NOISE_SPEAKER_NR" title="speaker nr" value="0x1" />
+	<item name="BTCALL_NOISE_TAIL_NR"    title="tail_nr"    value="0x2" />
+</enum>
+
+<enum name="TYPE_BTCALL_ALSP" title="TYPE_BTCALL_ALSP" num_items="4">
+	<item name="BTCALL_ALSP_POST_AGC"   title="后处理-AGC"      value="0x1" />
+	<item name="BTCALL_ALSP_PRE_ENC"    title="前处理-降噪"     value="0x2" />
+	<item name="BTCALL_ALSP_PRE_AI_ENC" title="前处理-AI降噪"   value="0x4" />
+	<item name="BTCALL_ALSP_PRE_CNG"    title="前处理-舒适噪声" value="0x8" />
+</enum>
+
+<struct name="Type_RF_Param" title="RF Param" size="4" num_items="2">
+	<item type="uint16" name="Addr"  title="ADDR[0x0~0xff]"  offs="0" size="2" range="" attr="hex" />
+	<item type="uint16" name="Value" title="VAL[0x0~0xffff]" offs="2" size="2" range="" attr="hex" />
+</struct>
+
+<struct name="Type_LLM_Basic" title="低延时模式基础设置" size="10" num_items="6">
+	<item type="uint8"  name="Default_Low_Latency_Mode" title="默认低延迟模式"                  offs="0" size="1" refer="TYPE_BOOL" />
+	<item type="uint8"  name="Save_Low_Latency_Mode"    title="保存低延迟模式"                  offs="1" size="1" refer="TYPE_BOOL" comment="不保存时重新开机恢复默认模式" />
+	<item type="uint16" name="SBC_Threshold"            title="[音乐] SBC 格式播放延迟时间 ms"  offs="2" size="2" range="0 ~ 150"   comment="0 表示默认值 60, 非0时不能小于40" />
+	<item type="uint16" name="AAC_Threshold"            title="[音乐] AAC 格式播放延迟时间 ms"  offs="4" size="2" range="0 ~ 150"   comment="0 表示默认值 60, 非0时不能小于50" />
+	<item type="uint16" name="MSBC_Threshold"           title="[通话] MSBC 格式播放延迟时间 ms" offs="6" size="2" range="0 ~ 150"   comment="0 表示默认值 60, 非0时不能小于30" />
+	<item type="uint16" name="CVSD_Threshold"           title="[通话] CVSD 格式播放延迟时间 ms" offs="8" size="2" range="0 ~ 150"   comment="0 表示默认值 60, 非0时不能小于30" />
+</struct>
+
+<struct name="Type_NTC_Range" title="NTC 温度范围" size="8" num_items="5">
+	<item type="uint16" name="ADC_Min"                title="ADC 阈值下限"            offs="0" size="2" range=""                    attr="hex" />
+	<item type="uint16" name="ADC_Max"                title="ADC 阈值上限"            offs="2" size="2" range=""                    attr="hex" />
+	<item type="uint8"  name="Adjust_Current_Percent" title="调节充电电流 (百分比)"   offs="4" size="1" range="0 ~ 100"             />
+	<item type="uint8"  name="Adjust_CV_Level"        title="调节CV等级"              offs="5" size="1" refer="TYPE_CHARGE_VOLTAGE" />
+	<item type="uint16" name="Charge_Time_Limit"      title="允许最长充电时间 (分钟)" offs="6" size="2" range=""                    comment="0 表示该温度区间停止充电" />
+</struct>
+
+<struct name="Type_NTC_Settings" title="NTC 温度调节充电电流" size="12" num_items="5">
+	<item type="uint8"  name="Enable_NTC"              title="启用 NTC 温度调节充电电流" offs="0"  size="1" refer="TYPE_BOOL"          />
+	<item type="uint32" name="LRADC_Ctrl"              title="LRADC 控制器"              offs="4"  size="4" refer="TYPE_LRADC_CTRL"    />
+	<item type="uint8"  name="LRADC_Pull_Up"           title="LRADC 上拉电阻"            offs="8"  size="1" refer="TYPE_LRADC_PULL_UP" />
+	<item type="uint8"  name="LRADC_Value_Test"        title="LRADC 采样值测试"          offs="9"  size="1" refer="TYPE_BOOL"          comment="通过串口打印 LRADC 采样值" />
+	<item type="uint16" name="NTC_Det_Debounce_Time_S" title="NTC检测去抖时间(秒)"       offs="10" size="2" range="1 ~ 20"             />
+</struct>
+
+<struct name="Type_Auto_Quit_BT_Ctrl_Test" title="自动退出控制器测试模式" size="4" num_items="2">
+	<item type="uint16" name="Quit_Timer_Sec"       title="定时退出 (秒)" offs="0" size="2" range=""          comment="0 表示不自动退出" />
+	<item type="uint8"  name="Power_Off_After_Quit" title="退出后关机"    offs="2" size="1" refer="TYPE_BOOL" />
+</struct>
+
+<struct name="Type_DC5V_IO_Comm_Settings" title="DC5V_IO 通讯设置" size="2" num_items="1">
+	<item type="uint16" name="DC5V_IO_Threshold_MV" title="DC5V_IO 阈值电压 (毫伏)" offs="0" size="2" range="" comment="0 表示禁用该功能" />
+</struct>
+
+<struct name="Type_DC5V_UART_Comm_Settings" title="DC5V_COM 通讯设置" size="8" num_items="3">
+	<item type="uint8"  name="Enable_DC5V_UART_Comm_Mode" title="启用 DC5V_COM 通讯模式"    offs="0" size="1" refer="TYPE_BOOL"                  />
+	<item type="uint8"  name="DC5V_UART_Switch_Voltage"   title="DC5V_COM 切换电压"         offs="1" size="1" refer="TYPE_DC5V_UART_SWITCH_VOLT" />
+	<item type="uint32" name="DC5V_UART_Comm_Baudrate"    title="DC5V_COM 通讯波特率 (bps)" offs="4" size="4" range=""                           />
+</struct>
+
+<struct name="Type_Battery_Charge_Settings_Ex" title="更多充电设置" size="1" num_items="1">
+	<item type="uint8" name="Charger_Box_Standby_Current" title="充电盒待机电流 (mA)" offs="0" size="1" range="0 ~ 10" />
+</struct>
+
+<struct name="Type_Customed_Key_Sequence" title="自定义按键序列" size="6" num_items="3">
+	<item type="uint16" name="Key_Sequence" title="按键序列" offs="0" size="2" refer="TYPE_CUSTOMED_KEY_SEQUENCE" />
+	<item type="uint16" name="Key_Event_1"  title="消息 1"   offs="2" size="2" refer="TYPE_SEQ1_KEY_EVENT"        />
+	<item type="uint16" name="Key_Event_2"  title="消息 2"   offs="4" size="2" refer="TYPE_SEQ2_KEY_EVENT"        />
+</struct>
+
+<struct name="Type_BT_Scan_Params" title="SCAN 参数设置" size="14" num_items="7">
+	<item type="uint8"  name="Scan_Mode"             title="模式"             offs="0"  size="1" refer="TYPE_BT_SCAN_MODE" attr="readonly" />
+	<item type="uint16" name="Inquiry_Scan_Window"   title="InquiryScan 窗口" offs="2"  size="2" range=""                  />
+	<item type="uint16" name="Inquiry_Scan_Interval" title="InquiryScan 间隔" offs="4"  size="2" range=""                  />
+	<item type="uint8"  name="Inquiry_Scan_Type"     title="InquiryScan 类型" offs="6"  size="1" range="0 ~ 1"             />
+	<item type="uint16" name="Page_Scan_Window"      title="PageScan 窗口"    offs="8"  size="2" range=""                  />
+	<item type="uint16" name="Page_Scan_Interval"    title="PageScan 间隔"    offs="10" size="2" range=""                  />
+	<item type="uint8"  name="Page_Scan_Type"        title="PageScan 类型"    offs="12" size="1" range="0 ~ 1"             />
+</struct>
+
+<struct name="Type_Tap_Key_Control" title="敲击按键支持" size="20" num_items="14">
+	<item type="uint8"  name="Tap_Ctrl_Select"          title="敲击支持选择"   offs="0"  size="1" refer="TYPE_TAP_CTRL_SELECT" />
+	<item type="uint8"  name="SDA_Pin"                  title="SDA 管脚"       offs="1"  size="1" refer="TYPE_GPIO_PIN"        />
+	<item type="uint8"  name="SCL_Pin"                  title="SCL 管脚"       offs="2"  size="1" refer="TYPE_GPIO_PIN"        />
+	<item type="uint8"  name="I2C_Pull_Up"              title="I2C 上拉"       offs="3"  size="1" refer="TYPE_GPIO_PULL"       comment="可选择上拉 10K" />
+	<item type="uint8"  name="I2C_Device_Address"       title="I2C 设备地址"   offs="4"  size="1" range=""                     attr="hex" />
+	<item type="uint32" name="I2C_Bitrate"              title="I2C 比特率"     offs="8"  size="4" range="20000 ~ 250000"       />
+	<item type="uint8"  name="INT1_Pin"                 title="INT1 管脚"      offs="12" size="1" refer="TYPE_GPIO_PIN"        />
+	<item type="uint8"  name="INT1_Pull_Up_Down"        title="INT1 上下拉"    offs="13" size="1" refer="TYPE_GPIO_PULL"       />
+	<item type="uint8"  name="INT1_Active_Level"        title="INT1 有效电平"  offs="14" size="1" refer="TYPE_GPIO_LEVEL"      />
+	<item type="uint8"  name="First_Tap_Sensitivity"    title="开始敲击灵敏度" offs="15" size="1" range="0 ~ 31"               comment="配置为 13 左右, 值越小越灵敏" />
+	<item type="uint8"  name="Continue_Tap_Sensitivity" title="连续敲击灵敏度" offs="16" size="1" range="0 ~ 31"               comment="配置为 6 左右" />
+	<item type="uint8"  name="Enable_Single_Tap"        title="允许单击操作"   offs="17" size="1" refer="TYPE_BOOL"            />
+	<item type="uint8"  name="Tap_Key_Tone"             title="敲击按键音"     offs="18" size="1" refer="TYPE_TONE_ID"         />
+	<item type="uint8"  name="Support_INT_Wake_Up"      title="支持敲击唤醒"   offs="19" size="1" refer="TYPE_BOOL"            />
+</struct>
+
+<struct name="Type_Extern_PA_Control" title="外部 PA 控制" size="4" num_items="4">
+	<item type="uint8" name="PA_Function"  title="外部 PA 功能" offs="0" size="1" refer="TYPE_EXTERN_PA_FUNC" />
+	<item type="uint8" name="GPIO_Pin"     title="GPIO 管脚"    offs="1" size="1" refer="TYPE_GPIO_PIN"       />
+	<item type="uint8" name="Pull_Up_Down" title="上下拉"       offs="2" size="1" refer="TYPE_GPIO_PULL"      />
+	<item type="uint8" name="Active_Level" title="有效电平"     offs="3" size="1" refer="TYPE_GPIO_LEVEL"     />
+</struct>
+
+<struct name="Type_MIC_Gain" title="MIC 增益" size="8" num_items="4">
+	<item type="uint16" name="ADC0_aGain" title="ADC0 模拟增益" offs="0" size="2" refer="TYPE_MIC_AGAIN" />
+	<item type="uint16" name="ADC0_dGain" title="ADC0 数字增益" offs="2" size="2" refer="TYPE_MIC_DGAIN" />
+	<item type="uint16" name="ADC1_aGain" title="ADC1 模拟增益" offs="4" size="2" refer="TYPE_MIC_AGAIN" />
+	<item type="uint16" name="ADC1_dGain" title="ADC1 数字增益" offs="6" size="2" refer="TYPE_MIC_DGAIN" />
+</struct>
+
+<struct name="Type_Cap_Temp_Comp" title="温度补偿" size="2" num_items="2">
+	<item type="uint8" name="Cap_Temp" title="温度 ℃" offs="0" size="1" refer="TYPE_CAP_TEMP" />
+	<item type="int8"  name="Cap_Comp" title="补偿 pF" offs="1" size="1" range="-10.0 ~ 10.0"  attr="float_x10" />
+</struct>
+
+<struct name="Type_Event_Notify" title="事件通知" size="6" num_items="6">
+	<item type="uint8" name="Event_Type"   title="事件类型"     offs="0" size="1" refer="TYPE_SYS_EVENT"            />
+	<item type="uint8" name="LED_Display"  title="LED 显示模式" offs="1" size="1" refer="TYPE_LED_DISPLAY_MODEL"    />
+	<item type="uint8" name="LED_Override" title="LED 显示覆盖" offs="2" size="1" refer="TYPE_LED_OVERRIDE_MODE"    comment="多状态下靠前的显示优先" />
+	<item type="uint8" name="Tone_Play"    title="提示音"       offs="3" size="1" refer="TYPE_TONE_ID"              />
+	<item type="uint8" name="Voice_Play"   title="播报语音"     offs="4" size="1" refer="TYPE_VOICE_ID"             />
+	<item type="uint8" name="Options"      title="选项"         offs="5" size="1" refer="TYPE_EVENT_NOTIFY_OPTIONS" attr="multi_select" />
+</struct>
+
+<struct name="Type_Numeric_Voice_ID_Name" title="数字语音编号名称" size="10" num_items="2">
+	<item type="uint8" name="Voice_ID"   title="编号"   offs="0" size="1" refer="TYPE_NUMERIC_VOICE_ID" />
+	<item type="uint8" name="Voice_Name" title="文件名" offs="1" size="9" range=""                      array="9" attr="string, replaceable=.act" />
+</struct>
+
+<struct name="Type_Voice_ID_Name" title="语音编号名称" size="10" num_items="2">
+	<item type="uint8" name="Voice_ID"   title="编号"   offs="0" size="1" refer="TYPE_VOICE_ID" />
+	<item type="uint8" name="Voice_Name" title="文件名" offs="1" size="9" range=""              array="9" attr="string, replaceable=.act" />
+</struct>
+
+<struct name="Type_Tone_ID_Name" title="提示音编号名称" size="10" num_items="2">
+	<item type="uint8" name="Tone_ID"   title="编号"   offs="0" size="1" refer="TYPE_TONE_ID" />
+	<item type="uint8" name="Tone_Name" title="文件名" offs="1" size="9" range=""             array="9" attr="string, replaceable=.pcm" />
+</struct>
+
+<struct name="Type_Linein_Detect_LRADC" title="LRADC 检测 Linein" size="12" num_items="4">
+	<item type="uint32" name="LRADC_Ctrl"    title="LRADC 控制器"   offs="0" size="4" refer="TYPE_LRADC_CTRL"    />
+	<item type="uint8"  name="LRADC_Pull_Up" title="LRADC 上拉电阻" offs="4" size="1" refer="TYPE_LRADC_PULL_UP" />
+	<item type="uint16" name="ADC_Min"       title="ADC 阈值下限"   offs="6" size="2" range=""                   attr="hex" />
+	<item type="uint16" name="ADC_Max"       title="ADC 阈值上限"   offs="8" size="2" range=""                   attr="hex" />
+</struct>
+
+<struct name="Type_Linein_Detect_GPIO" title="GPIO 检测 Linein" size="3" num_items="3">
+	<item type="uint8" name="GPIO_Pin"     title="GPIO 管脚" offs="0" size="1" refer="TYPE_GPIO_PIN"   />
+	<item type="uint8" name="Pull_Up_Down" title="上下拉"    offs="1" size="1" refer="TYPE_GPIO_PULL"  />
+	<item type="uint8" name="Active_Level" title="有效电平"  offs="2" size="1" refer="TYPE_GPIO_LEVEL" />
+</struct>
+
+<struct name="Type_Channel_Select_LRADC" title="LRADC 选择声道" size="12" num_items="4">
+	<item type="uint32" name="LRADC_Ctrl"    title="LRADC 控制器"   offs="0" size="4" refer="TYPE_LRADC_CTRL"    />
+	<item type="uint8"  name="LRADC_Pull_Up" title="LRADC 上拉电阻" offs="4" size="1" refer="TYPE_LRADC_PULL_UP" />
+	<item type="uint16" name="ADC_Min"       title="ADC 阈值下限"   offs="6" size="2" range=""                   attr="hex" />
+	<item type="uint16" name="ADC_Max"       title="ADC 阈值上限"   offs="8" size="2" range=""                   attr="hex" />
+</struct>
+
+<struct name="Type_Channel_Select_GPIO" title="GPIO 选择声道" size="3" num_items="3">
+	<item type="uint8" name="GPIO_Pin"     title="GPIO 管脚" offs="0" size="1" refer="TYPE_GPIO_PIN"   />
+	<item type="uint8" name="Pull_Up_Down" title="上下拉"    offs="1" size="1" refer="TYPE_GPIO_PULL"  />
+	<item type="uint8" name="Active_Level" title="有效电平"  offs="2" size="1" refer="TYPE_GPIO_LEVEL" />
+</struct>
+
+<struct name="Type_I2S_Select_GPIO" title="I2S 管脚配置" size="8" num_items="4">
+	<item type="uint16" name="I2S_MCLK"  title="I2S MCLK 管脚"  offs="0" size="2" refer="TYPE_GPIO_PIN" />
+	<item type="uint16" name="I2S_LRCLK" title="I2S LRCLK 管脚" offs="2" size="2" refer="TYPE_GPIO_PIN" />
+	<item type="uint16" name="I2S_BCLK"  title="I2S BCLK 管脚"  offs="4" size="2" refer="TYPE_GPIO_PIN" />
+	<item type="uint16" name="I2S_DOUT"  title="I2S DOUT 管脚"  offs="6" size="2" refer="TYPE_GPIO_PIN" />
+</struct>
+
+<struct name="Type_DMIC_Select_GPIO" title="DMIC 管脚配置" size="4" num_items="2">
+	<item type="uint16" name="DMIC01_CLK" title="DMIC01 CLK 管脚" offs="0" size="2" refer="TYPE_DMIC01_CLK_PIN" />
+	<item type="uint16" name="DMIC01_DAT" title="DMIC01 DAT 管脚" offs="2" size="2" refer="TYPE_DMIC01_DAT_PIN" />
+</struct>
+
+<struct name="Type_LED_Display_Model" title="LED 显示模式" size="16" num_items="11">
+	<item type="uint8"  name="Display_Model"     title="显示模式"            offs="0"  size="1" refer="TYPE_LED_DISPLAY_MODEL" />
+	<item type="uint8"  name="Display_LEDs"      title="显示 LED"            offs="1"  size="1" refer="TYPE_LED_NO"            attr="multi_select" />
+	<item type="uint8"  name="Disable_LEDs"      title="关闭 LED"            offs="2"  size="1" refer="TYPE_LED_NO"            attr="multi_select" />
+	<item type="uint8"  name="Use_PWM_Control"   title="使用 PWM 控制模式"   offs="3"  size="1" refer="TYPE_BOOL"              comment="使用 PWM GPIO 才有效" />
+	<item type="uint16" name="Delay_Time_Ms"     title="延迟亮灯时间 (毫秒)" offs="4"  size="2" range="0 ~ 10000"              />
+	<item type="uint16" name="ON_Time_Ms"        title="亮灯时间 (毫秒)"     offs="6"  size="2" range="0 ~ 60000"              />
+	<item type="uint16" name="OFF_Time_Ms"       title="灭灯时间 (毫秒)"     offs="8"  size="2" range="0 ~ 60000"              />
+	<item type="uint8"  name="Flash_Count"       title="亮灭闪烁次数"        offs="10" size="1" range="0 ~ 200"                comment="设置为 0 时无限闪烁" />
+	<item type="uint8"  name="Loop_Count"        title="闪烁循环次数"        offs="11" size="1" range="0 ~ 200"                comment="设置为 0 时无限循环" />
+	<item type="uint16" name="Loop_Wait_Time_Ms" title="循环等待时间 (毫秒)" offs="12" size="2" range="0 ~ 60000"              />
+	<item type="uint16" name="Breath_Time_Ms"    title="呼吸模式时间 (毫秒)" offs="14" size="2" range="0 ~ 2000"               comment="使用 PWM 控制模式才有效" />
+</struct>
+
+<struct name="Type_LED_Drive" title="LED 驱动" size="3" num_items="3">
+	<item type="uint8" name="LED_No"       title="LED 编号"  offs="0" size="1" refer="TYPE_LED_NO"       />
+	<item type="uint8" name="GPIO_Pin"     title="GPIO 管脚" offs="1" size="1" refer="TYPE_LED_GPIO_PIN" />
+	<item type="uint8" name="Active_Level" title="有效电平"  offs="2" size="1" refer="TYPE_GPIO_LEVEL"   />
+</struct>
+
+<struct name="Type_Combo_Key_Map" title="组合按键" size="6" num_items="5">
+	<item type="uint8"  name="Key_Func"    title="按键功能" offs="0" size="1" refer="TYPE_KEY_FUNC"        />
+	<item type="uint8"  name="Key_Value_1" title="键值 1"   offs="1" size="1" refer="TYPE_KEY_VALUE"       />
+	<item type="uint8"  name="Key_Value_2" title="键值 2"   offs="2" size="1" refer="TYPE_KEY_VALUE"       />
+	<item type="uint8"  name="LR_Device"   title="左右设备" offs="3" size="1" refer="TYPE_KEY_DEVICE_TYPE" attr="multi_select" />
+	<item type="uint16" name="Key_Event"   title="按键消息" offs="4" size="2" refer="TYPE_KEY_EVENT"       />
+</struct>
+
+<struct name="Type_Key_Func_Map" title="按键功能映射" size="6" num_items="4">
+	<item type="uint8"  name="Key_Func"  title="按键功能" offs="0" size="1" refer="TYPE_KEY_FUNC"        />
+	<item type="uint8"  name="Key_Value" title="键值"     offs="1" size="1" refer="TYPE_KEY_VALUE"       />
+	<item type="uint8"  name="LR_Device" title="左右设备" offs="2" size="1" refer="TYPE_KEY_DEVICE_TYPE" attr="multi_select" />
+	<item type="uint16" name="Key_Event" title="按键消息" offs="4" size="2" refer="TYPE_KEY_EVENT"       />
+</struct>
+
+<struct name="Type_GPIO_Key" title="GPIO 按键" size="6" num_items="5">
+	<item type="uint8"  name="Key_Value"        title="键值"            offs="0" size="1" refer="TYPE_KEY_VALUE"  />
+	<item type="uint8"  name="GPIO_Pin"         title="GPIO 管脚"       offs="1" size="1" refer="TYPE_GPIO_PIN"   />
+	<item type="uint8"  name="Pull_Up_Down"     title="上下拉"          offs="2" size="1" refer="TYPE_GPIO_PULL"  />
+	<item type="uint8"  name="Active_Level"     title="有效电平"        offs="3" size="1" refer="TYPE_GPIO_LEVEL" />
+	<item type="uint16" name="Debounce_Time_Ms" title="去抖时间 (毫秒)" offs="4" size="2" range="0 ~ 500"         />
+</struct>
+
+<struct name="Type_LRADC_Key" title="LRADC 按键" size="6" num_items="3">
+	<item type="uint8"  name="Key_Value" title="键值"         offs="0" size="1" refer="TYPE_KEY_VALUE" />
+	<item type="uint16" name="ADC_Min"   title="ADC 阈值下限" offs="2" size="2" range="0x00 ~ 0xFFFF"  attr="hex" />
+	<item type="uint16" name="ADC_Max"   title="ADC 阈值上限" offs="4" size="2" range="0x00 ~ 0xFFFF"  attr="hex" />
+</struct>
+
+<enum name="TYPE_BTCALL_LCY_OPTLEVEL" title="TYPE_BTCALL_LCY_OPTLEVEL" num_items="2">
+	<item name="BSLCY_OPT_DISABLED" title="Disabled"        value="0x0" />
+	<item name="BSLCY_OPT_LEVEL_1"  title="Level 1 (basic)" value="0x1" />
+</enum>
+
+<enum name="TYPE_BTMUSIC_PLC_MODE" title="TYPE_BTMUSIC_PLC_MODE" num_items="3">
+	<item name="BMPLC_MODE_DISABLED"      title="关闭"       value="0x0" />
+	<item name="BMPLC_MODE_EMPTY_FRAME"   title="静音帧补偿" value="0x1" />
+	<item name="BMPLC_MODE_HISTORY_FRAME" title="历史帧补偿" value="0x2" />
+</enum>
+
+<enum name="TYPE_MIC_CHANNEL_SELECT" title="TYPE_MIC_CHANNEL_SELECT" num_items="2">
+	<item name="MIC_CHANNEL_LEFT"  title="左声道MIC" value="0x0" />
+	<item name="MIC_CHANNEL_RIHGT" title="右声道MIC" value="0x1" />
+</enum>
+
+<enum name="MIC_SAMPLE_MODE" title="MIC_SAMPLE_MODE" num_items="2">
+	<item name="MIC_SAMPLE_MODE_FIX"    title="采样率固定16KHz" value="0x0" />
+	<item name="MIC_SAMPLE_MODE_FOLLOW" title="采样率跟随播放"  value="0x1" />
+</enum>
+
+<enum name="VOICE_SAMPLE_MODE" title="VOICE_SAMPLE_MODE" num_items="2">
+	<item name="VOICE_SAMPLE_MODE_FOLLOW_TTS"   title="提示音采样率跟随TTS"  value="0x0" />
+	<item name="VOICE_SAMPLE_MODE_BEST_QUALITY" title="提示音采样率最好品质" value="0x1" />
+</enum>
+
+<enum name="TYPE_ANALOG_GAIN_MAP" title="TYPE_ANALOG_GAIN_MAP" num_items="5">
+	<item name="ANALOG_GAIN_RUDUCE_NA"   title="NA"     value="0x0" />
+	<item name="ANALOG_GAIN_RUDUCE_0DB"  title="0 db"   value="0x4" />
+	<item name="ANALOG_GAIN_RUDUCE_3DB"  title="-3 db"  value="0x3" />
+	<item name="ANALOG_GAIN_RUDUCE_6DB"  title="-6 db"  value="0x2" />
+	<item name="ANALOG_GAIN_RUDUCE_12DB" title="-12 db" value="0x1" />
+</enum>
+
+<enum name="TYPE_UART_PARITY_BIT" title="TYPE_UART_PARITY_BIT" num_items="5">
+	<item name="UART_PARITY_BIT_NONE" title="无" value="0x0" />
+	<item name="UART_PARITY_BIT_ODD"  title="奇" value="0x4" />
+	<item name="UART_PARITY_BIT_EVEN" title="偶" value="0x6" />
+	<item name="UART_PARITY_BIT_0"    title="0"  value="0x7" />
+	<item name="UART_PARITY_BIT_1"    title="1"  value="0x5" />
+</enum>
+
+<enum name="TYPE_DC5V_UART_SWITCH_VOLT" title="TYPE_DC5V_UART_SWITCH_VOLT" num_items="5">
+	<item name="DC5V_UART_SWITCH_VOLT_NA"    title="NA"    value="0x0" />
+	<item name="DC5V_UART_SWITCH_VOLT_2_0_V" title="2.0 V" value="0x4" />
+	<item name="DC5V_UART_SWITCH_VOLT_3_0_V" title="3.0 V" value="0x5" />
+	<item name="DC5V_UART_SWITCH_VOLT_4_0_V" title="4.0 V" value="0x6" />
+	<item name="DC5V_UART_SWITCH_VOLT_4_5_V" title="4.5 V" value="0x7" />
+</enum>
+
+<enum name="TYPE_AAP_KEY_MAP" title="TYPE_AAP_KEY_MAP" num_items="6">
+	<item name="AAP_KEY_MAP_NONE"         title="关闭"      value="0x0" />
+	<item name="AAP_KEY_MAP_VOICE_ASSIST" title="语音助手"  value="0x1" />
+	<item name="AAP_KEY_MAP_PLAY_PAUSE"   title="播放/暂停" value="0x2" />
+	<item name="AAP_KEY_MAP_NEXT_MUSIC"   title="下一曲"    value="0x3" />
+	<item name="AAP_KEY_MAP_PREV_MUSIC"   title="上一曲"    value="0x4" />
+	<item name="AAP_KEY_MAP_NOISE_CTRL"   title="噪声控制"  value="0x5" />
+</enum>
+
+<enum name="TYPE_LE_AUDIO_WORK_MODE" title="TYPE_LE_AUDIO_WORK_MODE" num_items="2">
+	<item name="LE_AUDIO_WORK_COEXISTENCE"  title="共存模式" value="0x0" />
+	<item name="LE_AUDIO_WORK_INDEPENDENCE" title="独立模式" value="0x1" />
+</enum>
+
+<enum name="TYPE_BLE_ADDR_TYPE" title="TYPE_BLE_ADDR_TYPE" num_items="3">
+	<item name="BLE_PUBLIC_DEVICE_ADDRESS"          title="Public Device Address"          value="0x0" />
+	<item name="BLE_STATIC_DEVICE_ADDRESS"          title="Static Device Address"          value="0x1" />
+	<item name="BLE_NON_RESOLVABLE_PRIVATE_ADDRESS" title="Non-resolvable Private Address" value="0x2" />
+</enum>
+
+<enum name="TYPE_BLE_ADV_TYPE" title="TYPE_BLE_ADV_TYPE" num_items="6">
+	<item name="ADV_DISABLE"              title="ADV_DISABLE"              value="0xff" />
+	<item name="ADV_IND"                  title="ADV_IND"                  value="0x0"  />
+	<item name="ADV_DIRECT_IND_HIGH_DUTY" title="ADV_DIRECT_IND_HIGH_DUTY" value="0x1"  />
+	<item name="ADV_SCAN_IND"             title="ADV_SCAN_IND"             value="0x2"  />
+	<item name="ADV_NONCONN_IND"          title="ADV_NONCONN_IND"          value="0x3"  />
+	<item name="ADV_DIRECT_IND_LOW_DUTY"  title="ADV_DIRECT_IND_LOW_DUTY"  value="0x4"  />
+</enum>
+
+<enum name="TYPE_BT_SCAN_MODE" title="TYPE_BT_SCAN_MODE" num_items="7">
+	<item name="DEFAULT_INQUIRY_PAGE_SCAN_MODE" title="DEFAULT_INQUIRY_PAGE_SCAN_MODE" value="0x0" />
+	<item name="FAST_PAGE_SCAN_MODE"            title="FAST_PAGE_SCAN_MODE"            value="0x1" />
+	<item name="FAST_PAGE_SCAN_MODE_EX"         title="FAST_PAGE_SCAN_MODE_EX"         value="0x2" />
+	<item name="NORMAL_PAGE_SCAN_MODE"          title="NORMAL_PAGE_SCAN_MODE"          value="0x3" />
+	<item name="NORMAL_PAGE_SCAN_MODE_S3"       title="NORMAL_PAGE_SCAN_MODE_S3"       value="0x4" />
+	<item name="NORMAL_PAGE_SCAN_MODE_EX"       title="NORMAL_PAGE_SCAN_MODE_EX"       value="0x5" />
+	<item name="FAST_INQUIRY_PAGE_SCAN_MODE"    title="FAST_INQUIRY_PAGE_SCAN_MODE"    value="0x6" />
+</enum>
+
+<enum name="TYPE_TAP_CTRL_SELECT" title="TYPE_TAP_CTRL_SELECT" num_items="2">
+	<item name="TAP_CTRL_NONE"  title="NONE"  value="0x0" />
+	<item name="TAP_CTRL_DA230" title="DA230" value="0x1" />
+</enum>
+
+<enum name="TYPE_EXTERN_PA_FUNC" title="TYPE_EXTERN_PA_FUNC" num_items="3">
+	<item name="EXTERN_PA_NONE"   title="PA_NONE"   value="0x0" />
+	<item name="EXTERN_PA_ENABLE" title="PA_ENABLE" value="0x1" />
+	<item name="EXTERN_PA_MUTE"   title="PA_MUTE"   value="0x2" />
+</enum>
+
+<enum name="TYPE_CAP_TEMP" title="TYPE_CAP_TEMP" num_items="26">
+	<item name="CAP_TEMP_NA"   title="NA"  value="0x7f" />
+	<item name="CAP_TEMP_N_40" title="-40" value="0xd8" />
+	<item name="CAP_TEMP_N_35" title="-35" value="0xdd" />
+	<item name="CAP_TEMP_N_30" title="-30" value="0xe2" />
+	<item name="CAP_TEMP_N_25" title="-25" value="0xe7" />
+	<item name="CAP_TEMP_N_20" title="-20" value="0xec" />
+	<item name="CAP_TEMP_N_15" title="-15" value="0xf1" />
+	<item name="CAP_TEMP_N_10" title="-10" value="0xf6" />
+	<item name="CAP_TEMP_N_5"  title="-5"  value="0xfb" />
+	<item name="CAP_TEMP_0"    title="0"   value="0x0"  />
+	<item name="CAP_TEMP_P_5"  title="+5"  value="0x5"  />
+	<item name="CAP_TEMP_P_10" title="+10" value="0xa"  />
+	<item name="CAP_TEMP_P_15" title="+15" value="0xf"  />
+	<item name="CAP_TEMP_P_20" title="+20" value="0x14" />
+	<item name="CAP_TEMP_P_25" title="+25" value="0x19" />
+	<item name="CAP_TEMP_P_30" title="+30" value="0x1e" />
+	<item name="CAP_TEMP_P_35" title="+35" value="0x23" />
+	<item name="CAP_TEMP_P_40" title="+40" value="0x28" />
+	<item name="CAP_TEMP_P_45" title="+45" value="0x2d" />
+	<item name="CAP_TEMP_P_50" title="+50" value="0x32" />
+	<item name="CAP_TEMP_P_55" title="+55" value="0x37" />
+	<item name="CAP_TEMP_P_60" title="+60" value="0x3c" />
+	<item name="CAP_TEMP_P_65" title="+65" value="0x41" />
+	<item name="CAP_TEMP_P_70" title="+70" value="0x46" />
+	<item name="CAP_TEMP_P_75" title="+75" value="0x4b" />
+	<item name="CAP_TEMP_P_80" title="+80" value="0x50" />
+</enum>
+
+<enum name="TYPE_TWS_SYNC_MODE" title="TYPE_TWS_SYNC_MODE" num_items="2">
+	<item name="TWS_SYNC_KEY_TONE"  title="同步按键音" value="0x1" />
+	<item name="TWS_SYNC_POWER_OFF" title="同步关机"   value="0x2" />
+</enum>
+
+<enum name="TYPE_TWS_MATCH_MODE" title="TYPE_TWS_MATCH_MODE" num_items="2">
+	<item name="TWS_MATCH_NAME" title="名称匹配" value="0x0" />
+	<item name="TWS_MATCH_ID"   title="ID 匹配"  value="0x1" />
+</enum>
+
+<enum name="TYPE_TWS_PAIR_KEY_MODE" title="TYPE_TWS_PAIR_KEY_MODE" num_items="2">
+	<item name="TWS_PAIR_KEY_MODE_ONE" title="单方按键组对模式" value="0x1" />
+	<item name="TWS_PAIR_KEY_MODE_TWO" title="双方按键组对模式" value="0x2" />
+</enum>
+
+<enum name="TYPE_BT_HID_KEY_TYPE" title="TYPE_BT_HID_KEY_TYPE" num_items="2">
+	<item name="BT_HID_KEY_TYPE_KEYBOARD"         title="Keyboard"         value="0x1" />
+	<item name="BT_HID_KEY_TYPE_CUSTOMER_CONTROL" title="Customer Control" value="0x3" />
+</enum>
+
+<enum name="TYPE_BT_CTRL_TEST_MODE" title="TYPE_BT_CTRL_TEST_MODE" num_items="4">
+	<item name="BT_CTRL_DISABLE_TEST"    title="DISABLE"                value="0x0" />
+	<item name="BT_CTRL_DUT_TEST"        title="DUT_TEST"               value="0x1" />
+	<item name="BT_CTRL_LE_TEST"         title="LE_TEST"                value="0x2" />
+	<item name="BT_CTRL_DUT_AND_LE_TEST" title="DUT_TEST &amp; LE_TEST" value="0x3" />
+</enum>
+
+<enum name="TYPE_BT_AUTO_RECONNECT" title="TYPE_BT_AUTO_RECONNECT" num_items="2">
+	<item name="AUTO_RECONNECT_PHONE_BY_STARTUP" title="开机自动回连手机设备"     value="0x1" />
+	<item name="AUTO_RECONNECT_PHONE_BY_TIMEOUT" title="超时断开自动回连手机设备" value="0x2" />
+</enum>
+
+<enum name="TYPE_BT_CALL_RING_MODE" title="TYPE_BT_CALL_RING_MODE" num_items="3">
+	<item name="BT_CALL_RING_MODE_DEFAULT" title="默认"                       value="0x0" />
+	<item name="BT_CALL_RING_MODE_REMOTE"  title="已有来电铃声时不播放提示音" value="0x1" />
+	<item name="BT_CALL_RING_MODE_LOCAL"   title="只播放本地提示音"           value="0x2" />
+</enum>
+
+<enum name="TYPE_BT_SUPPORT_FEATURES" title="TYPE_BT_SUPPORT_FEATURES" num_items="14">
+	<item name="BT_SUPPORT_A2DP_AAC"              title="支持 AAC 音频格式"                  value="0x1"    />
+	<item name="BT_SUPPORT_A2DP_SCMS_T"           title="支持 SCMS-T 内容保护"               value="0x4"    />
+	<item name="BT_SUPPORT_AVRCP_VOLUME_SYNC"     title="支持 AVRCP 音量同步"                value="0x8"    />
+	<item name="BT_SUPPORT_HFP_VOLUME_SYNC"       title="支持 HFP 音量同步"                  value="0x10"   />
+	<item name="BT_SUPPORT_HFP_BATTERY_REPORT"    title="支持 HFP 电量上报"                  value="0x20"   />
+	<item name="BT_SUPPORT_HFP_3WAY_CALL"         title="支持 HFP 三方通话"                  value="0x40"   />
+	<item name="BT_SUPPORT_HFP_VOICE_ASSIST"      title="支持 Siri 等语音助手"               value="0x80"   />
+	<item name="BT_SUPPORT_HFP_CODEC_NEGOTIATION" title="支持 HFP 音频格式协商"              value="0x100"  />
+	<item name="BT_SUPPORT_ENABLE_NREC"           title="启用 NREC 手机端回音取消和噪声削弱" value="0x200"  />
+	<item name="BT_SUPPORT_TWS"                   title="支持 TWS功能"                       value="0x400"  />
+	<item name="BT_SUPPORT_ENABLE_SNIFF"          title="允许 Sniff 模式"                    value="0x800"  />
+	<item name="BT_SUPPORT_DUAL_PHONE_DEV_LINK"   title="支持双手机设备连接"                 value="0x1000" />
+	<item name="BT_SUPPORT_LINKKEY_MISS_REJECT"   title="取消配对后回连不弹出提示框"         value="0x2000" />
+	<item name="BT_SUPPORT_CLEAR_LINKKEY"         title="清除配对列表同时清除 LINKKEY"       value="0x4000" />
+</enum>
+
+<enum name="TYPE_BAT_RECHARGE_THRESHOLD" title="TYPE_BAT_RECHARGE_THRESHOLD" num_items="8">
+	<item name="BAT_RECHARGE_3_4_V" title="3.4 V" value="0x0" />
+	<item name="BAT_RECHARGE_3_5_V" title="3.5 V" value="0x1" />
+	<item name="BAT_RECHARGE_3_6_V" title="3.6 V" value="0x2" />
+	<item name="BAT_RECHARGE_3_7_V" title="3.7 V" value="0x3" />
+	<item name="BAT_RECHARGE_3_8_V" title="3.8 V" value="0x4" />
+	<item name="BAT_RECHARGE_3_9_V" title="3.9 V" value="0x5" />
+	<item name="BAT_RECHARGE_4_0_V" title="4.0 V" value="0x6" />
+	<item name="BAT_RECHARGE_4_1_V" title="4.1 V" value="0x7" />
+</enum>
+
+<enum name="TYPE_DC5VLV_LEVEL" title="TYPE_DC5VLV_LEVEL" num_items="8">
+	<item name="DC5VLV_LEVEL_0_2_V" title="DC5VLV_LEVEL_0_2_V" value="0x0" />
+	<item name="DC5VLV_LEVEL_0_5_V" title="DC5VLV_LEVEL_0_5_V" value="0x1" />
+	<item name="DC5VLV_LEVEL_1_0_V" title="DC5VLV_LEVEL_1_0_V" value="0x2" />
+	<item name="DC5VLV_LEVEL_1_5_V" title="DC5VLV_LEVEL_1_5_V" value="0x3" />
+	<item name="DC5VLV_LEVEL_2_0_V" title="DC5VLV_LEVEL_2_0_V" value="0x4" />
+	<item name="DC5VLV_LEVEL_2_5_V" title="DC5VLV_LEVEL_2_5_V" value="0x5" />
+	<item name="DC5VLV_LEVEL_3_0_V" title="DC5VLV_LEVEL_3_0_V" value="0x6" />
+	<item name="DC5VLV_LEVEL_4_5_V" title="DC5VLV_LEVEL_4_5_V" value="0x7" />
+</enum>
+
+<enum name="TYPE_DC5VPD_CURRENT" title="TYPE_DC5VPD_CURRENT" num_items="5">
+	<item name="DC5VPD_CURRENT_DISABLE" title="禁止下拉" value="0xff" />
+	<item name="DC5VPD_CURRENT_2_5_MA"  title="2.5 mA"   value="0x0"  />
+	<item name="DC5VPD_CURRENT_7_5_MA"  title="7.5 mA"   value="0x1"  />
+	<item name="DC5VPD_CURRENT_15_MA"   title="15 mA"    value="0x2"  />
+	<item name="DC5VPD_CURRENT_25_MA"   title="25 mA"    value="0x3"  />
+</enum>
+
+<enum name="TYPE_BATTERY_LOW_VOLTAGE" title="TYPE_BATTERY_LOW_VOLTAGE" num_items="7">
+	<item name="BATTERY_LOW_3_0_V" title="3.0 V" value="0xbb8" />
+	<item name="BATTERY_LOW_3_1_V" title="3.1 V" value="0xc1c" />
+	<item name="BATTERY_LOW_3_2_V" title="3.2 V" value="0xc80" />
+	<item name="BATTERY_LOW_3_3_V" title="3.3 V" value="0xce4" />
+	<item name="BATTERY_LOW_3_4_V" title="3.4 V" value="0xd48" />
+	<item name="BATTERY_LOW_3_5_V" title="3.5 V" value="0xdac" />
+	<item name="BATTERY_LOW_3_6_V" title="3.6 V" value="0xe10" />
+</enum>
+
+<enum name="TYPE_CHARGE_STOP_MODE" title="TYPE_CHARGE_STOP_MODE" num_items="3">
+	<item name="CHARGE_STOP_BY_VOLTAGE"             title="阈值电压"       value="0x0" />
+	<item name="CHARGE_STOP_BY_CURRENT"             title="阈值电流"       value="0x1" />
+	<item name="CHARGE_STOP_BY_VOLTAGE_AND_CURRENT" title="阈值电压和电流" value="0x2" />
+</enum>
+
+<enum name="TYPE_CHARGE_STOP_CURRENT" title="TYPE_CHARGE_STOP_CURRENT" num_items="9">
+	<item name="CHARGE_STOP_CURRENT_20_PERCENT" title="20%"    value="0x0" />
+	<item name="CHARGE_STOP_CURRENT_5_PERCENT"  title="5%"     value="0x1" />
+	<item name="CHARGE_STOP_CURRENT_30_MA"      title="30 mA"  value="0x2" />
+	<item name="CHARGE_STOP_CURRENT_20_MA"      title="20 mA"  value="0x3" />
+	<item name="CHARGE_STOP_CURRENT_16_MA"      title="16 mA"  value="0x4" />
+	<item name="CHARGE_STOP_CURRENT_12_MA"      title="12 mA"  value="0x5" />
+	<item name="CHARGE_STOP_CURRENT_8_MA"       title="8 mA"   value="0x6" />
+	<item name="CHARGE_STOP_CURRENT_6_4_MA"     title="6.4 mA" value="0x7" />
+	<item name="CHARGE_STOP_CURRENT_5_MA"       title="5 mA"   value="0x8" />
+</enum>
+
+<enum name="TYPE_FASTCHARGE_VOLTAGE_THRESHOLD" title="TYPE_FASTCHARGE_VOLTAGE_THRESHOLD" num_items="8">
+	<item name="FAST_CHARGE_3_4_V" title="3.4 V" value="0x0" />
+	<item name="FAST_CHARGE_3_5_V" title="3.5 V" value="0x1" />
+	<item name="FAST_CHARGE_3_6_V" title="3.6 V" value="0x2" />
+	<item name="FAST_CHARGE_3_7_V" title="3.7 V" value="0x3" />
+	<item name="FAST_CHARGE_3_8_V" title="3.8 V" value="0x4" />
+	<item name="FAST_CHARGE_3_9_V" title="3.9 V" value="0x5" />
+	<item name="FAST_CHARGE_4_0_V" title="4.0 V" value="0x6" />
+	<item name="FAST_CHARGE_4_1_V" title="4.1 V" value="0x7" />
+</enum>
+
+<enum name="TYPE_PRECHARGE_CURRENT_MIN_LIMIT" title="TYPE_PRECHARGE_CURRENT_MIN_LIMIT" num_items="8">
+	<item name="PRECHARGE_CURRENT_MIN_10_MA"  title="10 mA"  value="0x0" />
+	<item name="PRECHARGE_CURRENT_MIN_20_MA"  title="20 mA"  value="0x1" />
+	<item name="PRECHARGE_CURRENT_MIN_30_MA"  title="30 mA"  value="0x2" />
+	<item name="PRECHARGE_CURRENT_MIN_40_MA"  title="40 mA"  value="0x3" />
+	<item name="PRECHARGE_CURRENT_MIN_60_MA"  title="60 mA"  value="0x4" />
+	<item name="PRECHARGE_CURRENT_MIN_80_MA"  title="80 mA"  value="0x5" />
+	<item name="PRECHARGE_CURRENT_MIN_100_MA" title="100 mA" value="0x6" />
+	<item name="PRECHARGE_CURRENT_MIN_120_MA" title="120 mA" value="0x7" />
+</enum>
+
+<enum name="TYPE_PRECHARGE_CURRENT" title="TYPE_PRECHARGE_CURRENT" num_items="10">
+	<item name="PRECHARGE_CURRENT_5_PERCENT"  title="5%"  value="0x0" />
+	<item name="PRECHARGE_CURRENT_10_PERCENT" title="10%" value="0x1" />
+	<item name="PRECHARGE_CURRENT_15_PERCENT" title="15%" value="0x2" />
+	<item name="PRECHARGE_CURRENT_20_PERCENT" title="20%" value="0x3" />
+	<item name="PRECHARGE_CURRENT_25_PERCENT" title="25%" value="0x4" />
+	<item name="PRECHARGE_CURRENT_30_PERCENT" title="30%" value="0x5" />
+	<item name="PRECHARGE_CURRENT_35_PERCENT" title="35%" value="0x6" />
+	<item name="PRECHARGE_CURRENT_40_PERCENT" title="40%" value="0x7" />
+	<item name="PRECHARGE_CURRENT_45_PERCENT" title="45%" value="0x8" />
+	<item name="PRECHARGE_CURRENT_50_PERCENT" title="50%" value="0x9" />
+</enum>
+
+<enum name="TYPE_PRECHARGE_STOP_VOLTAGE" title="TYPE_PRECHARGE_STOP_VOLTAGE" num_items="4">
+	<item name="PRECHARGE_STOP_3_0_V" title="3.0 V" value="0xbb8" />
+	<item name="PRECHARGE_STOP_3_1_V" title="3.1 V" value="0xc1c" />
+	<item name="PRECHARGE_STOP_3_2_V" title="3.2 V" value="0xc80" />
+	<item name="PRECHARGE_STOP_3_3_V" title="3.3 V" value="0xce4" />
+</enum>
+
+<enum name="TYPE_CHARGE_VOLTAGE" title="TYPE_CHARGE_VOLTAGE" num_items="8">
+	<item name="CHARGE_VOLTAGE_4_20_V"  title="4.20 V"             value="0x5"  />
+	<item name="CHARGE_VOLTAGE_4_25_V"  title="4.25 V"             value="0x9"  />
+	<item name="CHARGE_VOLTAGE_4_30_V"  title="4.30 V (新型电池)"  value="0xd"  />
+	<item name="CHARGE_VOLTAGE_4_35_V"  title="4.35 V (新型电池)"  value="0x11" />
+	<item name="CHARGE_VOLTAGE_4_40_V"  title="4.40 V (新型电池)"  value="0x15" />
+	<item name="CHARGE_VOLTAGE_4_45_V"  title="4.45 V (新型电池)"  value="0x19" />
+	<item name="CHARGE_VOLTAGE_4_475_V" title="4.475 V (新型电池)" value="0x1b" />
+	<item name="CHARGE_VOLTAGE_4_50_V"  title="4.50 V (新型电池)"  value="0x1d" />
+</enum>
+
+<enum name="TYPE_CHARGE_CURRENT" title="TYPE_CHARGE_CURRENT" num_items="16">
+	<item name="CHARGE_CURRENT_10_MA"  title="10 mA"  value="0x0" />
+	<item name="CHARGE_CURRENT_20_MA"  title="20 mA"  value="0x1" />
+	<item name="CHARGE_CURRENT_30_MA"  title="30 mA"  value="0x2" />
+	<item name="CHARGE_CURRENT_40_MA"  title="40 mA"  value="0x3" />
+	<item name="CHARGE_CURRENT_60_MA"  title="60 mA"  value="0x4" />
+	<item name="CHARGE_CURRENT_80_MA"  title="80 mA"  value="0x5" />
+	<item name="CHARGE_CURRENT_100_MA" title="100 mA" value="0x6" />
+	<item name="CHARGE_CURRENT_120_MA" title="120 mA" value="0x7" />
+	<item name="CHARGE_CURRENT_140_MA" title="140 mA" value="0x8" />
+	<item name="CHARGE_CURRENT_150_MA" title="150 mA" value="0x9" />
+	<item name="CHARGE_CURRENT_160_MA" title="160 mA" value="0xa" />
+	<item name="CHARGE_CURRENT_180_MA" title="180 mA" value="0xb" />
+	<item name="CHARGE_CURRENT_200_MA" title="200 mA" value="0xc" />
+	<item name="CHARGE_CURRENT_220_MA" title="220 mA" value="0xd" />
+	<item name="CHARGE_CURRENT_250_MA" title="250 mA" value="0xe" />
+	<item name="CHARGE_CURRENT_300_MA" title="300 mA" value="0xf" />
+</enum>
+
+<enum name="TYPE_BAT_CHARGE_MODE" title="TYPE_BAT_CHARGE_MODE" num_items="2">
+	<item name="BAT_BACK_CHARGE_MODE"  title="后台充电模式" value="0x0" />
+	<item name="BAT_FRONT_CHARGE_MODE" title="前台充电模式" value="0x1" />
+</enum>
+
+<enum name="TYPE_EVENT_NOTIFY_OPTIONS" title="TYPE_EVENT_NOTIFY_OPTIONS" num_items="6">
+	<item name="EVENT_NOTIFY_OPTIONS_NONE" title="无"         value="0x0"  />
+	<item name="EVENT_NOTIFY_TWS_UNPAIRED" title="未组对"     value="0x1"  />
+	<item name="EVENT_NOTIFY_TWS_PAIRED"   title="已组对"     value="0x2"  />
+	<item name="EVENT_NOTIFY_CHANNEL_L"    title="L 左设备"   value="0x4"  />
+	<item name="EVENT_NOTIFY_CHANNEL_R"    title="R 右设备"   value="0x8"  />
+	<item name="EVENT_NOTIFY_VOICE_FIRST"  title="先播报语音" value="0x10" />
+</enum>
+
+<enum name="TYPE_SYS_EVENT" title="TYPE_SYS_EVENT" num_items="81">
+	<item name="UI_EVENT_NONE"                title="无"                  value="0x0"  />
+	<item name="UI_EVENT_POWER_ON"            title="开机"                value="0x1"  />
+	<item name="UI_EVENT_POWER_OFF"           title="关机"                value="0x2"  />
+	<item name="UI_EVENT_STANDBY"             title="待机"                value="0x3"  />
+	<item name="UI_EVENT_WAKE_UP"             title="唤醒"                value="0x4"  />
+	<item name="UI_EVENT_BATTERY_LOW"         title="电量低"              value="0x5"  />
+	<item name="UI_EVENT_BATTERY_LOW_EX"      title="更低电量"            value="0x6"  />
+	<item name="UI_EVENT_BATTERY_TOO_LOW"     title="电量不足"            value="0x7"  />
+	<item name="UI_EVENT_REPEAT_BAT_LOW"      title="重复低电提示"        value="0x8"  />
+	<item name="UI_EVENT_CHARGE_START"        title="开始充电"            value="0x9"  />
+	<item name="UI_EVENT_CHARGE_FULL"         title="充电满"              value="0xa"  />
+	<item name="UI_EVENT_FRONT_CHARGE_POWON"  title="前台充电开机"        value="0xb"  />
+	<item name="UI_EVENT_CHARGE_STOP"         title="结束充电"            value="0xc"  />
+	<item name="UI_EVENT_ENTER_PAIR_MODE"     title="进入配对模式"        value="0xd"  />
+	<item name="UI_EVENT_CLEAR_PAIRED_LIST"   title="清除配对列表"        value="0xe"  />
+	<item name="UI_EVENT_BT_WAIT_CONNECT"     title="等待连接"            value="0xf"  />
+	<item name="UI_EVENT_BT_CONNECTED"        title="蓝牙连接成功"        value="0x10" />
+	<item name="UI_EVENT_2ND_CONNECTED"       title="第二设备连接成功"    value="0x11" />
+	<item name="UI_EVENT_BT_DISCONNECTED"     title="蓝牙断开"            value="0x12" />
+	<item name="UI_EVENT_BT_UNLINKED"         title="蓝牙未连接"          value="0x13" />
+	<item name="UI_EVENT_TWS_WAIT_PAIR"       title="TWS 等待组对"        value="0x14" />
+	<item name="UI_EVENT_TWS_CONNECTED"       title="TWS 组对成功"        value="0x15" />
+	<item name="UI_EVENT_TWS_DISCONNECTED"    title="TWS 组对断开"        value="0x16" />
+	<item name="UI_EVENT_MIN_VOLUME"          title="最小音量"            value="0x17" />
+	<item name="UI_EVENT_MAX_VOLUME"          title="最大音量"            value="0x18" />
+	<item name="UI_EVENT_BT_MUSIC_PLAY"       title="蓝牙音乐播放"        value="0x19" />
+	<item name="UI_EVENT_BT_MUSIC_PAUSE"      title="蓝牙音乐暂停"        value="0x1a" />
+	<item name="UI_EVENT_PREV_MUSIC"          title="上一曲"              value="0x1b" />
+	<item name="UI_EVENT_NEXT_MUSIC"          title="下一曲"              value="0x1c" />
+	<item name="UI_EVENT_BT_CALL_OUTGOING"    title="去电"                value="0x1d" />
+	<item name="UI_EVENT_BT_CALL_INCOMING"    title="来电"                value="0x1e" />
+	<item name="UI_EVENT_BT_CALL_3WAYIN"      title="三方来电"            value="0x1f" />
+	<item name="UI_EVENT_BT_CALL_REJECT"      title="拒接来电"            value="0x20" />
+	<item name="UI_EVENT_BT_CALL_ONGOING"     title="通话开始"            value="0x21" />
+	<item name="UI_EVENT_BT_CALL_END"         title="通话结束"            value="0x22" />
+	<item name="UI_EVENT_SWITCH_CALL_OUT"     title="切换通话输出"        value="0x23" />
+	<item name="UI_EVENT_MIC_MUTE_ON"         title="MIC 静音打开"        value="0x24" />
+	<item name="UI_EVENT_MIC_MUTE_OFF"        title="MIC 静音关闭"        value="0x25" />
+	<item name="UI_EVENT_VOICE_ASSIST_START"  title="Siri 等语音助手启动" value="0x26" />
+	<item name="UI_EVENT_VOICE_ASSIST_STOP"   title="Siri 等语音助手停止" value="0x27" />
+	<item name="UI_EVENT_HID_PHOTO_SHOT"      title="HID 拍照"            value="0x28" />
+	<item name="UI_EVENT_SEL_VOICE_LANG_1"    title="切换语音语言 1"      value="0x2c" />
+	<item name="UI_EVENT_SEL_VOICE_LANG_2"    title="切换语音语言 2"      value="0x2d" />
+	<item name="UI_EVENT_ENTER_BQB_TEST_MODE" title="进入 BQB 测试模式"   value="0x2e" />
+	<item name="UI_EVENT_CUSTOMED_1"          title="自定义事件 1"        value="0x2f" />
+	<item name="UI_EVENT_CUSTOMED_2"          title="自定义事件 2"        value="0x30" />
+	<item name="UI_EVENT_CUSTOMED_3"          title="自定义事件 3"        value="0x31" />
+	<item name="UI_EVENT_CUSTOMED_4"          title="自定义事件 4"        value="0x32" />
+	<item name="UI_EVENT_CUSTOMED_5"          title="自定义事件 5"        value="0x33" />
+	<item name="UI_EVENT_CUSTOMED_6"          title="自定义事件 6"        value="0x34" />
+	<item name="UI_EVENT_CUSTOMED_7"          title="自定义事件 7"        value="0x35" />
+	<item name="UI_EVENT_CUSTOMED_8"          title="自定义事件 8"        value="0x36" />
+	<item name="UI_EVENT_CUSTOMED_9"          title="自定义事件 9"        value="0x37" />
+	<item name="UI_EVENT_LOW_LATENCY_MODE"    title="低延迟模式"          value="0x38" />
+	<item name="UI_EVENT_NORMAL_LATENCY_MODE" title="正常延迟模式"        value="0x39" />
+	<item name="UI_EVENT_PRIVMA_TALK_START"   title="开始APP语音上传"     value="0x3a" />
+	<item name="UI_EVENT_DC5V_CMD_COMPLETE"   title="DC5V 通讯命令完成"   value="0x3b" />
+	<item name="UI_EVENT_NMA_COLLECTION"      title="云音乐一键收藏"      value="0x3c" />
+	<item name="UI_EVENT_BT_MUSIC_DAE_SWITCH" title="蓝牙音乐音效切换"    value="0x3d" />
+	<item name="UI_EVENT_DAE_DEFAULT"         title="默认音效"            value="0x3e" />
+	<item name="UI_EVENT_DAE_CUSTOM1"         title="自定义音效1"         value="0x3f" />
+	<item name="UI_EVENT_DAE_CUSTOM2"         title="自定义音效2"         value="0x40" />
+	<item name="UI_EVENT_DAE_CUSTOM3"         title="自定义音效3"         value="0x41" />
+	<item name="UI_EVENT_DAE_CUSTOM4"         title="自定义音效4"         value="0x42" />
+	<item name="UI_EVENT_DAE_CUSTOM5"         title="自定义音效5"         value="0x43" />
+	<item name="UI_EVENT_DAE_CUSTOM6"         title="自定义音效6"         value="0x44" />
+	<item name="UI_EVENT_DAE_CUSTOM7"         title="自定义音效7"         value="0x45" />
+	<item name="UI_EVENT_DAE_CUSTOM8"         title="自定义音效8"         value="0x46" />
+	<item name="UI_EVENT_DAE_CUSTOM9"         title="自定义音效9"         value="0x47" />
+	<item name="UI_EVENT_NOMAL_MODE"          title="普通模式"            value="0x48" />
+	<item name="UI_EVENT_ANC_MODE"            title="主动降噪模式"        value="0x49" />
+	<item name="UI_EVENT_TRANSPARENCY_MODE"   title="通透模式"            value="0x4a" />
+	<item name="UI_EVENT_ANC_LEISURE_MODE"    title="休闲模式"            value="0x4b" />
+	<item name="UI_EVENT_ANC_WIND_NOISE_MODE" title="风噪模式"            value="0x4c" />
+	<item name="UI_EVENT_RING_HANDSET"        title="寻找设备"            value="0x4d" />
+	<item name="UI_EVENT_ALEXA_TONE_PLAY"     title="播放alexa喚醒提示音" value="0x4e" />
+	<item name="UI_EVENT_BT_CONNECTED_USB"    title="usb蓝牙连接成功"     value="0x4f" />
+	<item name="UI_EVENT_BT_DISCONNECTED_USB" title="usb蓝牙断开"         value="0x50" />
+	<item name="UI_EVENT_BT_CONNECTED_BR"     title="br蓝牙连接成功"      value="0x51" />
+	<item name="UI_EVENT_BT_DISCONNECTED_BR"  title="br蓝牙断开"          value="0x52" />
+	<item name="UI_EVENT_ENTER_PAIRING_MODE"  title="清列表进入配对模式"  value="0x53" />
+</enum>
+
+<enum name="TYPE_TONE_ID" title="TYPE_TONE_ID" num_items="13">
+	<item name="TONE_NONE"      title="无"         value="0x0" />
+	<item name="TONE_ID1"       title="提示音 1"   value="0x1" />
+	<item name="TONE_ID2"       title="提示音 2"   value="0x2" />
+	<item name="TONE_ID3"       title="提示音 3"   value="0x3" />
+	<item name="TONE_ID4"       title="提示音 4"   value="0x4" />
+	<item name="TONE_ID5"       title="提示音 5"   value="0x5" />
+	<item name="TONE_ID6"       title="提示音 6"   value="0x6" />
+	<item name="TONE_ID7"       title="提示音 7"   value="0x7" />
+	<item name="TONE_KEY_SOUND" title="按键音"     value="0x8" />
+	<item name="TONE_CALL_RING" title="来电铃声"   value="0x9" />
+	<item name="TONE_WARNING"   title="警告"       value="0xa" />
+	<item name="TONE_TM_ENTER"  title="通透模式开" value="0xb" />
+	<item name="TONE_TM_EXIT"   title="通透模式关" value="0xc" />
+</enum>
+
+<enum name="TYPE_VOICE_LANGUAGE" title="TYPE_VOICE_LANGUAGE" num_items="2">
+	<item name="VOICE_LANGUAGE_1" title="语音语言 1" value="0x0" />
+	<item name="VOICE_LANGUAGE_2" title="语音语言 2" value="0x1" />
+</enum>
+
+<enum name="TYPE_NUMERIC_VOICE_ID" title="TYPE_NUMERIC_VOICE_ID" num_items="10">
+	<item name="VOICE_NO_0" title="数字 0" value="0x30" />
+	<item name="VOICE_NO_1" title="数字 1" value="0x31" />
+	<item name="VOICE_NO_2" title="数字 2" value="0x32" />
+	<item name="VOICE_NO_3" title="数字 3" value="0x33" />
+	<item name="VOICE_NO_4" title="数字 4" value="0x34" />
+	<item name="VOICE_NO_5" title="数字 5" value="0x35" />
+	<item name="VOICE_NO_6" title="数字 6" value="0x36" />
+	<item name="VOICE_NO_7" title="数字 7" value="0x37" />
+	<item name="VOICE_NO_8" title="数字 8" value="0x38" />
+	<item name="VOICE_NO_9" title="数字 9" value="0x39" />
+</enum>
+
+<enum name="TYPE_VOICE_ID" title="TYPE_VOICE_ID" num_items="38">
+	<item name="VOICE_NONE"             title="无"               value="0x0"  />
+	<item name="VOICE_ID1"              title="语音 1"           value="0x1"  />
+	<item name="VOICE_ID2"              title="语音 2"           value="0x2"  />
+	<item name="VOICE_ID3"              title="语音 3"           value="0x3"  />
+	<item name="VOICE_ID4"              title="语音 4"           value="0x4"  />
+	<item name="VOICE_ID5"              title="语音 5"           value="0x5"  />
+	<item name="VOICE_POWER_ON"         title="开机"             value="0x6"  />
+	<item name="VOICE_POWER_OFF"        title="关机"             value="0x7"  />
+	<item name="VOICE_BAT_LOW"          title="电量低"           value="0x8"  />
+	<item name="VOICE_BAT_TOO_LOW"      title="电量不足"         value="0x9"  />
+	<item name="VOICE_BT_PAIR_MODE"     title="配对模式"         value="0xa"  />
+	<item name="VOICE_BT_WAIT_CONNECT"  title="等待连接"         value="0xb"  />
+	<item name="VOICE_BT_CONNECTED"     title="蓝牙连接成功"     value="0xc"  />
+	<item name="VOICE_2ND_CONNECTED"    title="第二设备连接成功" value="0xd"  />
+	<item name="VOICE_BT_DISCONNECTED"  title="蓝牙断开"         value="0xe"  />
+	<item name="VOICE_TWS_WAIT_PAIR"    title="等待组对"         value="0xf"  />
+	<item name="VOICE_TWS_CONNECTED"    title="组对成功"         value="0x10" />
+	<item name="VOICE_TWS_DISCONNECTED" title="组对断开"         value="0x11" />
+	<item name="VOICE_PLAY"             title="播放"             value="0x12" />
+	<item name="VOICE_PAUSE"            title="暂停"             value="0x13" />
+	<item name="VOICE_PREV_MUSIC"       title="上一曲"           value="0x14" />
+	<item name="VOICE_NEXT_MUSIC"       title="下一曲"           value="0x15" />
+	<item name="VOICE_MIN_VOLUME"       title="最小音量"         value="0x16" />
+	<item name="VOICE_MAX_VOLUME"       title="最大音量"         value="0x17" />
+	<item name="VOICE_NOMAL_MODE"       title="普通模式"         value="0x18" />
+	<item name="VOICE_ANC_MODE"         title="主动降噪模式"     value="0x19" />
+	<item name="VOICE_LEISURE_MODE"     title="ANC休闲模式"      value="0x1a" />
+	<item name="VOICE_WIND_MODE"        title="ANC风噪模式"      value="0x1b" />
+	<item name="VOICE_TRANS_MODE"       title="通透模式"         value="0x1c" />
+	<item name="VOICE_USB_MODE"         title="USB模式"          value="0x1d" />
+	<item name="VOICE_BT_MODE"          title="BT模式"           value="0x1e" />
+	<item name="VOICE_USB_CONNECTED"    title="usb连接"          value="0x1f" />
+	<item name="VOICE_USB_DISCONNECTED" title="usb断开"          value="0x20" />
+	<item name="VOICE_BTT_CONNECTED"    title="bt连接"           value="0x21" />
+	<item name="VOICE_BTT_DISCONNECTED" title="bt断开"           value="0x22" />
+	<item name="VOICE_PAIR_MODE"        title="配对模式"         value="0x23" />
+	<item name="VOICE_MIC_ON"           title="mic打开"          value="0x24" />
+	<item name="VOICE_MIC_OFF"          title="mic关闭"          value="0x25" />
+</enum>
+
+<enum name="TYPE_TWS_ALONE_AUDIO_CHANNEL" title="TYPE_TWS_ALONE_AUDIO_CHANNEL" num_items="4">
+	<item name="TWS_ALONE_AUDIO_MIX_LR"   title="混合左右声道" value="0x0" />
+	<item name="TWS_ALONE_AUDIO_ADAPTIVE" title="单边自适应"   value="0x1" />
+	<item name="TWS_ALONE_AUDIO_SINGLE_L" title="单边左声道"   value="0x2" />
+	<item name="TWS_ALONE_AUDIO_SINGLE_R" title="单边右声道"   value="0x3" />
+</enum>
+
+<enum name="TYPE_CHANNEL_SELECT_MODE" title="TYPE_CHANNEL_SELECT_MODE" num_items="11">
+	<item name="CHANNEL_SELECT_NORMAL_LR"     title="(非 TWS) 正常左右声道" value="0x0" />
+	<item name="CHANNEL_SELECT_MIX_LR"        title="(非 TWS) 混合左右声道" value="0x1" />
+	<item name="CHANNEL_SELECT_SWAP_LR"       title="(非 TWS) 交换左右声道" value="0x2" />
+	<item name="CHANNEL_SELECT_BOTH_L"        title="(非 TWS) 双边左声道"   value="0x3" />
+	<item name="CHANNEL_SELECT_BOTH_R"        title="(非 TWS) 双边右声道"   value="0x4" />
+	<item name="CHANNEL_SELECT_L_BY_TWS_PAIR" title="TWS 组对选择左声道"    value="0x5" />
+	<item name="CHANNEL_SELECT_R_BY_TWS_PAIR" title="TWS 组对选择右声道"    value="0x6" />
+	<item name="CHANNEL_SELECT_L_BY_GPIO"     title="GPIO 选择左声道"       value="0x7" />
+	<item name="CHANNEL_SELECT_R_BY_GPIO"     title="GPIO 选择右声道"       value="0x8" />
+	<item name="CHANNEL_SELECT_L_BY_LRADC"    title="LRADC 选择左声道"      value="0x9" />
+	<item name="CHANNEL_SELECT_R_BY_LRADC"    title="LRADC 选择右声道"      value="0xa" />
+</enum>
+
+<enum name="TYPE_PA_SWING_SETTING" title="TYPE_PA_SWING_SETTING" num_items="2">
+	<item name="PA_SWING_1_6_VPP" title="1.6 Vpp" value="0x1" />
+	<item name="PA_SWING_2_0_VPP" title="2.0 Vpp" value="0x0" />
+</enum>
+
+<enum name="TYPE_VMIC" title="TYPE_VMIC" num_items="3">
+	<item name="VMIC_0"    title="VMIC0" value="0x0"  />
+	<item name="VMIC_1"    title="VMIC1" value="0x1"  />
+	<item name="VMIC_NONE" title="无"    value="0xff" />
+</enum>
+
+<enum name="TYPE_ADC1_INPUT" title="TYPE_ADC1_INPUT" num_items="5">
+	<item name="ADC1_INPUT_NONE"     title="无"             value="0x0"  />
+	<item name="ADC1_INPUT_1N"       title="INPUT_1N"       value="0x4"  />
+	<item name="ADC1_INPUT_1P"       title="INPUT_1P"       value="0x8"  />
+	<item name="ADC1_INPUT_1NP_DIFF" title="INPUT_1NP_DIFF" value="0xc"  />
+	<item name="ADC1_INPUT_DMIC"     title="DMIC"           value="0xff" />
+</enum>
+
+<enum name="TYPE_ADC0_INPUT" title="TYPE_ADC0_INPUT" num_items="5">
+	<item name="ADC0_INPUT_NONE"     title="无"             value="0x0"  />
+	<item name="ADC0_INPUT_0N"       title="INPUT_0N"       value="0x1"  />
+	<item name="ADC0_INPUT_0P"       title="INPUT_0P"       value="0x2"  />
+	<item name="ADC0_INPUT_0NP_DIFF" title="INPUT_0NP_DIFF" value="0x3"  />
+	<item name="ADC0_INPUT_DMIC"     title="DMIC"           value="0xff" />
+</enum>
+
+<enum name="TYPE_ADC_INPUT" title="TYPE_ADC_INPUT" num_items="8">
+	<item name="ADC_INPUT_NONE"     title="无"             value="0x0"  />
+	<item name="ADC_INPUT_0N"       title="INPUT_0N"       value="0x1"  />
+	<item name="ADC_INPUT_0P"       title="INPUT_0P"       value="0x2"  />
+	<item name="ADC_INPUT_0NP_DIFF" title="INPUT_0NP_DIFF" value="0x3"  />
+	<item name="ADC_INPUT_1N"       title="INPUT_1N"       value="0x4"  />
+	<item name="ADC_INPUT_1P"       title="INPUT_1P"       value="0x8"  />
+	<item name="ADC_INPUT_1NP_DIFF" title="INPUT_1NP_DIFF" value="0xc"  />
+	<item name="ADC_INPUT_DMIC"     title="DMIC"           value="0xff" />
+</enum>
+
+<enum name="TYPE_ADC" title="TYPE_ADC" num_items="3">
+	<item name="ADC_NONE" title="无"   value="0x0" />
+	<item name="ADC_0"    title="ADC0" value="0x1" />
+	<item name="ADC_1"    title="ADC1" value="0x2" />
+</enum>
+
+<enum name="TYPE_DMIC_GAIN_SELECT" title="TYPE_DMIC_GAIN_SELECT" num_items="8">
+	<item name="DMIC_GAIN_1X"   title="1X(0db)"    value="0x0" />
+	<item name="DMIC_GAIN_2X"   title="2X(6db)"    value="0x1" />
+	<item name="DMIC_GAIN_4X"   title="4X(12db)"   value="0x2" />
+	<item name="DMIC_GAIN_8X"   title="8X(18db)"   value="0x3" />
+	<item name="DMIC_GAIN_16X"  title="16X(24db)"  value="0x4" />
+	<item name="DMIC_GAIN_32X"  title="32X(30db)"  value="0x5" />
+	<item name="DMIC_GAIN_64X"  title="63X(36db)"  value="0x6" />
+	<item name="DMIC_GAIN_127X" title="127X(42db)" value="0x6" />
+</enum>
+
+<enum name="TYPE_SPEAKER_OUT_SELECT" title="TYPE_SPEAKER_OUT_SELECT" num_items="3">
+	<item name="SPEAKER_OUT_ADAPTIVE" title="自适应" value="0x2" />
+	<item name="SPEAKER_OUT_ENABLE"   title="打开"   value="0x1" />
+	<item name="SPEAKER_OUT_DISABLE"  title="关闭"   value="0x0" />
+</enum>
+
+<enum name="TYPE_AUXIN_OUT_MODE" title="TYPE_AUXIN_OUT_MODE" num_items="2">
+	<item name="AUX_AA"   title="AA 通路"   value="0x0" />
+	<item name="AUX_ADDA" title="ADDA 通路" value="0x1" />
+</enum>
+
+<enum name="TYPE_AUDIO_OUT_MODE" title="TYPE_AUDIO_OUT_MODE" num_items="3">
+	<item name="AUDIO_OUT_MODE_DAC_DIFF"     title="DAC 差分"   value="0x0" />
+	<item name="AUDIO_OUT_MODE_DAC_NODIRECT" title="DAC 非直驱" value="0x1" />
+	<item name="AUDIO_OUT_MODE_I2S"          title="I2S"        value="0x2" />
+</enum>
+
+<enum name="TYPE_LINEIN_DETECT_MODE" title="TYPE_LINEIN_DETECT_MODE" num_items="3">
+	<item name="LINEIN_DETECT_NONE"     title="不检测"     value="0x0" />
+	<item name="LINEIN_DETECT_BY_GPIO"  title="GPIO 检测"  value="0x1" />
+	<item name="LINEIN_DETECT_BY_LRADC" title="LRADC 检测" value="0x2" />
+</enum>
+
+<enum name="TYPE_MIC_DGAIN" title="TYPE_MIC_DGAIN" num_items="50">
+	<item name="MIC_DGAIN_0_0_DB"  title="0 dB"      value="0x0"   />
+	<item name="MIC_DGAIN_1_0_DB"  title="1.023 dB"  value="0xa"   />
+	<item name="MIC_DGAIN_2_0_DB"  title="2.046 dB"  value="0x14"  />
+	<item name="MIC_DGAIN_3_0_DB"  title="3.069 dB"  value="0x1e"  />
+	<item name="MIC_DGAIN_4_0_DB"  title="4.092 dB"  value="0x28"  />
+	<item name="MIC_DGAIN_5_0_DB"  title="5.115 dB"  value="0x33"  />
+	<item name="MIC_DGAIN_6_0_DB"  title="6.0 dB"    value="0x3c"  />
+	<item name="MIC_DGAIN_7_0_DB"  title="7.023 dB"  value="0x46"  />
+	<item name="MIC_DGAIN_8_0_DB"  title="8.046 dB"  value="0x50"  />
+	<item name="MIC_DGAIN_9_5_DB"  title="9.069 dB"  value="0x5a"  />
+	<item name="MIC_DGAIN_10_0_DB" title="10.092 dB" value="0x64"  />
+	<item name="MIC_DGAIN_11_1_DB" title="11.115 dB" value="0x6f"  />
+	<item name="MIC_DGAIN_12_0_DB" title="12.0 dB"   value="0x78"  />
+	<item name="MIC_DGAIN_13_0_DB" title="13.023 dB" value="0x82"  />
+	<item name="MIC_DGAIN_14_0_DB" title="14.046 dB" value="0x8c"  />
+	<item name="MIC_DGAIN_15_0_DB" title="15.069 dB" value="0x96"  />
+	<item name="MIC_DGAIN_16_0_DB" title="16.092 dB" value="0xa0"  />
+	<item name="MIC_DGAIN_17_1_DB" title="17.115 dB" value="0xab"  />
+	<item name="MIC_DGAIN_18_0_DB" title="18.0 dB"   value="0xb4"  />
+	<item name="MIC_DGAIN_19_0_DB" title="19.023 dB" value="0xbe"  />
+	<item name="MIC_DGAIN_20_0_DB" title="20.046 dB" value="0xc8"  />
+	<item name="MIC_DGAIN_21_5_DB" title="21.069 dB" value="0xd2"  />
+	<item name="MIC_DGAIN_22_0_DB" title="22.092 dB" value="0xdc"  />
+	<item name="MIC_DGAIN_23_1_DB" title="23.115 dB" value="0xe7"  />
+	<item name="MIC_DGAIN_24_0_DB" title="24.0 dB"   value="0xf0"  />
+	<item name="MIC_DGAIN_25_0_DB" title="25.023 dB" value="0xfa"  />
+	<item name="MIC_DGAIN_26_0_DB" title="26.046 dB" value="0x104" />
+	<item name="MIC_DGAIN_27_5_DB" title="27.069 dB" value="0x10e" />
+	<item name="MIC_DGAIN_28_0_DB" title="28.092 dB" value="0x118" />
+	<item name="MIC_DGAIN_29_1_DB" title="29.115 dB" value="0x123" />
+	<item name="MIC_DGAIN_30_0_DB" title="30.0 dB"   value="0x12c" />
+	<item name="MIC_DGAIN_31_0_DB" title="31.023 dB" value="0x136" />
+	<item name="MIC_DGAIN_32_0_DB" title="32.046 dB" value="0x140" />
+	<item name="MIC_DGAIN_33_0_DB" title="33.069 dB" value="0x14a" />
+	<item name="MIC_DGAIN_34_0_DB" title="34.092 dB" value="0x154" />
+	<item name="MIC_DGAIN_35_1_DB" title="35.115 dB" value="0x15f" />
+	<item name="MIC_DGAIN_36_0_DB" title="36.0 dB"   value="0x168" />
+	<item name="MIC_DGAIN_37_0_DB" title="37.023 dB" value="0x172" />
+	<item name="MIC_DGAIN_38_0_DB" title="38.046 dB" value="0x17c" />
+	<item name="MIC_DGAIN_39_5_DB" title="39.069 dB" value="0x186" />
+	<item name="MIC_DGAIN_40_0_DB" title="40.092 dB" value="0x190" />
+	<item name="MIC_DGAIN_41_1_DB" title="41.115 dB" value="0x19b" />
+	<item name="MIC_DGAIN_42_0_DB" title="42.0 dB"   value="0x1a4" />
+	<item name="MIC_DGAIN_43_0_DB" title="43.023 dB" value="0x1ae" />
+	<item name="MIC_DGAIN_44_0_DB" title="44.046 dB" value="0x1b8" />
+	<item name="MIC_DGAIN_45_5_DB" title="45.069 dB" value="0x1c2" />
+	<item name="MIC_DGAIN_46_0_DB" title="46.092 dB" value="0x1cc" />
+	<item name="MIC_DGAIN_47_1_DB" title="47.115 dB" value="0x1d7" />
+	<item name="MIC_DGAIN_48_1_DB" title="48.138 dB" value="0x1e1" />
+	<item name="MIC_DGAIN_49_1_DB" title="49.161 dB" value="0x1eb" />
+</enum>
+
+<enum name="TYPE_MIC_AGAIN" title="TYPE_MIC_AGAIN" num_items="3">
+	<item name="MIC_AGAIN_0_0_DB"  title="0 dB"    value="0x0"  />
+	<item name="MIC_AGAIN_6_0_DB"  title="6.0 dB"  value="0x3c" />
+	<item name="MIC_AGAIN_12_0_DB" title="12.0 dB" value="0x78" />
+</enum>
+
+<enum name="TYPE_VOLUME_GAIN" title="TYPE_VOLUME_GAIN" num_items="83">
+	<item name="VOLUME_GAIN_0"  title="MUTE"        value="0x0"  />
+	<item name="VOLUME_GAIN_1"  title="-57.375  dB" value="0x26" />
+	<item name="VOLUME_GAIN_2"  title="-54.000  dB" value="0x2f" />
+	<item name="VOLUME_GAIN_3"  title="-51.375  dB" value="0x36" />
+	<item name="VOLUME_GAIN_4"  title="-48.750  dB" value="0x3d" />
+	<item name="VOLUME_GAIN_5"  title="-45.000  dB" value="0x47" />
+	<item name="VOLUME_GAIN_6"  title="-42.375  dB" value="0x4e" />
+	<item name="VOLUME_GAIN_7"  title="-39.000  dB" value="0x57" />
+	<item name="VOLUME_GAIN_8"  title="-36.375  dB" value="0x5e" />
+	<item name="VOLUME_GAIN_9"  title="-34.500  dB" value="0x63" />
+	<item name="VOLUME_GAIN_10" title="-32.250  dB" value="0x69" />
+	<item name="VOLUME_GAIN_11" title="-31.125  dB" value="0x6c" />
+	<item name="VOLUME_GAIN_12" title="-29.625  dB" value="0x70" />
+	<item name="VOLUME_GAIN_13" title="-27.750  dB" value="0x75" />
+	<item name="VOLUME_GAIN_14" title="-26.625  dB" value="0x78" />
+	<item name="VOLUME_GAIN_15" title="-25.500  dB" value="0x7b" />
+	<item name="VOLUME_GAIN_16" title="-24.375  dB" value="0x7e" />
+	<item name="VOLUME_GAIN_17" title="-23.250  dB" value="0x81" />
+	<item name="VOLUME_GAIN_18" title="-22.125  dB" value="0x84" />
+	<item name="VOLUME_GAIN_19" title="-21.000  dB" value="0x87" />
+	<item name="VOLUME_GAIN_20" title="-20.250  dB" value="0x89" />
+	<item name="VOLUME_GAIN_21" title="-19.500  dB" value="0x8b" />
+	<item name="VOLUME_GAIN_22" title="-18.750  dB" value="0x8d" />
+	<item name="VOLUME_GAIN_23" title="-17.625  dB" value="0x90" />
+	<item name="VOLUME_GAIN_24" title="-17.250  dB" value="0x91" />
+	<item name="VOLUME_GAIN_25" title="-16.500  dB" value="0x93" />
+	<item name="VOLUME_GAIN_26" title="-15.750  dB" value="0x95" />
+	<item name="VOLUME_GAIN_27" title="-15.000  dB" value="0x97" />
+	<item name="VOLUME_GAIN_28" title="-14.625  dB" value="0x98" />
+	<item name="VOLUME_GAIN_29" title="-13.875  dB" value="0x9a" />
+	<item name="VOLUME_GAIN_30" title="-13.125  dB" value="0x9c" />
+	<item name="VOLUME_GAIN_31" title="-12.750  dB" value="0x9d" />
+	<item name="VOLUME_GAIN_32" title="-12.000  dB" value="0x9f" />
+	<item name="VOLUME_GAIN_33" title="-11.625  dB" value="0xa0" />
+	<item name="VOLUME_GAIN_34" title="-10.875  dB" value="0xa2" />
+	<item name="VOLUME_GAIN_35" title="-10.500  dB" value="0xa3" />
+	<item name="VOLUME_GAIN_36" title="-10.125  dB" value="0xa4" />
+	<item name="VOLUME_GAIN_37" title="-9.375  dB"  value="0xa6" />
+	<item name="VOLUME_GAIN_38" title="-9.000  dB"  value="0xa7" />
+	<item name="VOLUME_GAIN_39" title="-8.625  dB"  value="0xa8" />
+	<item name="VOLUME_GAIN_40" title="-8.250  dB"  value="0xa9" />
+	<item name="VOLUME_GAIN_41" title="-7.875  dB"  value="0xaa" />
+	<item name="VOLUME_GAIN_42" title="-7.500  dB"  value="0xab" />
+	<item name="VOLUME_GAIN_43" title="-6.750  dB"  value="0xad" />
+	<item name="VOLUME_GAIN_44" title="-6.375  dB"  value="0xae" />
+	<item name="VOLUME_GAIN_45" title="-6.000  dB"  value="0xaf" />
+	<item name="VOLUME_GAIN_46" title="-5.625  dB"  value="0xb0" />
+	<item name="VOLUME_GAIN_47" title="-5.250  dB"  value="0xb1" />
+	<item name="VOLUME_GAIN_48" title="-4.875  dB"  value="0xb2" />
+	<item name="VOLUME_GAIN_49" title="-4.500  dB"  value="0xb3" />
+	<item name="VOLUME_GAIN_50" title="-4.125  dB"  value="0xb4" />
+	<item name="VOLUME_GAIN_51" title="-3.750  dB"  value="0xb5" />
+	<item name="VOLUME_GAIN_52" title="-3.375  dB"  value="0xb6" />
+	<item name="VOLUME_GAIN_53" title="-3.000  dB"  value="0xb7" />
+	<item name="VOLUME_GAIN_54" title="-2.625  dB"  value="0xb8" />
+	<item name="VOLUME_GAIN_55" title="-2.250  dB"  value="0xb9" />
+	<item name="VOLUME_GAIN_56" title="-1.875  dB"  value="0xba" />
+	<item name="VOLUME_GAIN_57" title="-1.500  dB"  value="0xbb" />
+	<item name="VOLUME_GAIN_58" title="-1.125  dB"  value="0xbc" />
+	<item name="VOLUME_GAIN_59" title="-0.750  dB"  value="0xbd" />
+	<item name="VOLUME_GAIN_60" title="-0.375  dB"  value="0xbe" />
+	<item name="VOLUME_GAIN_61" title=" 0.00   dB"  value="0xbf" />
+	<item name="VOLUME_GAIN_62" title=" 0.375  dB"  value="0xc0" />
+	<item name="VOLUME_GAIN_63" title=" 0.750  dB"  value="0xc1" />
+	<item name="VOLUME_GAIN_64" title=" 1.125  dB"  value="0xc2" />
+	<item name="VOLUME_GAIN_65" title=" 1.500  dB"  value="0xc3" />
+	<item name="VOLUME_GAIN_66" title=" 1.875  dB"  value="0xc4" />
+	<item name="VOLUME_GAIN_67" title=" 2.250  dB"  value="0xc5" />
+	<item name="VOLUME_GAIN_68" title=" 2.625  dB"  value="0xc6" />
+	<item name="VOLUME_GAIN_69" title=" 3.000  dB"  value="0xc7" />
+	<item name="VOLUME_GAIN_70" title=" 3.375  dB"  value="0xc8" />
+	<item name="VOLUME_GAIN_71" title=" 3.750  dB"  value="0xc9" />
+	<item name="VOLUME_GAIN_72" title=" 4.125  dB"  value="0xca" />
+	<item name="VOLUME_GAIN_73" title=" 4.500  dB"  value="0xcb" />
+	<item name="VOLUME_GAIN_74" title=" 4.875  dB"  value="0xcc" />
+	<item name="VOLUME_GAIN_75" title=" 5.250  dB"  value="0xcd" />
+	<item name="VOLUME_GAIN_76" title=" 5.625  dB"  value="0xce" />
+	<item name="VOLUME_GAIN_77" title=" 6.000  dB"  value="0xcf" />
+	<item name="VOLUME_GAIN_78" title=" 6.375  dB"  value="0xd0" />
+	<item name="VOLUME_GAIN_79" title=" 6.750  dB"  value="0xd1" />
+	<item name="VOLUME_GAIN_80" title=" 7.125  dB"  value="0xd2" />
+	<item name="VOLUME_GAIN_81" title=" 7.500  dB"  value="0xd3" />
+	<item name="VOLUME_GAIN_82" title=" 7.875  dB"  value="0xd4" />
+</enum>
+
+<enum name="TYPE_DMIC01_DAT_PIN" title="TYPE_DMIC01_DAT_PIN" num_items="3">
+	<item name="DMIC01_DAT_GPIO_NONE" title="DMIC01_DAT_GPIO_NONE" value="0xff"   />
+	<item name="DMIC01_DAT_GPIO_7"    title="DMIC01_DAT_GPIO_7"    value="0x1107" />
+	<item name="DMIC01_DAT_GPIO_31"   title="DMIC01_DAT_GPIO_31"   value="0x111f" />
+</enum>
+
+<enum name="TYPE_DMIC01_CLK_PIN" title="TYPE_DMIC01_CLK_PIN" num_items="3">
+	<item name="DMIC01_CLK_GPIO_NONE" title="DMIC01_CLK_GPIO_NONE" value="0xff"   />
+	<item name="DMIC01_CLK_GPIO_6"    title="DMIC01_CLK_GPIO_6"    value="0x1106" />
+	<item name="DMIC01_CLK_GPIO_30"   title="DMIC01_CLK_GPIO_30"   value="0x111e" />
+</enum>
+
+<enum name="TYPE_I2STX_DAT_PIN" title="TYPE_I2STX_DAT_PIN" num_items="7">
+	<item name="I2STX_DAT_GPIO_NONE" title="I2STX_DAT_GPIO_NONE" value="0xff"  />
+	<item name="I2STX_DAT_GPIO_2"    title="I2STX_DAT_GPIO_2"    value="0xa02" />
+	<item name="I2STX_DAT_GPIO_6"    title="I2STX_DAT_GPIO_6"    value="0xa06" />
+	<item name="I2STX_DAT_GPIO_9"    title="I2STX_DAT_GPIO_9"    value="0xa09" />
+	<item name="I2STX_DAT_GPIO_19"   title="I2STX_DAT_GPIO_19"   value="0xa13" />
+	<item name="I2STX_DAT_GPIO_21"   title="I2STX_DAT_GPIO_21"   value="0xa15" />
+	<item name="I2STX_DAT_GPIO_22"   title="I2STX_DAT_GPIO_22"   value="0xa16" />
+</enum>
+
+<enum name="TYPE_I2STX_LRCLK_PIN" title="TYPE_I2STX_LRCLK_PIN" num_items="5">
+	<item name="I2STX_LRCLK_GPIO_NONE" title="I2STX_LRCLK_GPIO_NONE" value="0xff"  />
+	<item name="I2STX_LRCLK_GPIO_1"    title="I2STX_LRCLK_GPIO_1"    value="0xa01" />
+	<item name="I2STX_LRCLK_GPIO_4"    title="I2STX_LRCLK_GPIO_4"    value="0xa04" />
+	<item name="I2STX_LRCLK_GPIO_8"    title="I2STX_LRCLK_GPIO_8"    value="0xa08" />
+	<item name="I2STX_LRCLK_GPIO_17"   title="I2STX_LRCLK_GPIO_17"   value="0xa11" />
+</enum>
+
+<enum name="TYPE_I2STX_BCLK_PIN" title="TYPE_I2STX_BCLK_PIN" num_items="4">
+	<item name="I2STX_BCLK_GPIO_NONE" title="I2STX_BCLK_GPIO_NONE" value="0xff"  />
+	<item name="I2STX_BCLK_GPIO_0"    title="I2STX_BCLK_GPIO_0"    value="0xa00" />
+	<item name="I2STX_BCLK_GPIO_5"    title="I2STX_BCLK_GPIO_5"    value="0xa05" />
+	<item name="I2STX_BCLK_GPIO_18"   title="I2STX_BCLK_GPIO_18"   value="0xa12" />
+</enum>
+
+<enum name="TYPE_I2STX_MCLK_PIN" title="TYPE_I2STX_MCLK_PIN" num_items="5">
+	<item name="I2STX_MCLK_GPIO_NONE" title="I2STX_MCLK_GPIO_NONE" value="0xff"  />
+	<item name="I2STX_MCLK_GPIO_3"    title="I2STX_MCLK_GPIO_3"    value="0xa03" />
+	<item name="I2STX_MCLK_GPIO_7"    title="I2STX_MCLK_GPIO_7"    value="0xa07" />
+	<item name="I2STX_MCLK_GPIO_10"   title="I2STX_MCLK_GPIO_10"   value="0xa0a" />
+	<item name="I2STX_MCLK_GPIO_20"   title="I2STX_MCLK_GPIO_20"   value="0xa14" />
+</enum>
+
+<enum name="TYPE_LED_OVERRIDE_MODE" title="TYPE_LED_OVERRIDE_MODE" num_items="4">
+	<item name="LED_OVERRIDE_NONE"   title="无" value="0x0" />
+	<item name="LED_OVERRIDE_FRONT"  title="前" value="0x3" />
+	<item name="LED_OVERRIDE_MIDDLE" title="中" value="0x2" />
+	<item name="LED_OVERRIDE_BACK"   title="后" value="0x1" />
+</enum>
+
+<enum name="TYPE_LED_DISPLAY_MODEL" title="TYPE_LED_DISPLAY_MODEL" num_items="33">
+	<item name="LED_DISPLAY_MODEL_NONE"            title="LED_DISPLAY_MODEL_NONE"            value="0x0"  />
+	<item name="LED_DISPLAY_MODEL_1"               title="LED_DISPLAY_MODEL_1"               value="0x1"  />
+	<item name="LED_DISPLAY_MODEL_2"               title="LED_DISPLAY_MODEL_2"               value="0x2"  />
+	<item name="LED_DISPLAY_MODEL_3"               title="LED_DISPLAY_MODEL_3"               value="0x3"  />
+	<item name="LED_DISPLAY_MODEL_4"               title="LED_DISPLAY_MODEL_4"               value="0x4"  />
+	<item name="LED_DISPLAY_MODEL_5"               title="LED_DISPLAY_MODEL_5"               value="0x5"  />
+	<item name="LED_DISPLAY_MODEL_6"               title="LED_DISPLAY_MODEL_6"               value="0x6"  />
+	<item name="LED_DISPLAY_MODEL_7"               title="LED_DISPLAY_MODEL_7"               value="0x7"  />
+	<item name="LED_DISPLAY_MODEL_8"               title="LED_DISPLAY_MODEL_8"               value="0x8"  />
+	<item name="LED_DISPLAY_MODEL_9"               title="LED_DISPLAY_MODEL_9"               value="0x9"  />
+	<item name="LED_DISPLAY_POWER_ON"              title="LED_DISPLAY_POWER_ON"              value="0xa"  />
+	<item name="LED_DISPLAY_POWER_OFF"             title="LED_DISPLAY_POWER_OFF"             value="0xb"  />
+	<item name="LED_DISPLAY_STANDBY"               title="LED_DISPLAY_STANDBY"               value="0xc"  />
+	<item name="LED_DISPLAY_CHARGE_START"          title="LED_DISPLAY_CHARGE_START"          value="0xd"  />
+	<item name="LED_DISPLAY_CHARGE_FULL"           title="LED_DISPLAY_CHARGE_FULL"           value="0xe"  />
+	<item name="LED_DISPLAY_BT_PAIR_MODE"          title="LED_DISPLAY_BT_PAIR_MODE"          value="0xf"  />
+	<item name="LED_DISPLAY_BT_WAIT_CONNECT"       title="LED_DISPLAY_BT_WAIT_CONNECT"       value="0x10" />
+	<item name="LED_DISPLAY_BT_CONNECTED"          title="LED_DISPLAY_BT_CONNECTED"          value="0x11" />
+	<item name="LED_DISPLAY_BT_UNLINKED"           title="LED_DISPLAY_BT_UNLINKED"           value="0x12" />
+	<item name="LED_DISPLAY_BT_CALL_INCOMING"      title="LED_DISPLAY_BT_CALL_INCOMING"      value="0x13" />
+	<item name="LED_DISPLAY_BT_CALL_ONGOING"       title="LED_DISPLAY_BT_CALL_ONGOING"       value="0x14" />
+	<item name="LED_DISPLAY_KEY_PRESS"             title="LED_DISPLAY_KEY_PRESS"             value="0x15" />
+	<item name="LED_DISPLAY_MUTE_ON"               title="LED_DISPLAY_MUTE_ON"               value="0x16" />
+	<item name="LED_DISPLAY_MUTE_OFF"              title="LED_DISPLAY_MUTE_OFF"              value="0x17" />
+	<item name="LED_DISPLAY_BATTERY_LOW"           title="LED_DISPLAY_BATTERY_LOW"           value="0x18" />
+	<item name="LED_DISPLAY_BATTERY_TOO_LOW"       title="LED_DISPLAY_BATTERY_TOO_LOW"       value="0x19" />
+	<item name="LED_DISPLAY_MANUAL_SWITCH_APP_1"   title="LED_DISPLAY_MANUAL_SWITCH_APP_1"   value="0x1a" />
+	<item name="LED_DISPLAY_MANUAL_SWITCH_APP_2"   title="LED_DISPLAY_MANUAL_SWITCH_APP_2"   value="0x1b" />
+	<item name="LED_DISPLAY_ENTER_BQB_TEST"        title="LED_DISPLAY_ENTER_BQB_TEST"        value="0x1c" />
+	<item name="LED_DISPLAY_DONGLE_ENTER_SEARCH"   title="LED_DISPLAY_DONGLE_ENTER_SEARCH"   value="0x1d" />
+	<item name="LED_DISPLAY_DONGLE_DISCONNECTED"   title="LED_DISPLAY_DONGLE_DISCONNECTED"   value="0x1e" />
+	<item name="LED_DISPLAY_DONGLE_CONNECTED"      title="LED_DISPLAY_DONGLE_CONNECTED"      value="0x1f" />
+	<item name="LED_DISPLAY_DONGLE_ENTER_BQB_MODE" title="LED_DISPLAY_DONGLE_ENTER_BQB_MODE" value="0x20" />
+</enum>
+
+<enum name="TYPE_LED_NO" title="TYPE_LED_NO" num_items="8">
+	<item name="LED_NULL"  title="LED_NULL"  value="0x0"  />
+	<item name="LED_1"     title="LED_1"     value="0x1"  />
+	<item name="LED_2"     title="LED_2"     value="0x2"  />
+	<item name="LED_3"     title="LED_3"     value="0x4"  />
+	<item name="LED_4"     title="LED_4"     value="0x8"  />
+	<item name="LED_RED"   title="LED_RED"   value="0x10" />
+	<item name="LED_GREEN" title="LED_GREEN" value="0x20" />
+	<item name="LED_BLUE"  title="LED_BLUE"  value="0x40" />
+</enum>
+
+<enum name="TYPE_LED_GPIO_PIN" title="TYPE_LED_GPIO_PIN" num_items="32">
+	<item name="LED_GPIO_NONE" title="GPIO_NONE"        value="0xff" />
+	<item name="LED_GPIO_0"    title="GPIO_0   (PWM_3)" value="0x0"  attr="pwm" />
+	<item name="LED_GPIO_1"    title="GPIO_1   (PWM_2)" value="0x1"  attr="pwm" />
+	<item name="LED_GPIO_2"    title="GPIO_2   (PWM_3)" value="0x2"  attr="pwm" />
+	<item name="LED_GPIO_3"    title="GPIO_3   (PWM_2)" value="0x3"  attr="pwm" />
+	<item name="LED_GPIO_4"    title="GPIO_4   (PWM_0)" value="0x4"  attr="pwm" />
+	<item name="LED_GPIO_5"    title="GPIO_5   (PWM_1)" value="0x5"  attr="pwm" />
+	<item name="LED_GPIO_6"    title="GPIO_6   (PWM_3)" value="0x6"  attr="pwm" />
+	<item name="LED_GPIO_7"    title="GPIO_7   (PWM_1)" value="0x7"  attr="pwm" />
+	<item name="LED_GPIO_8"    title="GPIO_8   (PWM_2)" value="0x8"  attr="pwm" />
+	<item name="LED_GPIO_9"    title="GPIO_9   (PWM_0)" value="0x9"  attr="pwm" />
+	<item name="LED_GPIO_10"   title="GPIO_10  (PWM_1)" value="0xa"  attr="pwm" />
+	<item name="LED_GPIO_11"   title="GPIO_11"          value="0xb"  />
+	<item name="LED_GPIO_12"   title="GPIO_12"          value="0xc"  />
+	<item name="LED_GPIO_13"   title="GPIO_13"          value="0xd"  />
+	<item name="LED_GPIO_14"   title="GPIO_14"          value="0xe"  />
+	<item name="LED_GPIO_15"   title="GPIO_15"          value="0xf"  />
+	<item name="LED_GPIO_16"   title="GPIO_16"          value="0x10" />
+	<item name="LED_GPIO_17"   title="GPIO_17 (PWM_2)"  value="0x11" attr="pwm" />
+	<item name="LED_GPIO_18"   title="GPIO_18 (PWM_0)"  value="0x12" attr="pwm" />
+	<item name="LED_GPIO_19"   title="GPIO_19 (PWM_3)"  value="0x13" attr="pwm" />
+	<item name="LED_GPIO_20"   title="GPIO_20 (PWM_2)"  value="0x14" attr="pwm" />
+	<item name="LED_GPIO_21"   title="GPIO_21 (PWM_0)"  value="0x15" attr="pwm" />
+	<item name="LED_GPIO_22"   title="GPIO_22 (PWM_1)"  value="0x16" attr="pwm" />
+	<item name="LED_GPIO_23"   title="GPIO_23"          value="0x17" />
+	<item name="LED_GPIO_24"   title="GPIO_24"          value="0x18" />
+	<item name="LED_GPIO_25"   title="GPIO_25"          value="0x19" />
+	<item name="LED_GPIO_26"   title="GPIO_26"          value="0x1a" />
+	<item name="LED_GPIO_27"   title="GPIO_27"          value="0x1b" />
+	<item name="LED_GPIO_28"   title="GPIO_28"          value="0x1c" />
+	<item name="LED_GPIO_29"   title="GPIO_29"          value="0x1d" />
+	<item name="LED_GPIO_30"   title="GPIO_30"          value="0x1e" />
+</enum>
+
+<enum name="TYPE_KEY_FUNC" title="TYPE_KEY_FUNC" num_items="68">
+	<item name="KEY_FUNC_NONE"                              title="无"                             value="0x0"  />
+	<item name="KEY_FUNC_POWER_OFF"                         title="关机"                           value="0x1"  />
+	<item name="KEY_FUNC_ENTER_PAIR_MODE"                   title="进入配对模式"                   value="0x2"  />
+	<item name="KEY_FUNC_CLEAR_PAIRED_LIST"                 title="清除配对列表 (不限模式)"        value="0x3"  />
+	<item name="KEY_FUNC_CLEAR_PAIRED_LIST_IN_PAIR_MODE"    title="清除配对列表 (配对模式下)"      value="0x4"  />
+	<item name="KEY_FUNC_CLEAR_PAIRED_LIST_IN_FRONT_CHARGE" title="清除配对列表 (前台充电时)"      value="0x5"  />
+	<item name="KEY_FUNC_CLEAR_PAIRED_LIST_IN_UNLINKED"     title="清除配对列表 (未连接时)"        value="0x6"  />
+	<item name="KEY_FUNC_TWS_PAIR_SEARCH"                   title="TWS 组对搜索"                   value="0x7"  />
+	<item name="KEY_FUNC_START_RECONNECT"                   title="启动回连"                       value="0x8"  />
+	<item name="KEY_FUNC_PLAY_PAUSE"                        title="播放/暂停"                      value="0x9"  />
+	<item name="KEY_FUNC_PREV_MUSIC"                        title="上一曲 (不限状态)"              value="0xa"  />
+	<item name="KEY_FUNC_NEXT_MUSIC"                        title="下一曲 (不限状态)"              value="0xb"  />
+	<item name="KEY_FUNC_PREV_MUSIC_IN_PLAYING"             title="上一曲 (播放状态)"              value="0xc"  />
+	<item name="KEY_FUNC_NEXT_MUSIC_IN_PLAYING"             title="下一曲 (播放状态)"              value="0xd"  />
+	<item name="KEY_FUNC_PREV_MUSIC_IN_PAUSED"              title="上一曲 (暂停状态)"              value="0xe"  />
+	<item name="KEY_FUNC_NEXT_MUSIC_IN_PAUSED"              title="下一曲 (暂停状态)"              value="0xf"  />
+	<item name="KEY_FUNC_ADD_MUSIC_VOLUME"                  title="音乐音量+"                      value="0x10" />
+	<item name="KEY_FUNC_SUB_MUSIC_VOLUME"                  title="音乐音量-"                      value="0x11" />
+	<item name="KEY_FUNC_ADD_MUSIC_VOLUME_IN_LINKED"        title="音乐音量+ (已连接时)"           value="0x12" />
+	<item name="KEY_FUNC_SUB_MUSIC_VOLUME_IN_LINKED"        title="音乐音量- (已连接时)"           value="0x13" />
+	<item name="KEY_FUNC_ADD_CALL_VOLUME"                   title="通话音量+"                      value="0x14" />
+	<item name="KEY_FUNC_SUB_CALL_VOLUME"                   title="通话音量-"                      value="0x15" />
+	<item name="KEY_FUNC_ACCEPT_CALL"                       title="接听来电"                       value="0x16" />
+	<item name="KEY_FUNC_REJECT_CALL"                       title="拒接来电"                       value="0x17" />
+	<item name="KEY_FUNC_HANGUP_CALL"                       title="挂断通话"                       value="0x18" />
+	<item name="KEY_FUNC_KEEP_CALL_RELEASE_3WAY"            title="继续当前通话，挂断三方通话"     value="0x19" />
+	<item name="KEY_FUNC_HOLD_CALL_ACTIVE_3WAY"             title="保留当前通话，切换三方通话"     value="0x1a" />
+	<item name="KEY_FUNC_HANGUP_CALL_ACTIVE_3WAY"           title="挂断当前通话，切换三方通话"     value="0x1b" />
+	<item name="KEY_FUNC_SWITCH_CALL_OUT"                   title="切换通话输出"                   value="0x1c" />
+	<item name="KEY_FUNC_SWITCH_MIC_MUTE"                   title="打开/关闭 MIC 静音"             value="0x1d" />
+	<item name="KEY_FUNC_DIAL_LAST_NO"                      title="回拨电话"                       value="0x1e" />
+	<item name="KEY_FUNC_START_VOICE_ASSIST"                title="启动 Siri 等语音助手"           value="0x1f" />
+	<item name="KEY_FUNC_STOP_VOICE_ASSIST"                 title="停止 Siri 等语音助手"           value="0x20" />
+	<item name="KEY_FUNC_HID_PHOTO_SHOT"                    title="HID 拍照"                       value="0x21" />
+	<item name="KEY_FUNC_HID_CUSTOM_KEY"                    title="HID 自定义按键"                 value="0x22" />
+	<item name="KEY_FUNC_ENTER_BQB_TEST_MODE"               title="进入 BQB 测试模式 (不限模式)"   value="0x23" />
+	<item name="KEY_FUNC_ENTER_BQB_TEST_IN_PAIR_MODE"       title="进入 BQB 测试模式 (配对模式下)" value="0x24" />
+	<item name="KEY_FUNC_SWITCH_VOICE_LANG"                 title="切换语音语言 (不限模式)"        value="0x25" />
+	<item name="KEY_FUNC_SWITCH_VOICE_LANG_IN_PAIR_MODE"    title="切换语音语言 (配对模式下)"      value="0x26" />
+	<item name="KEY_FUNC_SWITCH_VOICE_LANG_IN_UNLINKED"     title="切换语音语言 (未连接时)"        value="0x27" />
+	<item name="KEY_FUNC_CUSTOMED_1"                        title="自定义功能 1"                   value="0x28" />
+	<item name="KEY_FUNC_CUSTOMED_2"                        title="自定义功能 2"                   value="0x29" />
+	<item name="KEY_FUNC_CUSTOMED_3"                        title="自定义功能 3"                   value="0x2a" />
+	<item name="KEY_FUNC_CUSTOMED_4"                        title="自定义功能 4"                   value="0x2b" />
+	<item name="KEY_FUNC_CUSTOMED_5"                        title="自定义功能 5"                   value="0x2c" />
+	<item name="KEY_FUNC_CUSTOMED_6"                        title="自定义功能 6"                   value="0x2d" />
+	<item name="KEY_FUNC_CUSTOMED_7"                        title="自定义功能 7"                   value="0x2e" />
+	<item name="KEY_FUNC_CUSTOMED_8"                        title="自定义功能 8"                   value="0x2f" />
+	<item name="KEY_FUNC_CUSTOMED_9"                        title="自定义功能 9"                   value="0x30" />
+	<item name="KEY_FUNC_SWITCH_LOW_LATENCY_MODE"           title="切换低延迟模式"                 value="0x31" />
+	<item name="KEY_FUNC_START_PRIVMA_TALK"                 title="开始APP智能语音上传"            value="0x32" />
+	<item name="KEY_FUNC_NMA_KEY_FIRST"                     title="云音乐按键定义单击功能"         value="0x33" />
+	<item name="KEY_FUNC_NMA_KEY_SECOND"                    title="云音乐按键定义双击功能"         value="0x34" />
+	<item name="KEY_FUNC_TMA_ONE_KEY_TO_REQUEST"            title="腾讯音乐娱乐一键直达"           value="0x35" />
+	<item name="KEY_FUNC_DAE_SWITCH"                        title="音效切换"                       value="0x36" />
+	<item name="KEY_FUNC_TRANSPARENCY_MODE"                 title="通透模式"                       value="0x37" />
+	<item name="KEY_FUNC_MANUAL_SWITCH_APP"                 title="手动切换活动应用"               value="0x38" />
+	<item name="KEY_FUNC_SWITCH_AUDIO_INPUT"                title="切换到LINEIN应用"               value="0x39" />
+	<item name="KEY_FUNC_EXIT_BQB_TEST_MODE"                title="退出 BQB 测试模式"              value="0x3a" />
+	<item name="KEY_FUNC_SWITCH_NR_FLAG"                    title="切换降噪模式"                   value="0x3b" />
+	<item name="KEY_FUNC_DONGLE_ENTER_SEARCH"               title="进入搜索"                       value="0x3c" />
+	<item name="KEY_FUNC_ACCEPT_INCOMING"                   title="接听dongle端来电"               value="0x3d" />
+	<item name="KEY_FUNC_REJECT_INCOMING"                   title="挂断/拒接dongle来电"            value="0x3e" />
+	<item name="KEY_FUNC_CALL_MUTE"                         title="通话静音"                       value="0x3f" />
+	<item name="KEY_FUNC_CALL_UNMUTE"                       title="通话取消静音"                   value="0x40" />
+	<item name="KEY_FUNC_DOUBLE_SOUNDCARD_VOL_SUB"          title="双声卡下控制软音量减"           value="0x41" />
+	<item name="KEY_FUNC_DOUBLE_SOUNDCARD_VOL_ADD"          title="双声卡下控制软音量加"           value="0x42" />
+	<item name="KEY_FUNC_SWITCH_LANTENCY_MODE"              title="选择延时模式"                   value="0x43" />
+</enum>
+
+<enum name="TYPE_KEY_DEVICE_TYPE" title="TYPE_KEY_DEVICE_TYPE" num_items="5">
+	<item name="KEY_DEVICE_TYPE_NONE"    title="无"       value="0x0" />
+	<item name="KEY_DEVICE_TWS_UNPAIRED" title="未组对"   value="0x1" />
+	<item name="KEY_DEVICE_TWS_PAIRED"   title="已组对"   value="0x2" />
+	<item name="KEY_DEVICE_CHANNEL_L"    title="L 左设备" value="0x4" />
+	<item name="KEY_DEVICE_CHANNEL_R"    title="R 右设备" value="0x8" />
+</enum>
+
+<enum name="TYPE_CUSTOMED_KEY_SEQUENCE" title="TYPE_CUSTOMED_KEY_SEQUENCE" num_items="3">
+	<item name="CUSTOMED_KEY_SEQUENCE_NONE" title="无"               value="0x0" />
+	<item name="CUSTOMED_KEY_SEQUENCE_1"    title="自定义按键序列 1" value="0x2" />
+	<item name="CUSTOMED_KEY_SEQUENCE_2"    title="自定义按键序列 2" value="0x1" />
+</enum>
+
+<enum name="TYPE_SEQ2_KEY_EVENT" title="TYPE_SEQ2_KEY_EVENT" num_items="7">
+	<item name="SEQ2_KEY_EVENT_NONE"            title="无"         value="0x0"    />
+	<item name="SEQ2_KEY_EVENT_LONG_PRESS"      title="长按"       value="0x1000" />
+	<item name="SEQ2_KEY_EVENT_LONG_UP"         title="长按抬起"   value="0x200"  />
+	<item name="SEQ2_KEY_EVENT_LONG_LONG_PRESS" title="超长按"     value="0x20"   />
+	<item name="SEQ2_KEY_EVENT_LONG_LONG_UP"    title="超长按抬起" value="0x100"  />
+	<item name="SEQ2_KEY_EVENT_VERY_LONG_PRESS" title="极长按"     value="0x40"   />
+	<item name="SEQ2_KEY_EVENT_VERY_LONG_UP"    title="极长按抬起" value="0x80"   />
+</enum>
+
+<enum name="TYPE_SEQ1_KEY_EVENT" title="TYPE_SEQ1_KEY_EVENT" num_items="6">
+	<item name="SEQ1_KEY_EVENT_NONE"         title="无"   value="0x0"    />
+	<item name="SEQ1_KEY_EVENT_SINGLE_CLICK" title="单击" value="0x400"  />
+	<item name="SEQ1_KEY_EVENT_DOUBLE_CLICK" title="双击" value="0x4000" />
+	<item name="SEQ1_KEY_EVENT_TRIPLE_CLICK" title="三击" value="0x10"   />
+	<item name="SEQ1_KEY_EVENT_QUAD_CLICK"   title="四击" value="0x8"    />
+	<item name="SEQ1_KEY_EVENT_QUINT_CLICK"  title="五击" value="0x4"    />
+</enum>
+
+<enum name="TYPE_KEY_EVENT" title="TYPE_KEY_EVENT" num_items="15">
+	<item name="KEY_EVENT_NONE"                title="无"               value="0x0"    />
+	<item name="KEY_EVENT_SINGLE_CLICK"        title="单击"             value="0x400"  />
+	<item name="KEY_EVENT_DOUBLE_CLICK"        title="双击"             value="0x4000" />
+	<item name="KEY_EVENT_TRIPLE_CLICK"        title="三击"             value="0x10"   />
+	<item name="KEY_EVENT_QUAD_CLICK"          title="四击"             value="0x8"    />
+	<item name="KEY_EVENT_QUINT_CLICK"         title="五击"             value="0x4"    />
+	<item name="KEY_EVENT_REPEAT"              title="重复按键"         value="0x800"  />
+	<item name="KEY_EVENT_LONG_PRESS"          title="长按"             value="0x1000" />
+	<item name="KEY_EVENT_LONG_UP"             title="长按抬起"         value="0x200"  />
+	<item name="KEY_EVENT_LONG_LONG_PRESS"     title="超长按"           value="0x20"   />
+	<item name="KEY_EVENT_LONG_LONG_UP"        title="超长按抬起"       value="0x100"  />
+	<item name="KEY_EVENT_VERY_LONG_PRESS"     title="极长按"           value="0x40"   />
+	<item name="KEY_EVENT_VERY_LONG_UP"        title="极长按抬起"       value="0x80"   />
+	<item name="KEY_EVENT_CUSTOMED_SEQUENCE_1" title="自定义按键序列 1" value="0x2"    />
+	<item name="KEY_EVENT_CUSTOMED_SEQUENCE_2" title="自定义按键序列 2" value="0x1"    />
+</enum>
+
+<enum name="TYPE_KEY_VALUE" title="TYPE_KEY_VALUE" num_items="18">
+	<item name="VKEY_NONE"          title="VKEY_NONE"          value="0x0"  />
+	<item name="VKEY_1"             title="VKEY_1"             value="0x28" />
+	<item name="VKEY_2"             title="VKEY_2"             value="0x29" />
+	<item name="VKEY_3"             title="VKEY_3"             value="0x2a" />
+	<item name="VKEY_4"             title="VKEY_4"             value="0x2b" />
+	<item name="VKEY_5"             title="VKEY_5"             value="0x2c" />
+	<item name="VKEY_6"             title="VKEY_6"             value="0x2d" />
+	<item name="LRADC_COMBO_VKEY_1" title="LRADC_COMBO_VKEY_1" value="0x32" />
+	<item name="LRADC_COMBO_VKEY_2" title="LRADC_COMBO_VKEY_2" value="0x33" />
+	<item name="LRADC_COMBO_VKEY_3" title="LRADC_COMBO_VKEY_3" value="0x34" />
+	<item name="VKEY_PLAY"          title="VKEY_PLAY"          value="0xb"  />
+	<item name="VKEY_VSUB"          title="VKEY_VSUB"          value="0x6"  />
+	<item name="VKEY_VADD"          title="VKEY_VADD"          value="0x5"  />
+	<item name="VKEY_PREV"          title="VKEY_PREV"          value="0x2"  />
+	<item name="VKEY_NEXT"          title="VKEY_NEXT"          value="0x3"  />
+	<item name="VKEY_MODE"          title="VKEY_MODE"          value="0x9"  />
+	<item name="VKEY_MENU"          title="VKEY_MENU"          value="0x7"  />
+	<item name="TAP_KEY"            title="TAP_KEY"            value="0x35" />
+</enum>
+
+<enum name="TYPE_LRADC_PULL_UP" title="TYPE_LRADC_PULL_UP" num_items="3">
+	<item name="LRADC_PULL_UP_INTERNAL_50K" title="内部上拉 (50K)" value="0x8" />
+	<item name="LRADC_PULL_UP_INTERNAL_10K" title="内部上拉 (10K)" value="0x1" />
+	<item name="LRADC_PULL_UP_EXTERNAL"     title="外部上拉"       value="0x0" />
+</enum>
+
+<enum name="TYPE_LRADC_CTRL" title="TYPE_LRADC_CTRL" num_items="5">
+	<item name="LRADC_CTRL_NONE"     title="LRADC_CTRL_NONE"     value="0xff"    />
+	<item name="LRADC_CTRL_2_GPIO_0" title="LRADC_CTRL_2_GPIO_0" value="0x10002" />
+	<item name="LRADC_CTRL_3_GPIO_3" title="LRADC_CTRL_3_GPIO_3" value="0x10303" />
+	<item name="LRADC_CTRL_2_GPIO_8" title="LRADC_CTRL_2_GPIO_8" value="0x10802" />
+	<item name="LRADC_CTRL_1_WIO_1"  title="LRADC_CTRL_1_WIO_1"  value="0x12001" />
+</enum>
+
+<enum name="TYPE_BOOT_HOLD_KEY_FUNC" title="TYPE_BOOT_HOLD_KEY_FUNC" num_items="5">
+	<item name="BOOT_HOLD_KEY_FUNC_NONE"              title="无"                              value="0x0" />
+	<item name="BOOT_HOLD_KEY_FUNC_ENTER_PAIR_MODE"   title="进入配对模式"                    value="0x1" />
+	<item name="BOOT_HOLD_KEY_FUNC_TWS_PAIR_SEARCH"   title="TWS 组对搜索"                    value="0x2" />
+	<item name="BOOT_HOLD_KEY_FUNC_AUTO_SELECT"       title="自动选择 TWS 组对搜索或配对模式" value="0x3" />
+	<item name="BOOT_HOLD_KEY_FUNC_CLEAR_PAIRED_LIST" title="清除配对列表"                    value="0x4" />
+</enum>
+
+<enum name="TYPE_ONOFF_PULLR_SEL" title="TYPE_ONOFF_PULLR_SEL" num_items="2">
+	<item name="ONOFF_PULLR_SEL_UP"   title="内部50K上拉，低电平为按键按下"  value="0x0" />
+	<item name="ONOFF_PULLR_SEL_DOWN" title="内部100K下拉，高定平为按键按下" value="0x1" />
+</enum>
+
+<enum name="TYPE_ONOFF_PRESS_POWER_ON" title="TYPE_ONOFF_PRESS_POWER_ON" num_items="8">
+	<item name="ONOFF_PRESS_POWER_ON_SHORT"   title="短按开机" value="0x0"   />
+	<item name="ONOFF_PRESS_POWER_ON_250_MS"  title="250 毫秒" value="0xfa"  />
+	<item name="ONOFF_PRESS_POWER_ON_500_MS"  title="500 毫秒" value="0x1f4" />
+	<item name="ONOFF_PRESS_POWER_ON_1000_MS" title="1 秒"     value="0x3e8" />
+	<item name="ONOFF_PRESS_POWER_ON_1500_MS" title="1.5 秒"   value="0x5dc" />
+	<item name="ONOFF_PRESS_POWER_ON_2000_MS" title="2 秒"     value="0x7d0" />
+	<item name="ONOFF_PRESS_POWER_ON_3000_MS" title="3 秒"     value="0xbb8" />
+	<item name="ONOFF_PRESS_POWER_ON_4000_MS" title="4 秒"     value="0xfa0" />
+</enum>
+
+<enum name="TYPE_ONOFF_LONG_PRESS_RESET" title="TYPE_ONOFF_LONG_PRESS_RESET" num_items="3">
+	<item name="ONOFF_LONG_PRESS_RESET_DISABLE" title="禁止长按复位" value="0xff" />
+	<item name="ONOFF_LONG_PRESS_RESET_8S"      title="8 秒"         value="0x0"  />
+	<item name="ONOFF_LONG_PRESS_RESET_16S"     title="16 秒"        value="0x1"  />
+</enum>
+
+<enum name="TYPE_UART_RX_PIN" title="TYPE_UART_RX_PIN" num_items="7">
+	<item name="UART_RX_GPIO_NONE" title="UART_RX_GPIO_NONE" value="0xff"  />
+	<item name="UART_RX_GPIO_2"    title="UART_RX_GPIO_2"    value="0x202" />
+	<item name="UART_RX_GPIO_6"    title="UART_RX_GPIO_6"    value="0x206" />
+	<item name="UART_RX_GPIO_8"    title="UART_RX_GPIO_8"    value="0x208" />
+	<item name="UART_RX_GPIO_17"   title="UART_RX_GPIO_17"   value="0x211" />
+	<item name="UART_RX_GPIO_19"   title="UART_RX_GPIO_19"   value="0x213" />
+	<item name="UART_RX_GPIO_22"   title="UART_RX_GPIO_22"   value="0x216" />
+</enum>
+
+<enum name="TYPE_UART_TX_PIN" title="TYPE_UART_TX_PIN" num_items="10">
+	<item name="UART_TX_GPIO_NONE" title="UART_TX_GPIO_NONE" value="0xff"  />
+	<item name="UART_TX_GPIO_0"    title="UART_TX_GPIO_0"    value="0x200" />
+	<item name="UART_TX_GPIO_1"    title="UART_TX_GPIO_1"    value="0x201" />
+	<item name="UART_TX_GPIO_5"    title="UART_TX_GPIO_5"    value="0x205" />
+	<item name="UART_TX_GPIO_7"    title="UART_TX_GPIO_7"    value="0x207" />
+	<item name="UART_TX_GPIO_9"    title="UART_TX_GPIO_9"    value="0x209" />
+	<item name="UART_TX_GPIO_10"   title="UART_TX_GPIO_10"   value="0x20a" />
+	<item name="UART_TX_GPIO_18"   title="UART_TX_GPIO_18"   value="0x212" />
+	<item name="UART_TX_GPIO_20"   title="UART_TX_GPIO_20"   value="0x214" />
+	<item name="UART_TX_GPIO_21"   title="UART_TX_GPIO_21"   value="0x215" />
+</enum>
+
+<enum name="TYPE_GPIO_PULL" title="TYPE_GPIO_PULL" num_items="4">
+	<item name="GPIO_PULL_NONE"   title="无"        value="0x0" />
+	<item name="GPIO_PULL_UP"     title="上拉 50K"  value="0x8" />
+	<item name="GPIO_PULL_UP_10K" title="上拉 10K"  value="0x1" />
+	<item name="GPIO_PULL_DOWN"   title="下拉 100K" value="0x2" />
+</enum>
+
+<enum name="TYPE_GPIO_LEVEL" title="TYPE_GPIO_LEVEL" num_items="2">
+	<item name="GPIO_LEVEL_HIGH" title="高电平" value="0x1" />
+	<item name="GPIO_LEVEL_LOW"  title="低电平" value="0x0" />
+</enum>
+
+<enum name="TYPE_GPIO_PIN" title="TYPE_GPIO_PIN" num_items="33">
+	<item name="GPIO_PIN_NONE" title="GPIO_PIN_NONE" value="0xff" />
+	<item name="GPIO_NONE"     title="GPIO_NONE"     value="0xff" />
+	<item name="GPIO_PIN_0"    title="GPIO_PIN_0"    value="0x0"  />
+	<item name="GPIO_PIN_1"    title="GPIO_PIN_1"    value="0x1"  />
+	<item name="GPIO_PIN_2"    title="GPIO_PIN_2"    value="0x2"  />
+	<item name="GPIO_PIN_3"    title="GPIO_PIN_3"    value="0x3"  />
+	<item name="GPIO_PIN_4"    title="GPIO_PIN_4"    value="0x4"  />
+	<item name="GPIO_PIN_5"    title="GPIO_PIN_5"    value="0x5"  />
+	<item name="GPIO_PIN_6"    title="GPIO_PIN_6"    value="0x6"  />
+	<item name="GPIO_PIN_7"    title="GPIO_PIN_7"    value="0x7"  />
+	<item name="GPIO_PIN_8"    title="GPIO_PIN_8"    value="0x8"  />
+	<item name="GPIO_PIN_9"    title="GPIO_PIN_9"    value="0x9"  />
+	<item name="GPIO_PIN_10"   title="GPIO_PIN_10"   value="0xa"  />
+	<item name="GPIO_PIN_11"   title="GPIO_PIN_11"   value="0xb"  />
+	<item name="GPIO_PIN_12"   title="GPIO_PIN_12"   value="0xc"  />
+	<item name="GPIO_PIN_13"   title="GPIO_PIN_13"   value="0xd"  />
+	<item name="GPIO_PIN_14"   title="GPIO_PIN_14"   value="0xe"  />
+	<item name="GPIO_PIN_15"   title="GPIO_PIN_15"   value="0xf"  />
+	<item name="GPIO_PIN_16"   title="GPIO_PIN_16"   value="0x10" />
+	<item name="GPIO_PIN_17"   title="GPIO_PIN_17"   value="0x11" />
+	<item name="GPIO_PIN_18"   title="GPIO_PIN_18"   value="0x12" />
+	<item name="GPIO_PIN_19"   title="GPIO_PIN_19"   value="0x13" />
+	<item name="GPIO_PIN_20"   title="GPIO_PIN_20"   value="0x14" />
+	<item name="GPIO_PIN_21"   title="GPIO_PIN_21"   value="0x15" />
+	<item name="GPIO_PIN_22"   title="GPIO_PIN_22"   value="0x16" />
+	<item name="GPIO_PIN_23"   title="GPIO_PIN_23"   value="0x17" />
+	<item name="GPIO_PIN_24"   title="GPIO_PIN_24"   value="0x18" />
+	<item name="GPIO_PIN_25"   title="GPIO_PIN_25"   value="0x19" />
+	<item name="GPIO_PIN_26"   title="GPIO_PIN_26"   value="0x1a" />
+	<item name="GPIO_PIN_27"   title="GPIO_PIN_27"   value="0x1b" />
+	<item name="GPIO_PIN_28"   title="GPIO_PIN_28"   value="0x1c" />
+	<item name="GPIO_PIN_29"   title="GPIO_PIN_29"   value="0x1d" />
+	<item name="GPIO_PIN_30"   title="GPIO_PIN_30"   value="0x1e" />
+</enum>
+
+<enum name="TYPE_USB_DEVICE_MODE" title="TYPE_USB_DEVICE_MODE" num_items="4">
+	<item name="USB_DEVICE_MODE_CHARGE_ONLY" title="只充电"     value="0x0" />
+	<item name="USB_DEVICE_MODE_CHARGE_STUB" title="充电和stub" value="0x1" />
+	<item name="USB_DEVICE_MODE_CHARGE_UAC"  title="充电和uac"  value="0x2" />
+	<item name="USB_DEVICE_MODE_ADFU_ONLY"   title="adfu"       value="0x3" />
+</enum>
+
+<enum name="TYPE_AUTO_POWOFF_MODE" title="TYPE_AUTO_POWOFF_MODE" num_items="2">
+	<item name="AUTO_POWOFF_MODE_UNCONNECTED" title="无连接" value="0x0" />
+	<item name="AUTO_POWOFF_MODE_NOT_PLAYING" title="无播放" value="0x1" />
+</enum>
+
+<enum name="TYPE_SYS_SUPPORT_FEATURES" title="TYPE_SYS_SUPPORT_FEATURES" num_items="3">
+	<item name="SYS_ENABLE_DC5VPD_WHEN_DETECT_OUT" title="允许 DC5V 检测拔出时下拉"               value="0x4"  />
+	<item name="SYS_FRONT_CHARGE_DC5V_OUT_REBOOT"  title="前台充电 DC5V 拔出时重启"               value="0x8"  />
+	<item name="SYS_FORCE_CHARGE_WHEN_DC5V_IN"     title="DC5V 接入时总是开启充电 (即使电池满电)" value="0x10" />
+</enum>
+
+<enum name="TYPE_BOOL" title="TYPE_BOOL" num_items="2">
+	<item name="YES" title="是" value="0x1" />
+	<item name="NO"  title="否" value="0x0" />
+</enum>
+
+<category num_items="18">
+	<item name="SYSTEM"         title="系统"          parent="" />
+	<item name="UPGRADE"        title="固件升级设置"  parent="" />
+	<item name="DISPLAY"        title="显示"          parent="" />
+	<item name="KEY"            title="按键"          parent="" />
+	<item name="AUDIO"          title="音频"          parent="" />
+	<item name="VOLUME_GAIN"    title="音量及增益"    parent="" />
+	<item name="BATTERY_CHARGE" title="电池及充电"    parent="" />
+	<item name="EVENT_NOTIFY"   title="事件通知"      parent="" />
+	<item name="VOICE"          title="语音"          parent="" />
+	<item name="TONE"           title="提示音"        parent="" />
+	<item name="BT_MUSIC"       title="蓝牙音乐"      parent="" />
+	<item name="BT_CALL"        title="蓝牙通话"      parent="" />
+	<item name="BLUETOOTH"      title="蓝牙管理"      parent="" />
+	<item name="BLE"            title="BLE 管理"      parent="" />
+	<item name="LE_AUDIO"       title="LE AUDIO 管理" parent="" />
+	<item name="ASET"           title="音效调节"      parent="" />
+	<item name="ASQT"           title="通话调节"      parent="" />
+	<item name="ANC"            title="主动降噪"      parent="" />
+</category>
+
+<config name="User_Version" title="用户版本" cfg_id="0x01" offs="0x18c" size="32" num_items="1" category="SYSTEM">
+	<item type="uint8" name="Version" title="版本信息" offs="0" size="32" range="" array="32" attr="string" />
+</config>
+
+<config name="Platform_Case" title="平台方案" cfg_id="0x02" offs="0x1ac" size="28" num_items="5" category="SYSTEM" attr="readonly">
+	<item type="uint32" name="IC_Type"       title="IC 类型"  offs="0"  size="4"  range="" attr="hex" />
+	<item type="uint8"  name="Board_Type"    title="板型"     offs="4"  size="1"  range="" />
+	<item type="uint8"  name="Case_Name"     title="方案名称" offs="5"  size="20" range="" array="20" attr="string" />
+	<item type="uint8"  name="Major_Version" title="主版本号" offs="25" size="1"  range="" />
+	<item type="uint8"  name="Minor_Version" title="次版本号" offs="26" size="1"  range="" />
+</config>
+
+<config name="Console_UART" title="控制台串口" cfg_id="0x03" offs="0x1c8" size="12" num_items="4" category="SYSTEM">
+	<item type="uint16" name="TX_Pin"           title="输出管脚"     offs="0" size="2" refer="TYPE_UART_TX_PIN" />
+	<item type="uint16" name="RX_Pin"           title="输入管脚"     offs="2" size="2" refer="TYPE_UART_RX_PIN" />
+	<item type="uint32" name="Baudrate"         title="波特率 (bps)" offs="4" size="4" range=""                 />
+	<item type="uint8"  name="Print_Time_Stamp" title="打印时间戳"   offs="8" size="1" refer="TYPE_BOOL"        />
+</config>
+
+<config name="System_Settings" title="系统设置" cfg_id="0x04" offs="0x1d4" size="12" num_items="6" category="SYSTEM">
+	<item type="uint16" name="Support_Features"               title="系统支持特性"              offs="0"  size="2" refer="TYPE_SYS_SUPPORT_FEATURES" attr="multi_select" />
+	<item type="uint8"  name="Auto_Power_Off_Mode"            title="自动关机模式"              offs="2"  size="1" refer="TYPE_AUTO_POWOFF_MODE"     />
+	<item type="uint16" name="Auto_Power_Off_Time_Sec"        title="自动关机时间 (秒)"         offs="4"  size="2" range="0 ~ 900"                   comment="设置为 0 时禁止自动关机" />
+	<item type="uint16" name="Auto_Standby_Time_Sec"          title="自动待机时间 (秒)"         offs="6"  size="2" range="0 ~ 900"                   comment="设置为 0 时禁止自动待机" />
+	<item type="uint8"  name="Enable_Voice_Prompt_In_Calling" title="通话中允许语音播报提示"    offs="8"  size="1" refer="TYPE_BOOL"                 />
+	<item type="uint8"  name="Default_Voice_Language"         title="默认语音语言"              offs="9"  size="1" refer="TYPE_VOICE_LANGUAGE"       />
+</config>
+
+<config name="OTA_Settings" title="OTA 设置" cfg_id="0x05" offs="0x1e0" size="18" num_items="7" category="UPGRADE">
+	<item type="uint8" name="Enable_Dongle_OTA_Erase_VRAM"  title="Dongle OTA擦除用户区"              offs="0" size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="Enable_APP_OTA_Erase_VRAM"     title="发射机或APP OTA擦除用户区"         offs="1" size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="Enable_Single_OTA_Without_TWS" title="未组队时允许单耳OTA"               offs="2" size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="Enable_Ver_Diff"               title="左右耳固件版本不同时，允许TWS OTA" offs="3" size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="Enable_Ver_Low"                title="关闭版本控制，版本号自动加1"       offs="4" size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="Enable_Poweroff"               title="OTA完成后关机"                     offs="5" size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="Version_Number"                title="固件版本号"                        offs="6" size="12" range=""          array="12" attr="string" comment="例如 1.6.8, 2.6.3.4" />
+</config>
+
+<config name="Factory_Settings" title="固件烧录设置" cfg_id="0x06" offs="0x1f2" size="2" num_items="2" category="UPGRADE">
+	<item type="uint8" name="Keep_User_VRAM_Data_When_UART_Upgrade"   title="烧录固件时保留用户区数据" offs="0" size="1" refer="TYPE_BOOL" />
+	<item type="uint8" name="Keep_Factory_VRAM_Data_When_ATT_Upgrade" title="烧录固件时保留工厂区数据" offs="1" size="1" refer="TYPE_BOOL" />
+</config>
+
+<config name="ONOFF_Key" title="ONOFF 按键" cfg_id="0x07" offs="0x1f4" size="16" num_items="9" category="KEY">
+	<item type="uint8"  name="Use_Inner_ONOFF_Key"                          title="使用内部软 ONOFF 按键"            offs="0"  size="1" refer="TYPE_BOOL"                   />
+	<item type="uint8"  name="Key_Value"                                    title="ONOFF 键值"                       offs="2"  size="1" refer="TYPE_KEY_VALUE"              />
+	<item type="uint16" name="Time_Press_Power_On"                          title="按下开机"                         offs="4"  size="2" refer="TYPE_ONOFF_PRESS_POWER_ON"   comment="(内部软 ONOFF 按键)" />
+	<item type="uint8"  name="Time_Long_Press_Reset"                        title="长按复位"                         offs="6"  size="1" refer="TYPE_ONOFF_LONG_PRESS_RESET" comment="(内部软 ONOFF 按键)" />
+	<item type="uint8"  name="Onoff_pullr_sel"                              title="内部上下拉电阻"                   offs="7"  size="1" refer="TYPE_ONOFF_PULLR_SEL"        comment="(内部软 ONOFF 按键)" />
+	<item type="uint8"  name="Boot_Hold_Key_Func"                           title="开机长按键功能"                   offs="8"  size="1" refer="TYPE_BOOT_HOLD_KEY_FUNC"     />
+	<item type="uint16" name="Boot_Hold_Key_Time_Ms"                        title="开机长按键时间 (毫秒)"            offs="10" size="2" range="500 ~ 8000"                  />
+	<item type="uint16" name="Debounce_Time_Ms"                             title="去抖时间 (毫秒)"                  offs="12" size="2" range="0 ~ 100"                     />
+	<item type="uint8"  name="Reboot_After_Boot_Hold_Key_Clear_Paired_List" title="开机长按键清除配对列表后自动重启" offs="14" size="1" refer="TYPE_BOOL"                   />
+</config>
+
+<config name="LRADC_Keys" title="LRADC 按键" cfg_id="0x08" offs="0x204" size="68" num_items="5" category="KEY">
+	<item type="Type_LRADC_Key" name="Key"                   title="按键"                offs="0"  size="54" refer="Type_LRADC_Key"     array="9" />
+	<item type="uint32"         name="LRADC_Ctrl"            title="LRADC 控制器"        offs="56" size="4"  refer="TYPE_LRADC_CTRL"    />
+	<item type="uint8"          name="LRADC_Pull_Up"         title="LRADC 上拉电阻"      offs="60" size="1"  refer="TYPE_LRADC_PULL_UP" />
+	<item type="uint8"          name="LRADC_Value_Test"      title="LRADC 采样值测试"    offs="62" size="1"  refer="TYPE_BOOL"          comment="通过串口打印 LRADC 采样值" />
+	<item type="uint16"         name="Debounce_Time_Ms"      title="去抖时间 (毫秒)"     offs="64" size="2"  range="0 ~ 100"            />
+</config>
+
+<config name="GPIO_Keys" title="GPIO 按键" cfg_id="0x09" offs="0x248" size="24" num_items="1" category="KEY">
+	<item type="Type_GPIO_Key" name="Key" title="按键" offs="0" size="24" refer="Type_GPIO_Key" array="4" />
+</config>
+
+<config name="Tap_Key" title="敲击按键" cfg_id="0x0A" offs="0x260" size="20" num_items="1" category="KEY">
+	<item type="Type_Tap_Key_Control" name="Tap_Key_Control" title="敲击按键支持" offs="0" size="20" refer="Type_Tap_Key_Control" />
+</config>
+
+<config name="Key_Threshold" title="按键响应门限参数" cfg_id="0x0B" offs="0x274" size="14" num_items="7" category="KEY">
+	<item type="uint16" name="Single_Click_Valid_Ms"   title="单击有效时间 (毫秒)"     offs="0"  size="2" range="200 ~ 1000"   comment="单击按下到抬起在该时间内有效" />
+	<item type="uint16" name="Multi_Click_Interval_Ms" title="多击间隔时间 (毫秒)"     offs="2"  size="2" range="100 ~ 500"    />
+	<item type="uint16" name="Repeat_Start_Delay_Ms"   title="重复按键延迟时间 (毫秒)" offs="4"  size="2" range="0 ~ 1000"     comment="按键按下该时间后开始重复按键" />
+	<item type="uint16" name="Repeat_Interval_Ms"      title="重复按键间隔时间 (毫秒)" offs="6"  size="2" range="100 ~ 1000"   />
+	<item type="uint16" name="Long_Press_Time_Ms"      title="长按键时间 (毫秒)"       offs="8"  size="2" range="500 ~ 5000"   />
+	<item type="uint16" name="Long_Long_Press_Time_Ms" title="超长按键时间 (毫秒)"     offs="10" size="2" range="1000 ~ 10000" />
+	<item type="uint16" name="Very_Long_Press_Time_Ms" title="极长按键时间 (毫秒)"     offs="12" size="2" range="1500 ~ 20000" />
+</config>
+
+<config name="Key_Func_Maps" title="按键功能映射" cfg_id="0x0C" offs="0x282" size="240" num_items="1" category="KEY">
+	<item type="Type_Key_Func_Map" name="Map" title="映射" offs="0" size="240" refer="Type_Key_Func_Map" array="40" />
+</config>
+
+<config name="Combo_Key_Func_Maps" title="组合按键映射" cfg_id="0x0D" offs="0x372" size="48" num_items="1" category="KEY">
+	<item type="Type_Combo_Key_Map" name="Map" title="映射" offs="0" size="48" refer="Type_Combo_Key_Map" array="8" />
+</config>
+
+<config name="Customed_Key_Sequence" title="自定义按键序列设置" cfg_id="0x0E" offs="0x3a2" size="12" num_items="1" category="KEY">
+	<item type="Type_Customed_Key_Sequence" name="Customed_Key_Sequence" title="自定义按键序列" offs="0" size="12" refer="Type_Customed_Key_Sequence" array="2" />
+</config>
+
+<config name="LED_Drives" title="LED 驱动" cfg_id="0x0F" offs="0x3ae" size="12" num_items="1" category="DISPLAY">
+	<item type="Type_LED_Drive" name="LED" title="LED" offs="0" size="12" refer="Type_LED_Drive" array="4" />
+</config>
+
+<config name="LED_Display_Models" title="LED 显示模式" cfg_id="0x10" offs="0x3ba" size="480" num_items="1" category="DISPLAY">
+	<item type="Type_LED_Display_Model" name="Model" title="模式" offs="0" size="480" refer="Type_LED_Display_Model" array="30" />
+</config>
+
+<config name="BT_Music_Volume_Table" title="蓝牙音乐音量分级表" cfg_id="0x11" offs="0x59a" size="34" num_items="1" category="VOLUME_GAIN">
+	<item type="uint16" name="Level" title="分级" offs="0" size="34" refer="TYPE_VOLUME_GAIN" array="17" attr="click_popup" />
+</config>
+
+<config name="BT_Call_Volume_Table" title="蓝牙通话音量分级表" cfg_id="0x12" offs="0x5bc" size="32" num_items="1" category="VOLUME_GAIN">
+	<item type="uint16" name="Level" title="分级" offs="0" size="32" refer="TYPE_VOLUME_GAIN" array="16" attr="click_popup" />
+</config>
+
+<config name="Voice_Volume_Table" title="语音音量分级表" cfg_id="0x14" offs="0x5fe" size="34" num_items="1" category="VOLUME_GAIN">
+	<item type="uint16" name="Level" title="分级" offs="0" size="34" refer="TYPE_VOLUME_GAIN" array="17" attr="click_popup" />
+</config>
+
+<config name="Volume_Settings" title="音量设置" cfg_id="0x15" offs="0x620" size="8" num_items="7" category="VOLUME_GAIN">
+	<item type="uint8"  name="Voice_Default_Volume"    title="语音默认音量, 固定语音音量大小使用该值"      offs="0" size="1" range="0 ~ 16"     attr="slide_bar" />
+	<item type="uint8"  name="Voice_Min_Volume"        title="语音最小音量"                                offs="1" size="1" range="0 ~ 16"     attr="slide_bar" />
+	<item type="uint8"  name="Voice_Max_Volume"        title="语音最大音量"                                offs="2" size="1" range="0 ~ 16"     attr="slide_bar" />
+	<item type="uint8"  name="BT_Music_Default_Volume" title="蓝牙音乐默认音量"                            offs="3" size="1" range="0 ~ 16"     attr="slide_bar" />
+	<item type="uint8"  name="BT_Call_Default_Volume"  title="蓝牙通话默认音量"                            offs="4" size="1" range="0 ~ 15"     attr="slide_bar" />
+	<item type="uint8"  name="BT_Music_Default_Vol_Ex" title="蓝牙音乐默认音量 (用于不支持音量同步的设备)" offs="5" size="1" range="0 ~ 16"     attr="slide_bar" />
+	<item type="uint16" name="Tone_Volume_Decay"       title="按键音音量衰减"                              offs="6" size="2" range="0.0 ~ 30.0" attr="float_x1000" comment="单位dB，仅按键音固定音量模式有效" />
+</config>
+
+<config name="Audio_Settings" title="音频设置" cfg_id="0x16" offs="0x628" size="76" num_items="22" category="AUDIO">
+	<item type="uint8"                     name="Audio_Out_Mode"                  title="音频输出模式"                   offs="0"  size="1"  refer="TYPE_AUDIO_OUT_MODE"          />
+	<item type="Type_I2S_Select_GPIO"      name="I2STX_Select_GPIO"               title="I2S TX 管脚配置"                offs="2"  size="8"  refer="Type_I2S_Select_GPIO"         attr="click_popup" />
+	<item type="uint8"                     name="Channel_Select_Mode"             title="声道选择模式"                   offs="18" size="1"  refer="TYPE_CHANNEL_SELECT_MODE"     />
+	<item type="Type_Channel_Select_GPIO"  name="Channel_Select_GPIO"             title="GPIO 选择声道"                  offs="19" size="3"  refer="Type_Channel_Select_GPIO"     attr="click_popup" />
+	<item type="Type_Channel_Select_LRADC" name="Channel_Select_LRADC"            title="LRADC 选择声道"                 offs="24" size="12" refer="Type_Channel_Select_LRADC"    attr="click_popup" />
+	<item type="uint8"                     name="TWS_Alone_Audio_Channel"         title="TWS 未组对时声道选择"           offs="36" size="1"  refer="TYPE_TWS_ALONE_AUDIO_CHANNEL" />
+	<item type="uint8"                     name="L_Speaker_Out"                   title="左声道喇叭输出"                 offs="37" size="1"  refer="TYPE_SPEAKER_OUT_SELECT"      />
+	<item type="uint8"                     name="R_Speaker_Out"                   title="右声道喇叭输出"                 offs="38" size="1"  refer="TYPE_SPEAKER_OUT_SELECT"      />
+	<item type="uint32"                    name="ADC_Bias_Setting"                title="ADC BIAS 设置"                  offs="40" size="4"  range=""                             attr="hex, dev_mode" />
+	<item type="uint32"                    name="DAC_Bias_Setting"                title="DAC BIAS 设置"                  offs="44" size="4"  range=""                             attr="hex, dev_mode" />
+	<item type="uint8"                     name="Keep_DA_Enabled_When_Play_Pause" title="保持DAC打开状态"                offs="48" size="1"  refer="TYPE_BOOL"                    />
+	<item type="Type_Extern_PA_Control"    name="Extern_PA_Control"               title="外部 PA 控制"                   offs="50" size="8"  refer="Type_Extern_PA_Control"       array="2" attr="click_popup" />
+	<item type="uint8"                     name="AntiPOP_Process_Disable"         title="禁止ANTIPOP处理"                offs="58" size="1"  refer="TYPE_BOOL"                    />
+	<item type="uint8"                     name="Pa_Gain"                         title="PA增益选择"                     offs="59" size="1"  range=""                             comment="选择范围[0, 4], 不同模式下增益不同" />
+	<item type="uint8"                     name="DMIC01_Channel_Aligning"         title="DMIC01 采样沿选择"              offs="60" size="1"  range=""                             comment="值为 0 表示 channel_1 是上升沿, channel_2 是下降沿, 值为 1 则相反" />
+	<item type="Type_DMIC_Select_GPIO"     name="DMIC_Select_GPIO"                title="DMIC 管脚配置"                  offs="62" size="4"  refer="Type_DMIC_Select_GPIO"        attr="click_popup" />
+	<item type="uint8"                     name="main_mic"                        title="主mic录音通路选择"              offs="66" size="1"  refer="TYPE_ADC"                     />
+	<item type="uint8"                     name="sub_mic"                         title="副mic录音通路选择"              offs="67" size="1"  refer="TYPE_ADC"                     />
+	<item type="uint8"                     name="adc0_input"                      title="ADC0管脚配置"                   offs="68" size="1"  refer="TYPE_ADC0_INPUT"              />
+	<item type="uint8"                     name="adc1_input"                      title="ADC1管脚配置"                   offs="69" size="1"  refer="TYPE_ADC1_INPUT"              />
+	<item type="uint8"                     name="ADC0_SEL_VMIC"                   title="ADC0供电选择"                   offs="70" size="1"  refer="TYPE_VMIC"                    />
+	<item type="uint8"                     name="ADC1_SEL_VMIC"                   title="ADC1供电选择"                   offs="71" size="1"  refer="TYPE_VMIC"                    />
+</config>
+
+<config name="Tone_List" title="提示音列表" cfg_id="0x17" offs="0x674" size="105" num_items="2" category="TONE" attr="readonly">
+	<item type="Type_Tone_ID_Name" name="Tone"             title="提示音"   offs="0"   size="100" refer="Type_Tone_ID_Name" array="10" />
+	<item type="uint8"             name="Tone_Format_Name" title="文件格式" offs="100" size="5"   range=""                  array="5" attr="string" />
+</config>
+
+<config name="Key_Tone" title="按键音" cfg_id="0x18" offs="0x6dd" size="4" num_items="4" category="TONE">
+	<item type="uint8" name="Key_Tone_Select"           title="选择按键音"   offs="0" size="1" refer="TYPE_TONE_ID" />
+	<item type="uint8" name="Long_Key_Tone_Select"      title="长按提示音"   offs="1" size="1" refer="TYPE_TONE_ID" />
+	<item type="uint8" name="Long_Long_Key_Tone_Select" title="超长按提示音" offs="2" size="1" refer="TYPE_TONE_ID" />
+	<item type="uint8" name="Very_Long_Key_Tone_Select" title="极长按提示音" offs="3" size="1" refer="TYPE_TONE_ID" />
+</config>
+
+<config name="Voice_List" title="语音列表" cfg_id="0x19" offs="0x6e1" size="285" num_items="2" category="VOICE" attr="readonly">
+	<item type="Type_Voice_ID_Name" name="Voice"             title="语音"     offs="0"   size="280" refer="Type_Voice_ID_Name" array="28" />
+	<item type="uint8"              name="Voice_Format_Name" title="文件格式" offs="280" size="5"   range=""                   array="5" attr="string" />
+</config>
+
+<config name="Numeric_Voice_List" title="数字语音列表" cfg_id="0x1A" offs="0x7fe" size="100" num_items="1" category="VOICE" attr="readonly">
+	<item type="Type_Numeric_Voice_ID_Name" name="Voice" title="语音" offs="0" size="100" refer="Type_Numeric_Voice_ID_Name" array="10" />
+</config>
+
+<config name="Event_Notify" title="事件通知" cfg_id="0x1B" offs="0x862" size="270" num_items="1" category="EVENT_NOTIFY">
+	<item type="Type_Event_Notify" name="Notify" title="通知" offs="0" size="270" refer="Type_Event_Notify" array="45" />
+</config>
+
+<config name="Battery_Charge" title="电池充电" cfg_id="0x1C" offs="0x970" size="60" num_items="35" category="BATTERY_CHARGE">
+	<item type="uint8"  name="Select_Charge_Mode"                    title="选择充电模式"                      offs="0"  size="1" refer="TYPE_BAT_CHARGE_MODE"              comment="后台充电模式将保持蓝牙正常工作状态" />
+	<item type="uint8"  name="Charge_Current"                        title="正常充电电流"                      offs="1"  size="1" refer="TYPE_CHARGE_CURRENT"               />
+	<item type="uint8"  name="Charge_Voltage"                        title="正常充电电压"                      offs="2"  size="1" refer="TYPE_CHARGE_VOLTAGE"               />
+	<item type="uint8"  name="Charge_Stop_Mode"                      title="电池充满阈值选择"                  offs="3"  size="1" refer="TYPE_CHARGE_STOP_MODE"             />
+	<item type="uint16" name="Charge_Stop_Voltage"                   title="电池充满阈值电压"                  offs="4"  size="2" range="4.05 ~ 4.38"                       attr="float_x1000" comment="(小于等于充电电压 - 0.02V)" />
+	<item type="uint8"  name="Charge_Stop_Current"                   title="电池充满阈值电流"                  offs="6"  size="1" refer="TYPE_CHARGE_STOP_CURRENT"          />
+	<item type="uint8"  name="Init_Charge_Enable"                    title="开机预充使能"                      offs="7"  size="1" refer="TYPE_BOOL"                         />
+	<item type="uint8"  name="Init_Charge_Current_1"                 title="开机预充一阶段电流"                offs="8"  size="1" refer="TYPE_CHARGE_CURRENT"               />
+	<item type="uint16" name="Init_Charge_Vol_1"                     title="开机预充一阶段阈值电压"            offs="10" size="2" range=""                                  />
+	<item type="uint8"  name="Init_Charge_Current_2"                 title="开机预充二阶段电流"                offs="12" size="1" refer="TYPE_CHARGE_CURRENT"               />
+	<item type="uint16" name="Init_Charge_Vol_2"                     title="开机预充二阶段阈值电压"            offs="14" size="2" range=""                                  />
+	<item type="uint8"  name="Init_Charge_Current_3"                 title="开机预充三阶段电流"                offs="16" size="1" refer="TYPE_CHARGE_CURRENT"               />
+	<item type="uint16" name="Init_Charge_Vol_3"                     title="开机预充三阶段阈值电压"            offs="18" size="2" range=""                                  />
+	<item type="uint8"  name="Precharge_Enable"                      title="预充使能"                          offs="20" size="1" refer="TYPE_BOOL"                         />
+	<item type="uint16" name="Precharge_Stop_Voltage"                title="低电预充阈值电压"                  offs="22" size="2" refer="TYPE_PRECHARGE_STOP_VOLTAGE"       />
+	<item type="uint8"  name="Precharge_Current"                     title="低电预充电流"                      offs="24" size="1" refer="TYPE_PRECHARGE_CURRENT"            />
+	<item type="uint8"  name="Precharge_Current_Min_Limit"           title="低电预充电流最小限制"              offs="25" size="1" refer="TYPE_PRECHARGE_CURRENT_MIN_LIMIT"  />
+	<item type="uint8"  name="Fast_Charge_Enable"                    title="快速充电使能"                      offs="26" size="1" refer="TYPE_BOOL"                         />
+	<item type="uint8"  name="Fast_Charge_Current"                   title="快速充电电流"                      offs="27" size="1" refer="TYPE_CHARGE_CURRENT"               />
+	<item type="uint16" name="Fast_Charge_Voltage_Threshold"         title="快速充电截止电压"                  offs="28" size="2" refer="TYPE_FASTCHARGE_VOLTAGE_THRESHOLD" />
+	<item type="uint8"  name="Enable_Battery_Recharge"               title="启用电池复充功能"                  offs="30" size="1" refer="TYPE_BOOL"                         />
+	<item type="uint16" name="Recharge_Threshold_Low_Temperature"    title="低温时复充阈值电压"                offs="32" size="2" range=""                                  />
+	<item type="uint16" name="Recharge_Threshold_Normal_Temperature" title="常温时复充阈值电压"                offs="34" size="2" range=""                                  />
+	<item type="uint16" name="Recharge_Threshold_High_Temperature"   title="高温时复充阈值电压"                offs="36" size="2" range=""                                  />
+	<item type="uint8"  name="Bat_OVP_Enable"                        title="启用充电过压保护功能"              offs="38" size="1" refer="TYPE_BOOL"                         />
+	<item type="uint16" name="OVP_Voltage_Low_Temperature"           title="低温时过压保护阈值电压"            offs="40" size="2" range=""                                  />
+	<item type="uint16" name="OVP_Voltage_Normal_Temperature"        title="常温时过压保护阈值电压"            offs="42" size="2" range=""                                  />
+	<item type="uint16" name="OVP_Voltage_High_Temperature"          title="高温时过压保护阈值电压"            offs="44" size="2" range=""                                  />
+	<item type="uint16" name="Charge_Total_Time_Limit"               title="充电总时间限制(分钟)"              offs="46" size="2" range=""                                  />
+	<item type="uint16" name="Battery_Check_Period_Sec"              title="电量检测周期 (秒)"                 offs="48" size="2" range="10 ~ 300"                          />
+	<item type="uint16" name="Charge_Check_Period_Sec"               title="正常充电检测周期 (秒)"             offs="50" size="2" range="60 ~ 600"                          />
+	<item type="uint16" name="Charge_Full_Continue_Sec"              title="充满延续时间 (秒)"                 offs="52" size="2" range="10 ~ 1800"                         comment="充电至阈值后继续充电该时间以完全充满" />
+	<item type="uint16" name="Front_Charge_Full_Power_Off_Wait_Sec"  title="前台模式充电满后关机等待时间 (秒)" offs="54" size="2" range="5 ~ 300"                           />
+	<item type="uint16" name="DC5V_Detect_Debounce_Time_Ms"          title="DC5V 检测去抖时间 (毫秒)"          offs="56" size="2" range="0 ~ 1000"                          />
+	<item type="uint16" name="Battery_Default_RDrop"                 title="电池标称内阻 (毫欧)"               offs="58" size="2" range=""                                  />
+</config>
+
+<config name="Charger_Box" title="充电盒设置" cfg_id="0x1D" offs="0x9ac" size="24" num_items="9" category="BATTERY_CHARGE">
+	<item type="uint8"                        name="Enable_Charger_Box"          title="启用充电盒充电模式"       offs="0"  size="1" refer="TYPE_BOOL"                    />
+	<item type="uint8"                        name="DC5V_Pull_Down_Current"      title="DC5V 下拉唤醒充电盒"      offs="1"  size="1" refer="TYPE_DC5VPD_CURRENT"          />
+	<item type="uint16"                       name="DC5V_Pull_Down_Hold_Ms"      title="DC5V 下拉保持时间 (毫秒)" offs="2"  size="2" range="0 ~ 2000"                     />
+	<item type="uint16"                       name="Charger_Standby_Delay_Ms"    title="充电盒待机延迟 (毫秒)"    offs="4"  size="2" range="0 ~ 2000"                     />
+	<item type="uint16"                       name="Charger_Standby_Voltage"     title="充电盒待机电压"           offs="6"  size="2" range="0.5 ~ 4.0"                    attr="float_x1000" comment="充电盒待机电压为自身电池电压时可配置为 3.8V" />
+	<item type="uint16"                       name="Charger_Wake_Delay_Ms"       title="充电盒唤醒延迟 (毫秒)"    offs="8"  size="2" range="0 ~ 2000"                     />
+	<item type="uint8"                        name="Charger_Box_Standby_Current" title="充电盒待机电流(mA)"       offs="10" size="1" range="0 ~ 10"                       />
+	<item type="Type_DC5V_UART_Comm_Settings" name="DC5V_UART_Comm_Settings"     title="DC5V_COM 通讯设置"        offs="12" size="8" refer="Type_DC5V_UART_Comm_Settings" attr="click_popup" />
+	<item type="Type_DC5V_IO_Comm_Settings"   name="DC5V_IO_Comm_Settings"       title="DC5V_IO 通讯设置"         offs="20" size="2" refer="Type_DC5V_IO_Comm_Settings"   attr="click_popup" />
+</config>
+
+<config name="Battery_Level" title="电量分级" cfg_id="0x1E" offs="0x9c4" size="20" num_items="1" category="BATTERY_CHARGE">
+	<item type="uint16" name="Level" title="分级" offs="0" size="20" range="2.80 ~ 4.35" array="10" attr="float_x1000" />
+</config>
+
+<config name="Battery_Low" title="低电电量" cfg_id="0x1F" offs="0x9d8" size="8" num_items="4" category="BATTERY_CHARGE">
+	<item type="uint16" name="Battery_Too_Low_Voltage"         title="电量不足"                offs="0" size="2" range="3.00 ~ 3.80" attr="float_x1000" comment="电量不足时会自动关机" />
+	<item type="uint16" name="Battery_Low_Voltage"             title="电量低"                  offs="2" size="2" range="3.00 ~ 3.80" attr="float_x1000" />
+	<item type="uint16" name="Battery_Low_Voltage_Ex"          title="更低电量"                offs="4" size="2" range="0.00 ~ 3.80" attr="float_x1000" />
+	<item type="uint16" name="Battery_Low_Prompt_Interval_Sec" title="电量低提示间隔时间 (秒)" offs="6" size="2" range="0 ~ 600"     comment="设置为 0 时只提示一次" />
+</config>
+
+<config name="NTC_Settings" title="温度调节充电电流" cfg_id="0x20" offs="0x9e0" size="52" num_items="2" category="BATTERY_CHARGE">
+	<item type="Type_NTC_Settings" name="NTC_Settings" title="NTC 温度调节充电电流" offs="0"  size="12" refer="Type_NTC_Settings" />
+	<item type="Type_NTC_Range"    name="NTC_Ranges"   title="NTC 温度范围"         offs="12" size="40" refer="Type_NTC_Range"    array="5" attr="click_popup" />
+</config>
+
+<config name="BT_Device" title="蓝牙设备" cfg_id="0x21" offs="0xa14" size="84" num_items="15" category="BLUETOOTH">
+	<item type="uint8"  name="BT_Device_Name"              title="蓝牙设备名称"             offs="0"  size="30" range=""           array="30" attr="string" />
+	<item type="uint8"  name="Left_Device_Suffix"          title="L 左设备名称后缀"         offs="30" size="10" range=""           array="10" attr="string" />
+	<item type="uint8"  name="Right_Device_Suffix"         title="R 右设备名称后缀"         offs="40" size="10" range=""           array="10" attr="string" />
+	<item type="uint8"  name="BT_Address"                  title="蓝牙地址"                 offs="50" size="6"  range=""           array="6" attr="bt_addr" />
+	<item type="uint8"  name="Use_Random_BT_Address"       title="使用随机蓝牙地址"         offs="56" size="1"  refer="TYPE_BOOL"  comment="随机生成低 3 字节蓝牙地址" />
+	<item type="uint32" name="BT_Device_Class"             title="蓝牙设备类型"             offs="60" size="4"  range=""           attr="hex, dev_mode" />
+	<item type="uint8"  name="PIN_Code"                    title="PIN Code"                 offs="64" size="6"  range=""           array="6" attr="string, dev_mode" comment="在禁止 SSP 功能时使用" />
+	<item type="uint8"  name="Default_HOSC_Capacity"       title="缺省频偏电容值 (pF)"      offs="70" size="1"  range="0.0 ~ 24.0" attr="float_x10" />
+	<item type="uint8"  name="Force_Default_HOSC_Capacity" title="总是使用配置的频偏电容值" offs="71" size="1"  refer="TYPE_BOOL"  />
+	<item type="uint8"  name="BT_Max_RF_TX_Power"          title="蓝牙最大发射功率"         offs="72" size="1"  range="0 ~ 43"     />
+	<item type="uint8"  name="BLE_RF_TX_Power"             title="BLE 发射功率"             offs="73" size="1"  range="0 ~ 43"     />
+	<item type="uint8"  name="A2DP_Bitpool"                title="A2DP Bitpool"             offs="74" size="1"  range="2 ~ 53"     />
+	<item type="uint16" name="Vendor_ID"                   title="厂商 ID"                  offs="76" size="2"  range=""           attr="hex" />
+	<item type="uint16" name="Product_ID"                  title="产品 ID"                  offs="78" size="2"  range=""           attr="hex" />
+	<item type="uint16" name="Version_ID"                  title="版本 ID"                  offs="80" size="2"  range=""           attr="hex" />
+</config>
+
+<config name="BT_RF_Param_Table" title="RF Param Table" cfg_id="0x22" offs="0xa68" size="16" num_items="1" category="BLUETOOTH" attr="dev_mode">
+	<item type="Type_RF_Param" name="Param_Table" title="RF Param" offs="0" size="16" refer="Type_RF_Param" array="4" />
+</config>
+
+<config name="BT_Manager" title="蓝牙管理" cfg_id="0x23" offs="0xa78" size="16" num_items="8" category="BLUETOOTH">
+	<item type="uint32"                      name="Support_Features"           title="蓝牙支持特性"                   offs="0"  size="4" refer="TYPE_BT_SUPPORT_FEATURES"    attr="multi_select" />
+	<item type="uint8"                       name="Support_Device_Number"      title="可同时连接设备个数"             offs="4"  size="1" range="1 ~ 3"                       />
+	<item type="uint8"                       name="Paired_Device_Save_Number"  title="已配对设备保存个数"             offs="5"  size="1" range="2 ~ 8"                       />
+	<item type="uint8"                       name="Controller_Test_Mode"       title="控制器测试模式"                 offs="6"  size="1" refer="TYPE_BT_CTRL_TEST_MODE"      />
+	<item type="uint8"                       name="Enter_BQB_Test_Mode_By_Key" title="通过按键进入 BQB 测试模式"      offs="7"  size="1" refer="TYPE_BOOL"                   />
+	<item type="Type_Auto_Quit_BT_Ctrl_Test" name="Auto_Quit_BT_Ctrl_Test"     title="自动退出控制器测试模式"         offs="8"  size="4" refer="Type_Auto_Quit_BT_Ctrl_Test" attr="click_popup" />
+	<item type="uint16"                      name="Idle_Enter_Sniff_Time_Ms"   title="空闲进入 Sniff 模式时间 (毫秒)" offs="12" size="2" range="2000 ~ 20000"                attr="dev_mode" />
+	<item type="uint16"                      name="Sniff_Interval_Ms"          title="Sniff 周期 (毫秒)"              offs="14" size="2" range="100 ~ 500"                   attr="dev_mode" />
+</config>
+
+<config name="BT_Pair" title="蓝牙配对连接" cfg_id="0x24" offs="0xa88" size="12" num_items="9" category="BLUETOOTH">
+	<item type="uint8"  name="Default_State_Discoverable"                 title="默认状态可被搜索发现"                      offs="0"  size="1" refer="TYPE_BOOL" />
+	<item type="uint16" name="Default_State_Wait_Connect_Sec"             title="默认状态等待配对连接 (秒)"                 offs="2"  size="2" range="0 ~ 600"   comment="设置为 0 时不限时间" />
+	<item type="uint16" name="Pair_Mode_Duration_Sec"                     title="配对模式持续时间 (秒)"                     offs="4"  size="2" range="0 ~ 600"   comment="设置为 0 时不限时间" />
+	<item type="uint8"  name="Disconnect_All_Phones_When_Enter_Pair_Mode" title="进入配对模式时断开所有已连接手机设备"      offs="6"  size="1" refer="TYPE_BOOL" />
+	<item type="uint8"  name="Clear_Paired_List_When_Enter_Pair_Mode"     title="进入配对模式时清除配对列表"                offs="7"  size="1" refer="TYPE_BOOL" />
+	<item type="uint8"  name="Clear_TWS_When_Key_Clear_Paired_List"       title="按键清除配对列表同时清除 TWS 组对设备信息" offs="8"  size="1" refer="TYPE_BOOL" />
+	<item type="uint8"  name="Enter_Pair_Mode_When_Key_Clear_Paired_List" title="按键清除配对列表同时进入配对模式"          offs="9"  size="1" refer="TYPE_BOOL" />
+	<item type="uint8"  name="Enter_Pair_Mode_When_Paired_List_Empty"     title="配对列表为空时开机进入配对模式"            offs="10" size="1" refer="TYPE_BOOL" />
+	<item type="uint8"  name="BT_Not_Discoverable_When_Connected"         title="蓝牙已连接后关闭可见性"                    offs="11" size="1" refer="TYPE_BOOL" />
+</config>
+
+<config name="TWS_Pair" title="TWS 组对连接" cfg_id="0x25" offs="0xa94" size="8" num_items="5" category="BLUETOOTH">
+	<item type="uint8"  name="TWS_Pair_Key_Mode"             title="按键组对模式"                   offs="0" size="1" refer="TYPE_TWS_PAIR_KEY_MODE" />
+	<item type="uint8"  name="Match_Mode"                    title="匹配模式"                       offs="1" size="1" refer="TYPE_TWS_MATCH_MODE"    />
+	<item type="uint8"  name="Match_Name_Length"             title="名称匹配长度"                   offs="2" size="1" range="1 ~ 30"                 />
+	<item type="uint16" name="TWS_Wait_Pair_Search_Time_Sec" title="等待组对搜索时间 (秒)"          offs="4" size="2" range="5 ~ 600"                />
+	<item type="uint8"  name="TWS_Power_On_Auto_Pair_Search" title="未组对过时开机自动进行组对搜索" offs="6" size="1" refer="TYPE_BOOL"              />
+</config>
+
+<config name="TWS_Advanced_Pair" title="TWS 高级组对设置" cfg_id="0x26" offs="0xa9c" size="4" num_items="3" category="BLUETOOTH">
+	<item type="uint8" name="Check_RSSI_When_TWS_Pair_Search"    title="组对搜索时判断信号强度" offs="1" size="1" refer="TYPE_BOOL" />
+	<item type="int8"  name="RSSI_Threshold"                     title="信号强度阈值"           offs="2" size="1" range="-120 ~ 0"  />
+	<item type="uint8" name="Use_Search_Mode_When_TWS_Reconnect" title="TWS 回连时使用搜索模式" offs="3" size="1" refer="TYPE_BOOL" />
+</config>
+
+<config name="TWS_Sync" title="TWS 同步设置" cfg_id="0x27" offs="0xaa0" size="1" num_items="1" category="BLUETOOTH">
+	<item type="uint8" name="Sync_Mode" title="同步模式" offs="0" size="1" refer="TYPE_TWS_SYNC_MODE" attr="multi_select" />
+</config>
+
+<config name="BT_Auto_Reconnect" title="蓝牙自动回连" cfg_id="0x28" offs="0xaa1" size="16" num_items="9" category="BLUETOOTH">
+	<item type="uint8"  name="Enable_Auto_Reconnect"                       title="启用自动回连"                   offs="0"  size="1" refer="TYPE_BT_AUTO_RECONNECT" attr="multi_select" />
+	<item type="uint16" name="Reconnect_Phone_Timeout"                     title="单次连接手机设备超时 (秒)"      offs="2"  size="2" range="0.5 ~ 10.0"             attr="float_x10" />
+	<item type="uint16" name="Reconnect_Phone_Interval"                    title="重试回连手机设备间隔时间 (秒)"  offs="4"  size="2" range="0.5 ~ 25.0"             attr="float_x10" comment="包含连接超时" />
+	<item type="uint8"  name="Reconnect_Phone_Times_By_Startup"            title="开机回连手机设备尝试次数"       offs="6"  size="1" range="0 ~ 100"                comment="设置为 0 时不限次数" />
+	<item type="uint16" name="Reconnect_TWS_Timeout"                       title="单次连接 TWS 设备超时 (秒)"     offs="8"  size="2" range="0.5 ~ 10.0"             attr="float_x10" />
+	<item type="uint16" name="Reconnect_TWS_Interval"                      title="重试回连 TWS 设备间隔时间 (秒)" offs="10" size="2" range="0.5 ~ 25.0"             attr="float_x10" comment="包含连接超时" />
+	<item type="uint8"  name="Reconnect_TWS_Times_By_Startup"              title="开机回连 TWS 设备尝试次数"      offs="12" size="1" range="0 ~ 100"                comment="设置为 0 时不限次数" />
+	<item type="uint8"  name="Reconnect_Times_By_Timeout"                  title="超时断开回连尝试次数"           offs="13" size="1" range="0 ~ 100"                comment="设置为 0 时不限次数" />
+	<item type="uint8"  name="Enter_Pair_Mode_When_Startup_Reconnect_Fail" title="开机回连失败时进入配对模式"     offs="14" size="1" refer="TYPE_BOOL"              />
+</config>
+
+<config name="BT_HID_Settings" title="HID 设置" cfg_id="0x29" offs="0xab1" size="6" num_items="4" category="BLUETOOTH" attr="dev_mode">
+	<item type="uint16" name="HID_Auto_Disconnect_Delay_Sec"  title="HID 操作后自动断开延迟时间 (秒)" offs="0" size="2" range="0 ~ 600"              comment="设置为 0 时不自动断开" />
+	<item type="uint16" name="HID_Connect_Operation_Delay_Ms" title="HID 连接时操作延迟时间 (毫秒)"   offs="2" size="2" range="100 ~ 2000"           />
+	<item type="uint8"  name="HID_Custom_Key_Type"            title="HID 自定义按键类型"              offs="4" size="1" refer="TYPE_BT_HID_KEY_TYPE" />
+	<item type="uint8"  name="HID_Custom_Key_Value"           title="HID 自定义按键值"                offs="5" size="1" range=""                     attr="hex" />
+</config>
+
+<config name="Low_Latency_Settings" title="低延迟模式设置" cfg_id="0x2A" offs="0xab7" size="22" num_items="5" category="AUDIO">
+	<item type="Type_LLM_Basic" name="LLM_Basic"                   title="低延时模式基础设置"            offs="0"  size="10" refer="Type_LLM_Basic"           />
+	<item type="uint8"          name="BTMusic_Use_ALLM"            title="[音乐] 使用自适应低延时模式"   offs="10" size="1"  refer="TYPE_BOOL"                comment="使能后不同时期测量的延时可能会有差异" />
+	<item type="uint8"          name="ALLM_Factor"                 title="[音乐] 自适应灵敏度"           offs="11" size="1"  range="0 ~ 5"                    comment="值越大自适应低延时越优先保证播放的稳定性" />
+	<item type="uint8"          name="ALLM_Upper"                  title="[音乐] 自适应最高延时 ms"      offs="12" size="1"  range="110 ~ 180"                comment="允许自适应低延时上调到的最高延时值" />
+	<item type="uint8"          name="BTMusic_PLC_Mode"            title="[音乐] 使用补帧技术"           offs="13" size="1"  refer="TYPE_BTMUSIC_PLC_MODE"    />
+</config>
+
+<config name="BTMusic_Multi_Dae_Settings" title="自定义音效使能" cfg_id="0x2B" offs="0xacd" size="3" num_items="3" category="AUDIO">
+	<item type="uint8" name="Enable"      title="是否打开自定义音效" offs="0" size="1" refer="TYPE_BOOL" comment="打开后可以在音效调节中自定义蓝牙音乐音效" />
+	<item type="uint8" name="Cur_Dae_Num" title="自定义音效数量"     offs="1" size="1" range=""          attr="readonly, dev_mode" />
+	<item type="uint8" name="Dae_Index"   title="当前音效序号"       offs="2" size="1" range=""          attr="readonly, dev_mode" />
+</config>
+
+<config name="BT_Music_Volume_Sync" title="音量同步" cfg_id="0x2C" offs="0xad0" size="6" num_items="4" category="BT_MUSIC">
+	<item type="uint8"  name="Volume_Sync_Only_When_Playing" title="只在播放状态下同步音量"      offs="0" size="1" refer="TYPE_BOOL"   />
+	<item type="uint8"  name="Origin_Volume_Sync_To_Remote"  title="初始音量同步至远端设备"      offs="1" size="1" refer="TYPE_BOOL"   comment="(连接时同步)" />
+	<item type="uint16" name="Origin_Volume_Sync_Delay_Ms"   title="初始音量同步延迟时间 (毫秒)" offs="2" size="2" range="2000 ~ 5000" />
+	<item type="uint16" name="Playing_Volume_Sync_Delay_Ms"  title="播放音量同步延迟时间 (毫秒)" offs="4" size="2" range="1000 ~ 3000" />
+</config>
+
+<config name="BT_Music_Stop_Hold" title="按键停顿时间" cfg_id="0x2D" offs="0xad6" size="4" num_items="2" category="BT_MUSIC">
+	<item type="uint16" name="Key_Pause_Stop_Hold_Ms" title="按键暂停时停顿时间 (毫秒)" offs="0" size="2" range="0 ~ 5000" comment="暂停后维持停止状态一段时间 (可过滤音乐淡出数据)" />
+	<item type="uint16" name="Key_Prev_Next_Hold_Ms"  title="按键上下曲停顿时间 (毫秒)" offs="2" size="2" range="0 ~ 5000" />
+</config>
+
+<config name="BT_Two_Device_Play" title="双手机播放控制" cfg_id="0x2E" offs="0xada" size="4" num_items="1" category="BT_MUSIC">
+	<item type="uint16" name="A2DP_Status_Stopped_Delay_Ms"    title="停止播放状态延迟时间 (毫秒)" offs="2" size="2" range="500 ~ 5000" />
+</config>
+
+<config name="BT_Call_Volume_Sync" title="音量同步" cfg_id="0x2F" offs="0xade" size="4" num_items="2" category="BT_CALL">
+	<item type="uint8"  name="Origin_Volume_Sync_To_Remote" title="初始音量同步至远端设备"      offs="0" size="1" refer="TYPE_BOOL"   comment="(开始通话时同步)" />
+	<item type="uint16" name="Origin_Volume_Sync_Delay_Ms"  title="初始音量同步延迟时间 (毫秒)" offs="2" size="2" range="1000 ~ 3000" />
+</config>
+
+<config name="Incoming_Call_Prompt" title="来电提示" cfg_id="0x30" offs="0xae2" size="4" num_items="3" category="BT_CALL">
+	<item type="uint16" name="Prompt_Interval_Ms" title="来电提示间隔时间 (毫秒)" offs="0" size="2" range="200 ~ 5000"             />
+	<item type="uint8"  name="Play_Phone_Number"  title="播报来电号码"            offs="2" size="1" refer="TYPE_BOOL"              />
+	<item type="uint8"  name="BT_Call_Ring_Mode"  title="来电铃声模式"            offs="3" size="1" refer="TYPE_BT_CALL_RING_MODE" />
+</config>
+
+<config name="Cap_Temp_Comp" title="温度补偿" cfg_id="0x31" offs="0xae6" size="41" num_items="2" category="BLUETOOTH" attr="dev_mode">
+	<item type="uint8"              name="Enable_Cap_Temp_Comp" title="启用温度补偿" offs="0" size="1"  refer="TYPE_BOOL"          />
+	<item type="Type_Cap_Temp_Comp" name="Table"                title="温度补偿"     offs="1" size="40" refer="Type_Cap_Temp_Comp" array="20" />
+</config>
+
+<config name="BT_Music_DAE" title="蓝牙音乐音效" cfg_id="0x33" offs="0xb23" size="2" num_items="2" category="ASET" attr="adjust_online">
+	<item type="uint8" name="Enable_DAE"  title="音效使能" offs="0" size="1" refer="TYPE_BOOL" />
+	<item type="uint8" name="Test_Volume" title="测试音量" offs="1" size="1" range="0 ~ 16"    attr="slide_bar" />
+</config>
+
+<config name="BT_Call_Out_DAE" title="蓝牙通话输出音效" cfg_id="0x34" offs="0xb25" size="2" num_items="2" category="ASET" attr="adjust_online, asqt">
+	<item type="uint8" name="Enable_DAE"  title="音效使能" offs="0" size="1" refer="TYPE_BOOL" />
+	<item type="uint8" name="Test_Volume" title="测试音量" offs="1" size="1" range="0 ~ 16"    attr="slide_bar" />
+</config>
+
+<config name="BT_Call_MIC_DAE" title="蓝牙通话 MIC 音效" cfg_id="0x35" offs="0xb27" size="2" num_items="2" category="ASET" attr="adjust_online, asqt">
+	<item type="uint8" name="Enable_DAE"  title="音效使能" offs="0" size="1" refer="TYPE_BOOL" />
+	<item type="uint8" name="Test_Volume" title="测试音量" offs="1" size="1" range="0 ~ 16"    attr="slide_bar" />
+</config>
+
+<config name="BT_Call_Quality" title="通话效果" cfg_id="0x37" offs="0xb2b" size="10" num_items="2" category="ASQT" attr="adjust_online, asqt">
+	<item type="Type_MIC_Gain" name="MIC_Gain"    title="MIC 增益" offs="0" size="8" refer="Type_MIC_Gain" attr="click_popup" />
+	<item type="uint8"         name="Test_Volume" title="测试音量" offs="8" size="1" range="0 ~ 15"        attr="slide_bar" />
+</config>
+
+<config name="Voice_Player_Param" title="播放器参数" cfg_id="0x38" offs="0xb35" size="16" num_items="9" category="VOICE" attr="dev_mode">
+	<item type="uint32" name="VP_Develop_Value1"      title="开发者模式参数 1"                        offs="0"  size="4" range="" />
+	<item type="uint8"  name="VP_WaitData_Time"       title="数据不增加时持续等待时间"                offs="4"  size="1" range="" />
+	<item type="uint8"  name="VP_WaitData_Empty_Time" title="数据为空时持续等待时间 (0 表示一直等待)" offs="5"  size="1" range="" />
+	<item type="uint8"  name="VP_Max_Decode_Count"    title="最大解码次数"                            offs="6"  size="1" range="" />
+	<item type="uint16" name="VP_Max_PCMBUF_Sampels"  title="PCMBUF 持续解码最大门限值"               offs="8"  size="2" range="" />
+	<item type="uint16" name="VP_Het_PCMBUF_Sampels"  title="PCMBUF 半空中断门限值"                   offs="10" size="2" range="" />
+	<item type="uint16" name="VP_Hft_PCMBUF_Sampels"  title="PCMBUF 半满中断门限值"                   offs="12" size="2" range="" />
+	<item type="uint8"  name="VP_Work_Frequency"      title="工作频率(包括系统正常工作的频率)"        offs="14" size="1" range="" />
+	<item type="uint8"  name="VP_Module_Frequency"    title="模块频率(此模块所需频率增量)"            offs="15" size="1" range="" />
+</config>
+
+<config name="Voice_User_Settings" title="播放器设置" cfg_id="0x39" offs="0xb45" size="2" num_items="1" category="VOICE" attr="dev_mode">
+	<item type="uint16" name="VP_StartPlay_Threshold" title="普通模式开始播放门限值 Bytes" offs="0" size="2" range="" />
+</config>
+
+<config name="Tone_Player_Param" title="播放器参数" cfg_id="0x3A" offs="0xb47" size="16" num_items="9" category="TONE" attr="dev_mode">
+	<item type="uint32" name="WT_Develop_Value1"      title="开发者模式参数 1"                        offs="0"  size="4" range="" />
+	<item type="uint8"  name="WT_WaitData_Time"       title="数据不增加时持续等待时间"                offs="4"  size="1" range="" />
+	<item type="uint8"  name="WT_WaitData_Empty_Time" title="数据为空时持续等待时间 (0 表示一直等待)" offs="5"  size="1" range="" />
+	<item type="uint8"  name="WT_Max_Decode_Count"    title="最大解码次数"                            offs="6"  size="1" range="" />
+	<item type="uint16" name="WT_Max_PCMBUF_Sampels"  title="PCMBUF 持续解码最大门限值"               offs="8"  size="2" range="" />
+	<item type="uint16" name="WT_Het_PCMBUF_Sampels"  title="PCMBUF 半空中断门限值"                   offs="10" size="2" range="" />
+	<item type="uint16" name="WT_Hft_PCMBUF_Sampels"  title="PCMBUF 半满中断门限值"                   offs="12" size="2" range="" />
+	<item type="uint8"  name="WT_Work_Frequency"      title="工作频率(包括系统正常工作的频率)"        offs="14" size="1" range="" />
+	<item type="uint8"  name="WT_Module_Frequency"    title="模块频率(此模块所需频率增量)"            offs="15" size="1" range="" />
+</config>
+
+<config name="Tone_User_Settings" title="播放器设置" cfg_id="0x3B" offs="0xb57" size="2" num_items="1" category="TONE" attr="dev_mode">
+	<item type="uint16" name="WT_StartPlay_Threshold" title="普通模式开始播放门限值 Bytes" offs="0" size="2" range="" />
+</config>
+
+<config name="BTMusic_Player_Param" title="播放器参数" cfg_id="0x3E" offs="0xb75" size="36" num_items="22" category="BT_MUSIC">
+	<item type="uint32" name="BM_Develop_Value1"       title="开发者模式参数 1"                           offs="0"  size="4" range="" />
+	<item type="uint8"  name="BM_WaitData_Time"        title="数据不增加时持续等待时间"                   offs="4"  size="1" range="" />
+	<item type="uint8"  name="BM_WaitData_Empty_Time"  title="数据为空时持续等待时间 (0 表示一直等待)"    offs="5"  size="1" range="" />
+	<item type="uint8"  name="BM_Freq_TWS_Decrement"   title="TWS 场景频率减量 Mhz"                       offs="6"  size="1" range="" />
+	<item type="uint8"  name="BM_SBC_Max_Decode_Count" title="SBC 最大解码次数"                           offs="7"  size="1" range="" />
+	<item type="uint8"  name="BM_AAC_Max_Decode_Count" title="AAC 最大解码次数"                           offs="8"  size="1" range="" />
+	<item type="uint8"  name="BM_Max_PCMBUF_Time"      title="PCMBUF 最大缓存时间"                        offs="9"  size="1" range="" />
+	<item type="uint16" name="BM_SBC_Max_Sleep_Time"   title="SBC 最大睡眠时间 us"                        offs="10" size="2" range="" />
+	<item type="uint16" name="BM_AAC_Max_Sleep_Time"   title="AAC 最大睡眠时间 us"                        offs="12" size="2" range="" />
+	<item type="uint16" name="BM_TWS_WPlay_Mintime"    title="TWS 同时播放等待最小时间间隔 ms"            offs="14" size="2" range="" />
+	<item type="uint16" name="BM_TWS_WPlay_Maxtime"    title="TWS 同时播放等待最大时间间隔 ms"            offs="16" size="2" range="" />
+	<item type="uint16" name="BM_TWS_WStop_Mintime"    title="TWS 同时停止等待最小时间间隔 (中断时间) ms" offs="18" size="2" range="" />
+	<item type="uint16" name="BM_TWS_WStop_Maxtime"    title="TWS 同时停止等待最大时间间隔 (超时时间) ms" offs="20" size="2" range="" />
+	<item type="uint16" name="BM_TWS_Sync_interval"    title="TWS 播放过程中同步时间间隔 pkt"             offs="22" size="2" range="" />
+	<item type="uint16" name="BM_Het_PCMBUF_Sampels"   title="PCMBUF 半空中断门限值"                      offs="24" size="2" range="" />
+	<item type="uint16" name="BM_Hft_PCMBUF_Sampels"   title="PCMBUF 半满中断门限值"                      offs="26" size="2" range="" />
+	<item type="uint16" name="BM_StartPlay_Normal"     title="普通模式开始播放延迟时间 ms"                offs="28" size="2" range="" />
+	<item type="uint16" name="BM_StartPlay_TWS"        title="TWS 模式开始播放延迟时间 ms"                offs="30" size="2" range="" />
+	<item type="uint8"  name="BM_Work_Frequency_AAC"   title="AAC工作频率(包括系统正常工作的频率)"        offs="32" size="1" range="" />
+	<item type="uint8"  name="BM_Module_Frequency_AAC" title="AAC模块频率(此模块所需频率增量), 暂时不用"  offs="33" size="1" range="" />
+	<item type="uint8"  name="BM_Work_Frequency_SBC"   title="SBC工作频率(包括系统正常工作的频率)"        offs="34" size="1" range="" />
+	<item type="uint8"  name="BM_Module_Frequency_SBC" title="SBC模块频率(此模块所需频率增量), 暂时不用"  offs="35" size="1" range="" />
+</config>
+
+<config name="BTMusic_User_Settings" title="播放器设置" cfg_id="0x3F" offs="0xb99" size="10" num_items="5" category="BT_MUSIC">
+	<item type="uint8"  name="BM_ISpeech_PEQ_Enable"    title="语音识别场景下播歌 PEQ (CPU 不足时不能开启)" offs="1" size="1" range=""         attr="dev_mode" />
+	<item type="uint16" name="BM_Fadein_Continue_Time"  title="淡入持续时间 ms"                             offs="2" size="2" range=""         />
+	<item type="uint16" name="BM_Fadeout_Continue_Time" title="淡出持续时间 ms"                             offs="4" size="2" range=""         />
+	<item type="uint16" name="BM_SBC_Playing_CacheData" title="SBC 格式播放延迟 ms"                         offs="6" size="2" range="40 ~ 300" />
+	<item type="uint16" name="BM_AAC_Playing_CacheData" title="AAC 格式播放延迟 ms"                         offs="8" size="2" range="50 ~ 300" />
+</config>
+
+<config name="BTSpeech_Player_Param" title="播放器参数" cfg_id="0x40" offs="0xba3" size="40" num_items="23" category="BT_CALL">
+	<item type="uint32" name="BS_Develop_Value1"        title="是否启用各算法模块"                          offs="0"  size="4" refer="TYPE_BTCALL_ALSP" attr="multi_select" />
+	<item type="uint8"  name="BS_WaitData_Time"         title="数据不增加时持续等待时间"                    offs="4"  size="1" range=""                 />
+	<item type="uint8"  name="BS_WaitData_Empty_Time"   title="数据为空时持续等待时间 (0 表示一直等待)"     offs="5"  size="1" range=""                 />
+	<item type="uint8"  name="BS_Max_Decode_Count"      title="最大解码次数"                                offs="6"  size="1" range=""                 />
+	<item type="uint8"  name="BS_Max_PCMBUF_Time"       title="PCMBUF 最大缓存时间"                         offs="7"  size="1" range=""                 />
+	<item type="uint16" name="BS_CVSD_Max_Sleep_Time"   title="CVSD 最大睡眠时间 us"                        offs="8"  size="2" range=""                 />
+	<item type="uint16" name="BS_MSBC_Max_Sleep_Time"   title="MSBC 最大睡眠时间 us"                        offs="10" size="2" range=""                 />
+	<item type="uint16" name="BS_TWS_WPlay_Mintime"     title="TWS 同时播放等待最小时间间隔 (中断时间) ms"  offs="12" size="2" range=""                 />
+	<item type="uint16" name="BS_TWS_WPlay_Maxtime"     title="TWS 同时播放等待最大时间间隔 (超时时间) ms"  offs="14" size="2" range=""                 />
+	<item type="uint16" name="BS_TWS_WStop_Mintime"     title="TWS 同时停止等待最小时间间隔 (中断时间) ms"  offs="16" size="2" range=""                 />
+	<item type="uint16" name="BS_TWS_WStop_Maxtime"     title="TWS 同时停止等待最大时间间隔 (超时时间) ms"  offs="18" size="2" range=""                 />
+	<item type="uint16" name="BS_TWS_Sync_interval"     title="TWS 播放过程中同步时间间隔 pkt"              offs="20" size="2" range=""                 />
+	<item type="uint16" name="BS_Het_PCMBUF_Sampels"    title="PCMBUF 半空中断门限值"                       offs="22" size="2" range=""                 />
+	<item type="uint16" name="BS_Hft_PCMBUF_Sampels"    title="PCMBUF 半满中断门限值"                       offs="24" size="2" range=""                 />
+	<item type="uint16" name="BS_StartPlay_Normal"      title="普通模式开始播放延迟 ms"                     offs="26" size="2" range=""                 />
+	<item type="uint16" name="BS_StartPlay_TWS"         title="TWS 模式开始播放延迟 ms"                     offs="28" size="2" range=""                 />
+	<item type="uint8"  name="BS_Work_Frequency_MSBC"   title="MSBC工作频率(包括系统正常工作的频率)"        offs="30" size="1" range=""                 />
+	<item type="uint8"  name="BS_Module_Frequency_MSBC" title="MSBC模块频率(此模块所需频率增量), 暂时不用"  offs="31" size="1" range=""                 />
+	<item type="uint8"  name="BS_Work_Frequency_CVSD"   title="CVSD工作频率(包括系统正常工作的频率)"        offs="32" size="1" range=""                 />
+	<item type="uint8"  name="BS_Module_Frequency_CVSD" title="CVSD模块频率(此模块所需频率增量), 暂时不用"  offs="33" size="1" range=""                 />
+	<item type="uint8"  name="BS_Module_Frequency_TMIC" title="双MIC模块频率(此模块所需频率增量), 暂时不用" offs="34" size="1" range=""                 />
+	<item type="uint8"  name="BS_Module_Frequency_PLC"  title="PLC模块频率(此模块所需频率增量), 暂时不用"   offs="35" size="1" range=""                 />
+	<item type="uint8"  name="BS_MIC_Playing_PKTCNT"    title="播放过程中控制器队列缓存MIC包数 "            offs="36" size="1" range=""                 />
+</config>
+
+<config name="BTSpeech_User_Settings" title="播放器设置" cfg_id="0x41" offs="0xbcb" size="12" num_items="4" category="BT_CALL">
+	<item type="uint16" name="BS_Fadein_Continue_Time"   title="淡入持续时间 ms"      offs="4"  size="2" range=""                 />
+	<item type="uint16" name="BS_Fadeout_Continue_Time"  title="淡出持续时间 ms"      offs="6"  size="2" range=""                 attr="dev_mode" />
+	<item type="uint16" name="BS_CVSD_Playing_CacheData" title="CVSD 格式播放延迟 ms" offs="8"  size="2" range="30 ~ 150"         />
+	<item type="uint16" name="BS_MSBC_Playing_CacheData" title="MSBC 格式播放延迟 ms" offs="10" size="2" range="30 ~ 150"         />
+</config>
+
+<config name="BLE_Manager" title="BLE 管理" cfg_id="0x44" offs="0xbeb" size="128" num_items="4" category="BLE" attr="fixed_size=128">
+	<item type="uint8" name="BLE_Enable"                          title="启用 BLE 功能"                   offs="0" size="1" refer="TYPE_BOOL"          />
+	<item type="uint8" name="Use_Advertising_Mode_2_After_Paired" title="配对连接过后使用 BLE 广播模式 2" offs="1" size="1" refer="TYPE_BOOL"          comment="配对列表非空且不在配对模式" />
+	<item type="uint8" name="BLE_Address_Type"                    title="BLE 地址类型"                    offs="2" size="1" refer="TYPE_BLE_ADDR_TYPE" />
+	<item type="uint8" name="Advertising_After_Connected"         title="经典蓝牙连接后才进行BLE广播"     offs="3" size="1" refer="TYPE_BOOL"          />
+</config>
+
+<config name="BLE_Advertising_Mode_1" title="BLE 广播模式 1" cfg_id="0x45" offs="0xc6b" size="188" num_items="6" category="BLE">
+	<item type="uint16" name="Advertising_Interval_Ms"    title="广播间隔 (毫秒)"      offs="0"   size="2"  range="20 ~ 5000"         />
+	<item type="uint8"  name="Advertising_Type"           title="广播类型"             offs="2"   size="1"  refer="TYPE_BLE_ADV_TYPE" />
+	<item type="uint8"  name="BLE_Device_Name"            title="BLE 设备名称"         offs="3"   size="29" range=""                  array="29" attr="string" />
+	<item type="uint8"  name="Manufacturer_Specific_Data" title="厂商自定义数据"       offs="32"  size="59" range=""                  array="59" attr="string" />
+	<item type="uint8"  name="Service_UUIDs_16_Bit"       title="服务 UUIDs (16-Bit)"  offs="91"  size="59" range=""                  array="59" attr="string" />
+	<item type="uint8"  name="Service_UUIDs_128_Bit"      title="服务 UUIDs (128-Bit)" offs="150" size="38" range=""                  array="38" attr="string" />
+</config>
+
+<config name="BLE_Advertising_Mode_2" title="BLE 广播模式 2" cfg_id="0x46" offs="0xd27" size="188" num_items="6" category="BLE">
+	<item type="uint16" name="Advertising_Interval_Ms"    title="广播间隔 (毫秒)"      offs="0"   size="2"  range="20 ~ 5000"         />
+	<item type="uint8"  name="Advertising_Type"           title="广播类型"             offs="2"   size="1"  refer="TYPE_BLE_ADV_TYPE" />
+	<item type="uint8"  name="BLE_Device_Name"            title="BLE 设备名称"         offs="3"   size="29" range=""                  array="29" attr="string" />
+	<item type="uint8"  name="Manufacturer_Specific_Data" title="厂商自定义数据"       offs="32"  size="59" range=""                  array="59" attr="string" />
+	<item type="uint8"  name="Service_UUIDs_16_Bit"       title="服务 UUIDs (16-Bit)"  offs="91"  size="59" range=""                  array="59" attr="string" />
+	<item type="uint8"  name="Service_UUIDs_128_Bit"      title="服务 UUIDs (128-Bit)" offs="150" size="38" range=""                  array="38" attr="string" />
+</config>
+
+<config name="BLE_Connection_Param" title="BLE 连接参数" cfg_id="0x47" offs="0xde3" size="8" num_items="4" category="BLE">
+	<item type="uint16" name="Interval_Min_Ms" title="最小间隔 (毫秒)" offs="0" size="2" range="8 ~ 1000"    />
+	<item type="uint16" name="Interval_Max_Ms" title="最大间隔 (毫秒)" offs="2" size="2" range="8 ~ 1000"    />
+	<item type="uint16" name="Latency"         title="延迟"            offs="4" size="2" range="0 ~ 100"     />
+	<item type="uint16" name="Timeout_Ms"      title="超时 (毫秒)"     offs="6" size="2" range="500 ~ 10000" />
+</config>
+
+<config name="LE_AUDIO_Manager" title="LE AUDIO 管理" cfg_id="0x48" offs="0xdeb" size="128" num_items="4" category="LE_AUDIO" attr="fixed_size=128">
+	<item type="uint8" name="LE_AUDIO_Enable"          title="启用 LE AUDIO 功能"                 offs="0"  size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="LE_AUDIO_APP_Auto_Switch" title="启用BR music与LEA 场景自动切换功能" offs="1"  size="1"  refer="TYPE_BOOL" />
+	<item type="uint8" name="LE_AUDIO_Device_Name"     title="LE AUDIO 设备名称"                  offs="2"  size="29" range=""          array="29" attr="string" />
+	<item type="uint8" name="LE_AUDIO_Dir_Adv_Enable"  title="启用定向广播"                       offs="32" size="1"  refer="TYPE_BOOL" />
+</config>
+
+<config name="LE_AUDIO_Advertising_Mode" title="LE AUDIO 广播模式" cfg_id="0x49" offs="0xe6b" size="22" num_items="6" category="LE_AUDIO">
+	<item type="uint8" name="LE_AUDIO_LC3_Interval"             title="LC3周期"               offs="0" size="1"  refer="TYPE_LC3_INTERVAL"          />
+	<item type="uint8" name="LE_AUDIO_LC3_RX_Bit_Width"         title="LC3解码位宽"           offs="1" size="1"  refer="TYPE_LC3_BIT_WIDTH"         />
+	<item type="uint8" name="LE_AUDIO_LC3_RX_Music_2CH_Bitrate" title="LC3立体声音乐最高码率" offs="2" size="1"  refer="TYPE_LC3_MUSIC_2CH_BITRATE" />
+	<item type="uint8" name="LE_AUDIO_LC3_RX_Music_1CH_Bitrate" title="LC3单声道音乐最高码率" offs="3" size="1"  refer="TYPE_LC3_MUSIC_1CH_BITRATE" />
+	<item type="uint8" name="LE_AUDIO_LC3_TX_Bit_Width"         title="LC3编码位宽"           offs="4" size="1"  refer="TYPE_LC3_BIT_WIDTH"         />
+	<item type="uint8" name="LE_AUDIO_LC3_TX_Call_1CH_Bitrate"  title="LC3通话最高码率"       offs="5" size="1"  refer="TYPE_LC3_CALL_1CH_BITRATE"  />
+</config>
+
+<config name="BT_Link_Quality" title="链路质量监控" cfg_id="0x4B" offs="0xed1" size="4" num_items="4" category="BLUETOOTH" attr="dev_mode">
+	<item type="uint8" name="Quality_Pre_Value" title="Quality_Pre_Value" offs="0" size="1" range="" />
+	<item type="uint8" name="Quality_Diff"      title="Quality_Diff"      offs="1" size="1" range="" />
+	<item type="uint8" name="Quality_ESCO_Diff" title="Quality_ESCO_Diff" offs="2" size="1" range="" />
+	<item type="uint8" name="Quality_Monitor"   title="Quality_Monitor"   offs="3" size="1" range="" />
+</config>
+
+<config name="BT_Scan_Params" title="SCAN 参数设置" cfg_id="0x4C" offs="0xed5" size="98" num_items="1" category="BLUETOOTH" attr="dev_mode">
+	<item type="Type_BT_Scan_Params" name="Params" title="SCAN 参数设置" offs="0" size="98" refer="Type_BT_Scan_Params" array="7" />
+</config>
+
+<config name="Usr_Reserved_Data" title="用户保留配置" cfg_id="0x50" offs="0x10b7" size="255" num_items="2" category="SYSTEM" attr="fixed_size=255">
+	<item type="uint8" name="String"              title="字符串"         offs="0"   size="128" range="" array="128" attr="string" />
+	<item type="uint8" name="Run_Console_Command" title="执行控制台命令" offs="128" size="127" range="" array="127" attr="string" />
+</config>
+
+<config name="BT_Debug" title="蓝牙调试" cfg_id="0x52" offs="0x12b5" size="36" num_items="7" category="BLUETOOTH">
+	<item type="uint8" name="BTC_Log"          title="蓝牙控制器LOG输出方式" offs="0" size="1"  range="" comment="值为 0 表示关闭, 1 表示通过BTC UART 输出,2表示通过系统打印" />
+	<item type="uint8" name="BTC_Log_TX_Pin"   title="BTC UART 输出管脚"     offs="1" size="1"  range="" />
+	<item type="uint8" name="BTC_Log_RX_Pin"   title="BTC UART 输入管脚"     offs="2" size="1"  range="" />
+	<item type="uint8" name="BTC_BQB_TX_Pin"   title="BQB UART1 输出管脚"    offs="3" size="1"  range="" />
+	<item type="uint8" name="BTC_BQB_RX_Pin"   title="BQB UART1 输入管脚"    offs="4" size="1"  range="" />
+	<item type="uint8" name="BTC_Fix_TX_Power" title="BTC 固定TX POWER"      offs="5" size="1"  range="" comment="值为0表示关闭，其它值表示固定TX power的 level值: 如配38,表示固定TX POWER为8db" />
+	<item type="uint8" name="BTC_Debug_Signal" title="BTC 调试信号"          offs="6" size="1"  range="" comment="值为0表示禁止，1表示使能" />
+</config>
+
+<config name="System_More_Settings" title="系统设置更多配置" cfg_id="0x53" offs="0x12d9" size="128" num_items="1" category="SYSTEM" attr="fixed_size=128">
+	<item type="uint8" name="Default_USB_Device_Mode" title="默认usb设备模式" offs="0" size="1" refer="TYPE_USB_DEVICE_MODE" />
+</config>
+
+<config name="Audio_More_Settings" title="音频更多配置" cfg_id="0x58" offs="0x1459" size="64" num_items="1" category="AUDIO" attr="fixed_size=64">
+	<item type="uint8" name="Automute_Force_Enable"             title="强制使能Automute"         offs="4" size="1" refer="TYPE_BOOL" comment="如果不强制使能，则由 CONFIG_AUDIO_DAC_0_AUTOMUTE 决定" />
+</config>
+
+<config name="BT_Call_More_Settings" title="蓝牙通话更多配置" cfg_id="0x5B" offs="0x1559" size="128" num_items="1" category="BT_CALL" attr="fixed_size=128">
+	<item type="uint8" name="BS_noise_reduce" title="近端喇叭噪声控制使能" offs="0" size="1" refer="TYPE_BTCALL_NOISE_REDUCE" attr="multi_select" />
+</config>
+
+<config name="TR_BT_Device" title="蓝牙发射管理" cfg_id="0x5C" offs="0x15d9" size="128" num_items="1" category="BLUETOOTH" attr="fixed_size=128">
+	<item type="uint8" name="Trans_Work_Mode" title="蓝牙发射模式" offs="0" size="1" refer="TYPE_BOOL" />
+</config>
+
+<config name="LEAUDIO_Call_MIC_DAE" title="LE AUDIO通话 MIC 音效" cfg_id="0x5F" offs="0x16db" size="2" num_items="2" category="ASET" attr="adjust_online, asqt">
+	<item type="uint8" name="Enable_DAE"  title="音效使能" offs="0" size="1" refer="TYPE_BOOL" />
+	<item type="uint8" name="Test_Volume" title="测试音量" offs="1" size="1" range="0 ~ 16"    attr="slide_bar" />
+</config>
+
+</config_file>
+

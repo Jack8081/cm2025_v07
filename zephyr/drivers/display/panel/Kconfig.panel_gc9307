@@ -1,0 +1,19 @@
+# RM69090 display driver configuration options
+
+# Copyright (c) 2019 Marc Reilly <marc@cpdesign.com.au>
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig PANEL_GC9307
+	bool "GC9307 display driver"
+	help
+	  Enable driver for GC9307 display driver.
+
+if PANEL_GC9307
+
+config PANEL_LARK_GC9307
+	bool "Display LCD panel on SoC Lark"
+	default y
+	depends on (SOC_SERIES_LARK || SOC_SERIES_LARK_FPGA)
+	help
+	  Enable LCD display controller on SoC Lark
+endif # PANEL_GC9307

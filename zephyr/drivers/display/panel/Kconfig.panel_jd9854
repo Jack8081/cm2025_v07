@@ -1,0 +1,9 @@
+# JD9854 display driver configuration options
+
+# Copyright (c) 2019 Marc Reilly <marc@cpdesign.com.au>
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig PANEL_JD9854
+	bool "Display jd9854"
+	help
+	  Enable JD9854 panel display.

@@ -1,0 +1,25 @@
+# Kconfig - MT DRV configuration options
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# Magic Tune Module DRV options
+#
+config MAGIC_TUNE
+    bool "actions tune module support"
+    depends on I2C
+    default n
+    help
+      enanle actions tune module
+      
+config MAGIC_TUNE_CM001X1
+    bool "CM001X1 tune module support"
+    depends on MAGIC_TUNE
+    default n
+    help
+      enable actions tune module CM001X1
+      

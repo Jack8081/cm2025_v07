@@ -1,0 +1,13 @@
+# GC9C01 display driver configuration options
+
+# Copyright (c) 2019 Marc Reilly <marc@cpdesign.com.au>
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig PANEL_GC9C01
+	bool "GC9C01 display driver"
+	help
+	  Enable driver for GC9C01 display driver.
+
+if PANEL_GC9C01
+
+endif # PANEL_GC9C01

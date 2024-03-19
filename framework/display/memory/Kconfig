@@ -1,0 +1,196 @@
+# Kconfig - Actions memory manager
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig UI_MEMORY_MANAGER
+	bool "ui memory manager"
+	default y if UI_SERVICE
+	help
+	  This option enables ui memory manager
+
+if UI_MEMORY_MANAGER
+
+choice
+	prompt "UI Memory Management"
+	default UI_MEM_USE_POOL
+	help
+	  Memory Management for UI Surface Buffers
+
+	config UI_MEM_USE_SLAB
+		bool "Memory Slab"
+		depends on MEMORY_SLABS
+		help
+		  Use memory slab to allocate UI surface buffer.
+
+	config UI_MEM_USE_POOL
+		bool "Memory Pool with Fixed-Size Blocks"
+		help
+		  Use fixed-size memory block to allocate UI surface buffer.
+
+endchoice
+
+if UI_MEM_USE_POOL
+
+config UI_MEM_BLOCK_SIZE
+	int "Block Size"
+	default 259200
+	help
+	  Size of the block in bytes.
+
+config UI_MEM_NUMBER_BLOCKS
+	int "Number of Blocks"
+	default 1
+	help
+	  Number of (fixed-size) blocks.
+
+endif # UI_MEM_USE_POOL
+
+if UI_MEM_USE_SLAB
+
+config UI_SLAB_TOTAL_NUM
+	int "total slabes num"
+	default 11
+	help
+	  This option set total slabes num
+
+config UI_SLAB0_BLOCK_SIZE
+	int "UI_SLAB0 block size of per slabes"
+	default 8
+	help
+	  This option set block size of UI_SLAB0
+
+config UI_SLAB0_NUM_BLOCKS
+	int "UI_SLAB0 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB0
+
+config UI_SLAB1_BLOCK_SIZE
+	int "UI_SLAB1 block size of per slabes"
+	default 16
+	help
+	  This option set block size of UI_SLAB1
+
+config UI_SLAB1_NUM_BLOCKS
+	int "UI_SLAB1 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB1
+
+config UI_SLAB2_BLOCK_SIZE
+	int "UI_SLAB2 block size of per slabes"
+	default 32
+	help
+	  This option set block size of UI_SLAB2
+
+config UI_SLAB2_NUM_BLOCKS
+	int "UI_SLAB2 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB2
+
+config UI_SLAB3_BLOCK_SIZE
+	int "UI_SLAB3 block size of per slabes"
+	default 64
+	help
+	  This option set block size of UI_SLAB3
+
+config UI_SLAB3_NUM_BLOCKS
+	int "UI_SLAB3 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB3
+
+config UI_SLAB4_BLOCK_SIZE
+	int "UI_SLAB4 block size of per slabes"
+	default 128
+	help
+	  This option set block size of UI_SLAB4
+
+config UI_SLAB4_NUM_BLOCKS
+	int "UI_SLAB4 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB4
+
+config UI_SLAB5_BLOCK_SIZE
+	int "UI_SLAB5 block size of per slabes"
+	default 256
+	help
+	  This option set block size of UI_SLAB5
+
+config UI_SLAB5_NUM_BLOCKS
+	int "UI_SLAB5 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB5
+
+config UI_SLAB6_BLOCK_SIZE
+	int "UI_SLAB6 block size of per slabes"
+	default 512
+	help
+	  This option set block size of UI_SLAB6
+
+config UI_SLAB6_NUM_BLOCKS
+	int "UI_SLAB6 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB6
+
+config UI_SLAB7_BLOCK_SIZE
+	int "UI_SLAB7 block size of per slabes"
+	default 1024
+	help
+	  This option set block size of UI_SLAB7
+
+config UI_SLAB7_NUM_BLOCKS
+	int "UI_SLAB7 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB7
+
+config UI_SLAB8_BLOCK_SIZE
+	int "UI_SLAB8 block size of per slabes"
+	default 1536
+	help
+	  This option set block size of UI_SLAB8
+
+config UI_SLAB8_NUM_BLOCKS
+	int "UI_SLAB8 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB8
+
+config UI_SLAB9_BLOCK_SIZE
+	int "UI_SLAB8 block size of per slabes"
+	default 2048
+	help
+	  This option set block size of UI_SLAB9
+
+config UI_SLAB9_NUM_BLOCKS
+	int "UI_SLAB8 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB9
+
+config UI_SLAB10_BLOCK_SIZE
+	int "UI_SLAB8 block size of per slabes"
+	default 2048
+	help
+	  This option set block size of UI_SLAB9
+
+config UI_SLAB10_NUM_BLOCKS
+	int "UI_SLAB8 num of blocks of per slabes"
+	default 0
+	help
+	  This option set num of blocks of UI_SLAB10
+
+endif # UI_MEM_USE_SLAB
+
+endif # UI_MEMORY_MANAGER
+
+rsource "Kconfig.GUI"

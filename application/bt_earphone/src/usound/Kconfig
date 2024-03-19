@@ -1,0 +1,131 @@
+
+# Kconfig - ACTIONS primitive options for sdk version 2.0
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+config USOUND_APP
+	bool
+	prompt "USOUND App Support"
+	depends on MEDIA_PLAYER
+	select STREAM
+	select RINGBUFF_STREAM
+	select USB_APP_AUDIO_DEVICE 
+	select USB_AUDIO_CLASS
+	select USB_AUDIO_SOURCESINK
+	select SUPPORT_USB_AUDIO_SOURCE
+	select USB_DEVICE_HID
+	select HID_INTERRUPT_OUT
+	select USB_SELF_DEFINED_REPORT
+	select USB_AOTG_DC_FS
+	select USB_AUDIO_CONTROL_UNIT
+	select HOTPLUG
+	select USB_HOTPLUG
+	default n
+	help
+	This option enables or disable the usb audio app.
+
+config USOUND_SPEAKER
+	bool
+	prompt "USOUND IN"
+	depends on USOUND_APP
+	select SUPPORT_USB_AUDIO_SINK 
+	default n
+	help
+	This option enables or disable the usb audio in.
+
+config USOUND_MIC
+	bool
+	prompt "USOUND OUT"
+	depends on USOUND_APP
+	select SUPPORT_USB_AUDIO_SOURCE 
+	default n
+	help
+	This option enables or disable the usb audio out.
+
+config USOUND_DOUBLE_SOUND_CARD
+	bool
+	prompt "USOUND supprot double sound card"
+	depends on USOUND_APP
+	default n
+	help
+	This option enables or disable the usb audio support double sound card.
+	
+config USOUND_LISTENED_VIA_AOUT 
+	bool
+	prompt "listened via aout"
+	depends on USOUND_APP
+	default n
+	help
+	This option enables or disable listened via aout.
+
+config USOUND_AUTO_OPEN_LISTENED_VIA_AOUT 
+	bool
+	prompt "auto open listened via aout"
+	depends on USOUND_LISTENED_VIA_AOUT
+	default n
+	help
+	This option enables or disable auto open listened via aout.
+
+config USOUND_UPLOAD_EFX_EN
+	bool
+	prompt "audio in app enanble upload music effect"
+	depends on VOICE_EFFECT 
+	default n
+	help
+	This option enables or disenables upload music effect
+
+config EXTERNAL_DSP 
+	bool
+	prompt "support external dsp process"
+	depends on USOUND_APP
+	default n
+	help
+	This option support external dsp process.
+
+config SUPPORT_MUTE_SHORTCUT_KEY_PAIR 
+	bool
+	prompt "support mute/unmute shortcut key"
+	depends on USOUND_APP
+	default n
+	help
+	This option support mute/unmute shortcut key.
+
+config EXTERNAL_DSP_AUDIO_CHANNEL_MODE
+	int
+	prompt "USB audio channel mode when external dsp"
+	default 0
+	help
+	  USB audio channel mode when external dsp.
+
+config USB_IOS_IAP2_SUPPORT
+	bool
+	prompt "Enable USB ios iap2 protocol"
+	default n
+
+config USB_DOWNLOAD_LISTEN_SUPPORT
+	bool
+	prompt "Enable USB download listen support"
+	depends on USOUND_LISTENED_VIA_AOUT
+	default n
+
+config NRF_CHANNEL_NUM
+	int
+	prompt "uac nrf channel num"
+	default 1
+	help
+	  uac nrf channel num.
+

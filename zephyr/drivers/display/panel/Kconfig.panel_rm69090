@@ -1,0 +1,13 @@
+# RM69090 display driver configuration options
+
+# Copyright (c) 2019 Marc Reilly <marc@cpdesign.com.au>
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig PANEL_RM69090
+	bool "RM69090 display driver"
+	help
+	  Enable driver for RM69090 display driver.
+
+if PANEL_RM69090
+
+endif # PANEL_RM69090

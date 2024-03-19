@@ -1,0 +1,73 @@
+menuconfig USB_APP_AUDIO_DEVICE
+	bool
+	prompt "enable USB audio device APP"
+	default n
+	help
+	  enable USB audio device APP.
+
+if USB_APP_AUDIO_DEVICE
+
+config USB_APP_AUDIO_DEVICE_MANUFACTURER
+	string
+	prompt "USB audio(composite device) manufacturer name"
+	default "C-Media Electronics Inc."
+	help
+	  USB audio device manufacturer string. can be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_PRODUCT
+	string
+	prompt "USB AUDIO device product name"
+	default "Wireless gaming headset"
+	help
+	  USB audio device product string. can be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_SN
+	string
+	prompt "USB audio device serial number"
+	default "0123456789AB"
+	help
+	  USB audio device serial number string. can be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_GAME
+	string
+	prompt "USB audio device double soundcard game name"
+	default "USB Audio Game Sound"
+	help
+	  USB audio device double soundcard game string. can be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_VOICE
+	string
+	prompt "USB audio device double soundcard voice name"
+	default "USB Audio Chat Sound"
+	help
+	  USB audio device double soundcard voice string. can be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_STRING50
+	string
+	prompt "String 50"
+	default "CMA192"
+	help
+	 String 50
+
+config USB_APP_AUDIO_DEVICE_SN_NVRAM
+	string
+	prompt "get serial number from NVRAM"
+	default "BT_MAC"
+	help
+	  get audio device serial number string from NVRAM, can be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_VID
+	hex
+	prompt "USB audio device vendor ID"
+	default 0x0d8c
+	help
+	  USB audio device vendor ID. MUST be configured by vendor.
+
+config USB_APP_AUDIO_DEVICE_PID
+	hex
+	prompt "USB audio device product ID"
+	default 0x0304
+	help
+	  USB audio device product ID. MUST be configured by vendor.
+
+endif #USB_APP_AUDIO_DEVICE

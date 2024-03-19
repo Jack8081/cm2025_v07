@@ -1,0 +1,14 @@
+# Configuration options for Actions INPUT YP DRIVERS
+
+# Copyright (c) 2020 Actions Technology Co., Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+if INPUT_DEV_EAR_INOUT
+
+config INPUT_DEV_EAR_JSA1227
+  bool "earphone in out driver"
+	default n
+	help
+	  Enable support for ear inout driver.
+
+endif # INPUT_DEV_EAR_INOUT

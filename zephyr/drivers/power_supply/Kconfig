@@ -1,0 +1,81 @@
+# Kconfig - Power supply configuration options
+#
+#
+# Copyright (c) 2021 Actions Semiconductor Co., Ltd
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig POWER_SUPPLY
+    bool
+    prompt "Power supply drivers"
+    default n
+    help
+      Enable power supply drivers configuration
+
+if POWER_SUPPLY
+
+config POWER_SUPPLY_ACTS_BATTERY
+    bool "Actions SoC battery power supply driver"
+    depends on SOC_FAMILY_ACTS
+    default n
+    help
+      Enable support for Actions SoC battery driver.
+
+choice
+    prompt "Actsion Soc battery power supply methods"
+    default ACTS_BATTERY_SUPPLY_INTERNAL
+    depends on POWER_SUPPLY_ACTS_BATTERY
+    help
+        This option will select the different methods for the battery power supply.
+
+config ACTS_BATTERY_SUPPLY_INTERNAL
+    bool "battery supplied by internal charger"
+    help
+        Support battery power supplied by internal charger.
+
+config ACTS_BATTERY_SUPPLY_EXTERNAL
+    bool "battery supplied by external charger"
+    help
+        Support battery power supplied by external charger.
+		
+config ACTS_BATTERY_ONLY_BATTERY_SAMPLE
+    bool "battery supplied by only sample"
+    help
+        Support battery only sample function.		
+
+endchoice
+
+config ACTS_BATTERY_SUPPLY_CHARGER_BOX
+    bool "battery supplied by the charger box"
+    depends on ACTS_BATTERY_SUPPLY_INTERNAL
+    help
+        Support battery power supplied by charger box.
+
+config ACTS_BATTERY_SUPPLY_EXT_COULOMETER
+    bool "battery measure by external coulometer"
+    depends on ACTS_BATTERY_SUPPLY_EXTERNAL
+    help
+        Support bettery power measured by external coulometer.
+
+config ACTS_BATTERY_SUPPORT_CHARGER_NTC
+    bool "battery support NTC temperature detect"
+    depends on ACTS_BATTERY_SUPPLY_INTERNAL
+	default n
+    help
+        Support battery temperature detect.
+
+config ACTS_BATTERY_SUPPORT_FAST_CHARGER
+    bool "battery support fast charge function"
+    depends on ACTS_BATTERY_SUPPLY_INTERNAL
+	default n
+    help
+        Support battery fast charge.
+		
+config ACTS_BATTERY_POWERON_MIN_VOL_WITHOUT_DC5V
+    int "power on min voltage setting"
+	default 3300
+    help
+        Set power on min voltage when not plug dc5v .		
+
+endif # POWER_SUPPLY

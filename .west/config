@@ -1,0 +1,4 @@
+[manifest]
+path = zephyr
+file = west-zs303ah.yml
+

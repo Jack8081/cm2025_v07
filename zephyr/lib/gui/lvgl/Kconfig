@@ -1,0 +1,38 @@
+# Copyright (c) 2018-2019 Jan Van Winkel <jan.van_winkel@dxplore.eu>
+# Copyright (c) 2020 Teslabs Engineering S.L.
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig LVGL
+	bool "LittlevGL GUI library"
+	help
+	  This option enables the LittlevGL GUI library.
+
+if LVGL
+
+config APP_LINK_WITH_LVGL
+	bool "Link 'app' with LVGL"
+	default y
+	help
+	  Add LVGL header files to the 'app' include path. It may be
+	  disabled if the include paths for LVGL are causing aliasing
+	  issues for 'app'.
+
+config LVGL_VDB_SIZE
+	int "Rendering buffer size in pixels"
+	default 0
+	help
+	  Size of the buffer used for rendering screen content in pixels.
+
+config LVGL_DOUBLE_VDB
+	bool "Use two rendering buffers"
+	help
+	  Use two buffers to render and flush data in parallel
+
+config LVGL_USE_FILESYSTEM
+	bool "File system"
+	help
+	  Enable filesystem support.
+
+rsource "Kconfig.lvgl"
+
+endif # LVGL

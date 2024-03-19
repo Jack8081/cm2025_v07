@@ -1,0 +1,19 @@
+# Kconfig - Actions ota
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig OTA
+	bool
+	prompt "ota"
+	default n
+	help
+	This option enables actions ota
+
+
+
+
+

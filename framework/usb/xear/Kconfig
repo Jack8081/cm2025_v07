@@ -1,0 +1,27 @@
+# Kconfig - Actions power manager
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig XEAR
+	bool
+	prompt "Xear"
+	default y
+	help
+	This option enables xear
+	
+config XEAR_LED_CTRL
+	bool
+	prompt "xear led control"
+	depends on XEAR
+	default y
+	help
+	This option enables xear led control.
+
+rsource "lib/Kconfig"
+
+#source "ext/actions/system/xear/lib/Kconfig"
+#source "framework/usb/xear/lib/Kconfig"

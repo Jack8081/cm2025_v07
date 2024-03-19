@@ -1,0 +1,22 @@
+# ADC configuration options
+
+# Copyright (c) 2021 Actions Semiconductor Co., Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+config ADC_ACTS
+	bool "Actions ADC driver"
+	default y
+	help
+	  Support the ADC functions for the Actions chipset.
+
+config PMUADC_NAME
+	string "PMU ADC Driver's name"
+	depends on ADC_ACTS
+	default "PMUDAC_0"
+
+config ADC_ACTS_ALWAYS_ON
+	bool "Actions ADC function always on"
+	depends on ADC_ACTS
+	default y
+	help
+	  Always enable ADC function in normal stage.

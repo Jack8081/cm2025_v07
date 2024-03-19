@@ -1,0 +1,231 @@
+# Kconfig - Actions media player
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig MEDIA
+	bool
+	prompt "media"
+	imply MEDIA_PLAYER
+	default n
+	help
+	This option enables actions media
+
+config MEDIA_LIB_NAME
+	string "media lib name"
+	default "media"
+	help
+	  The library name of the media lib compiled output.
+
+config MEDIA_PLAYER
+	bool
+	prompt "media player Support"
+	depends on MEDIA
+	select MEDIA_SERVICE
+	select STREAM
+	select RINGBUFF_STREAM
+	default n
+	help
+	This option enables actions media player
+
+config MEDIA_SERVICE
+	bool
+	prompt "Media Service Support"
+	select THREAD_TIMER
+	select AUDIO_SYSTEM
+	default n
+	help
+	This option enables actions Media service.
+
+config MEDIASRV_PRIORITY
+    int
+    prompt "Media Service Thread Priority"
+    default 4
+    depends on MEDIA_SERVICE
+    help
+    This option set audio thread priority  
+
+config MEDIASRV_STACKSIZE
+    int
+    prompt "Media Service Thread Stack Size"
+    default 2048
+    depends on MEDIA_SERVICE
+    help
+    This option set stack size for audio service thread	 
+
+
+config MEDIA_EFFECT
+	bool
+	prompt "media effect Support"
+	depends on MEDIA_PLAYER
+	default n
+	help
+	This option enables actions media effect
+
+config MEDIA_EFFECT_OUTMODE
+	int
+	prompt "media effect output mode Support"
+	depends on MEDIA_PLAYER
+	default 0
+	help
+	This option enables actions media output mode 
+
+config MUSIC_EFFECT
+	bool
+	prompt "music effect Support"
+	depends on MEDIA_PLAYER
+	select MEDIA_EFFECT
+	select MUSIC_DAE
+	default n
+	help
+	This option enables actions music effect
+
+config MUSIC_EFFECT_HW_ACCELERATION
+	bool
+	prompt "music effect hw Support"
+	depends on MUSIC_EFFECT
+	default y
+	help
+	This option enables actions music effect hw acceleration
+
+config MUSIC_DRC_EFFECT
+	bool
+	prompt "music drc effect Support"
+	depends on MUSIC_EFFECT
+	select MEDIA_EFFECT
+	default n
+	help
+	This option enables actions music drc effect
+
+config VOICE_EFFECT
+	bool
+	prompt "voice effect Support"
+	depends on MEDIA_EFFECT
+	default n
+	help
+	This option enables actions voice effect
+
+config VOICE_EFFECT_HW_ACCELERATION
+	bool
+	prompt "voice effect hw Support"
+	depends on VOICE_EFFECT
+	default y
+	help
+	This option enables actions voice effect hw acceleration
+
+config AEC_TAIL_LENGTH
+	int
+	prompt "AEC tail length config"
+	depends on VOICE_EFFECT
+	default 48
+	help
+	This option set AEC tail length config
+
+config MEDIA_ENCODER_MCU
+	bool
+	prompt "mcu encode Support"
+	depends on MEDIA
+	default y
+	help
+	This option enables mcu encode
+
+config MEDIA_ENCODER_DSP
+	bool
+	prompt "dsp encode Support"
+	depends on MEDIA
+	default y
+	help
+	This option enables dsp encode
+
+config MEDIA_DECODER_MCU
+	bool
+	prompt "mcu decode Support"
+	depends on MEDIA
+	default y
+	help
+	This option enables mcu decode
+
+config MEDIA_DECODER_DSP
+	bool
+	prompt "dsp decode Support"
+	depends on MEDIA
+	default y
+	help
+	This option enables dsp decode
+
+config MEDIA_DECODER_RESTRANSMIT_TWS
+	bool
+	prompt "restransmit tws decoder Support"
+	depends on MEDIA
+	default n
+	help
+	This option enables restransmit tws decoder
+
+config MEDIA_DECODER_SNOOP_TWS
+	bool
+	prompt "snoop tws decoder Support"
+	depends on MEDIA
+	default n
+	help
+	This option enables snoop tws decoder
+
+config MEDIA_BG_RECORDER
+	bool
+	prompt "background record Support"
+	depends on MEDIA
+	default n
+	help
+	This option enables background recorder
+
+config PLAYBACK_STREAM_PARSER
+	bool
+	prompt "playback stream parser Support"
+	depends on MEDIA
+	default n
+	help
+	This option enables playback stream parser
+
+config MEDIA_DSP_SLEEP
+	bool
+	prompt "dsp sleep Support"
+	depends on MEDIA
+	default n
+	help
+	This option enables dsp sleep
+
+config MEDIA_DSP_SLEEP_MODE
+	int
+	prompt "dsp sleep mode, 0: light sleep, 1: deep sleep"
+	depends on MEDIA
+	default 1
+	help
+	This option dsp sleep mode, 0: light sleep, 1: deep sleep
+
+config MEDIA_SUB_DSP_LIB
+	bool
+	prompt "Sub dsp lib support"
+	depends on MEDIA
+	default n
+	help
+	This option enable sub dsp lib support
+
+config MEDIA_NEW_DEBUG_DUMP
+	bool
+	prompt "new debug dump method support"
+	depends on MEDIA
+	default n
+	help
+	This option enable new debug dump method support
+
+config MEDIA_MEM_DONGLE
+	bool
+	prompt "malloc dongle mem"
+	depends on APP_TRANSMITTER
+	default n
+	help
+	This option used to malloc dongle mem
+
+rsource "libal/Kconfig"

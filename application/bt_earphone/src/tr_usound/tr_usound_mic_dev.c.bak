@@ -1,0 +1,664 @@
+/*
+ * Copyright (c) 2019 Actions Semiconductor Co., Ltd
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * @file
+ * @brief tr_usound media
+ */
+
+#include "tr_usound.h"
+#include "tts_manager.h"
+#include "buffer_stream.h"
+#include "ringbuff_stream.h"
+#include "media_mem.h"
+#include <soc.h>
+#include "ctrl_interface.h"
+
+#if (CONFIG_USB_AUDIO_UPLOAD_CHANNEL_NUM == 2)
+void tr_usound_set_post_soft_by_mix_mod(void)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	switch(tr_usound->bt_mic_mix_mode)
+    {
+        case 0:
+		tr_usound->post_soft_coef[0] = 0x8000;
+		tr_usound->post_soft_coef[1] = 0x8000;
+        break;
+        case 2:
+		tr_usound->post_soft_coef[0] = 0x8000;	//左声道原音量，可以动态修改数组中的值来动态改音量
+		tr_usound->post_soft_coef[1] = 0x4000;	//右声道为一半音量，可以动态修改数组中的值来动态改音量
+		break;
+        case 1:
+        if(tr_usound_mic_dev_num() == 1)
+        {
+            if(tr_usound->mic[0].mic_chan)
+            {
+		        tr_usound->post_soft_coef[0] = 0x8000;
+		        tr_usound->post_soft_coef[1] = 0;
+            }
+            if(tr_usound->mic[1].mic_chan)
+            {
+		        tr_usound->post_soft_coef[0] = 0;
+		        tr_usound->post_soft_coef[1] = 0x8000;
+            }
+        }
+        else if(tr_usound_mic_dev_num() == 2)
+        {
+		    tr_usound->post_soft_coef[0] = 0x8000;
+		    tr_usound->post_soft_coef[1] = 0x8000;
+        }
+        break;
+    }
+}
+#endif
+
+u8_t hid_connectlist_transto_partnerlist_index(u8_t index)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+    struct conn_status status;
+    void *chan;
+	int i;
+
+    if((index == 0) || (index > 2)){
+        return 0xff;
+    }
+
+    API_APP_CONNECTION_CONFIG(index-1, &status);
+    if(!status.connected){
+        return 0xff;
+    }
+    chan = status.sink_chan;
+	
+    for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan == chan)
+		{
+			return i;
+		}
+	}
+
+    if(i == ARRAY_SIZE(tr_usound->mic)){
+        return 0xff;
+    }
+
+    return 0xff;
+}
+
+u8_t hid_partnerlist_transto_connectlist_index(u8_t index)
+{
+    struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+    u8_t conn_dev = tr_usound_mic_dev_num();
+    struct conn_status status0;
+    struct conn_status status1;
+
+    if(index > 1){
+        return 0xff;
+    }
+
+    if(conn_dev == 0)
+    {
+        return 0xff;
+    }
+
+    if(tr_usound->mic[index].mic_chan == 0)
+    {
+        return 0xff;
+    }
+    
+    API_APP_CONNECTION_CONFIG(0, &status0);
+    API_APP_CONNECTION_CONFIG(1, &status1);
+
+    if(tr_usound->mic[index].mic_chan == status0.sink_chan)
+    {
+        return 1;
+    }
+
+    if(tr_usound->mic[index].mic_chan == status1.sink_chan)
+    {
+        return 2;
+    }
+
+    return 0xff;
+}
+
+#ifdef CONFIG_DOWNLOAD_SHARE_ME_EN
+int tr_usound_mic_dev_add_spk_chan(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+
+    for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].spk_chan == chan)
+		{
+			return -EEXIST;
+		}
+	}
+
+    for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+    {
+        if(tr_usound->mic[i].spk_chan == NULL)
+        {
+            tr_usound->mic[i].spk_chan = chan;
+            tr_usound_set_source_stream(chan, i);
+            tr_usound_set_source_stream_notify_by_index(i);
+            tr_usound->remote_spk_chan_num++;
+            return 0;
+        }
+    }
+
+	return -EAGAIN;
+}
+#endif
+
+int tr_usound_mic_dev_add(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+#if (CONFIG_BT_TRANS_SUPPORT_CIS_NUMBER == 2)
+    uint8_t addr_l[6] = {0};
+    uint8_t addr_r[6] = {0};
+    struct conn_status status;
+
+    tr_bt_manager_get_audio_dev_status_by_chan(chan, &status);
+    API_APP_GETPAIRADDR(0, addr_l);
+    API_APP_GETPAIRADDR(1, addr_r);
+#endif
+
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan == chan)
+		{
+			return -EEXIST;
+		}
+	}
+	
+#if (CONFIG_BT_TRANS_SUPPORT_CIS_NUMBER == 2)
+	if(tr_usound->remote_mic_num == 1)
+	{
+		tr_usound->chan_reconf = 1;
+	}
+
+    if(memcmp(addr_l, status.addr, 6) == 0)
+    {
+		tr_usound->mic[0].mic_chan = chan;
+		tr_usound->remote_mic_num++;
+		tr_bt_manager_audio_sink_stream_set(tr_usound->mic[0].mic_chan, tr_usound->mic[0].sink_cache_stream);
+        tr_usound_mic_set_rx_cb_by_index(0);
+#ifdef CONFIG_BT_MIC_GAIN_ADJUST
+	    tr_usound->pre_soft_coef[0] = 0x8000;
+#if (CONFIG_USB_AUDIO_UPLOAD_CHANNEL_NUM == 2)
+        tr_usound_set_post_soft_by_mix_mod();
+#endif
+        tr_usound_update_mic_gain();
+#endif
+#if (defined CONFIG_GUI) && (defined CONFIG_LED)
+        ui_message_send_async(MAIN_VIEW,MSG_VIEW_PAINT, UI_EVENT_BT_CONNECTED);
+#endif
+        return 0;
+    }
+    else if(memcmp(addr_r, status.addr, 6) == 0)
+    {
+		tr_usound->mic[1].mic_chan = chan;
+		tr_usound->remote_mic_num++;
+		tr_bt_manager_audio_sink_stream_set(tr_usound->mic[1].mic_chan, tr_usound->mic[1].sink_cache_stream);
+        tr_usound_mic_set_rx_cb_by_index(1);
+#ifdef CONFIG_BT_MIC_GAIN_ADJUST
+	    tr_usound->pre_soft_coef[1] = 0x8000;
+#if (CONFIG_USB_AUDIO_UPLOAD_CHANNEL_NUM == 2)
+        tr_usound_set_post_soft_by_mix_mod();
+#endif
+        tr_usound_update_mic_gain();
+#endif
+#if (defined CONFIG_GUI) && (defined CONFIG_LED)
+        ui_message_send_async(MAIN_VIEW,MSG_VIEW_PAINT, UI_EVENT_BT1_CONNECTED);
+#endif
+        return 0;
+    }else
+    {
+        SYS_LOG_INF("add chan fail\n");
+    }
+#else
+    for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+    {
+        if(tr_usound->mic[i].mic_chan == NULL)
+        {
+            tr_usound->mic[i].mic_chan = chan;
+            tr_usound->remote_mic_num++;
+            return 0;
+        }
+    }
+#endif
+
+	return -EAGAIN;
+}
+
+#if (CONFIG_BT_TRANS_SUPPORT_CIS_NUMBER == 2)
+bool tr_usound_mic_dev_ready_check(void *chan, u32_t status)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i, index;
+    bool ret = false;
+    u32_t key;
+
+    key = irq_lock();
+    if(status != 0)
+    {
+    	for(i = 0; i < ARRAY_SIZE(tr_usound->ready_mic_chan); i++)
+    	{
+    		if(tr_usound->ready_mic_chan[i] == chan)
+    		{
+    		    tr_usound->ready_mic_chan[i] = NULL;
+    			tr_usound->ready_mic_num--;
+    			ret = true;
+                goto exit;
+    		}
+    	}
+    }
+    else
+    {
+        index = -1;
+    	for(i = 0; i < ARRAY_SIZE(tr_usound->ready_mic_chan); i++)
+    	{
+    		if(tr_usound->ready_mic_chan[i] == chan)
+    		{
+                goto exit;
+    		}
+            else if(tr_usound->ready_mic_chan[i] == NULL)
+            {
+                index = i;
+            }
+    	}
+        if(index == -1)
+        {
+            goto exit;
+        }
+        
+        tr_usound->ready_mic_chan[index] = chan;
+        tr_usound->ready_mic_num++;
+        ret = true;
+    }
+
+exit:
+    irq_unlock(key);
+	return ret;
+}
+#endif
+
+#ifdef CONFIG_DOWNLOAD_SHARE_ME_EN
+int tr_usound_mic_dev_del_spk_chan(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+
+		if(tr_usound->mic[i].spk_chan == chan)
+		{
+            tr_bt_manager_audio_source_stream_set_notify_cb(tr_usound->mic[i].spk_chan, NULL);
+
+        	if (tr_usound->mic[i].source_stream) {
+		        stream_close(tr_usound->mic[i].source_stream);
+		        stream_destroy(tr_usound->mic[i].source_stream);
+		        tr_usound->mic[i].source_stream = NULL;
+	        }
+
+			tr_usound->mic[i].spk_chan = NULL;
+			tr_usound->remote_spk_chan_num--;
+			return 0;
+        }
+    }
+
+	return -ENODEV;
+}
+
+int tr_usound_mic_dev_del_all_chan(void)
+{
+    struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+    int i;
+
+    for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+    {
+        if(tr_usound->mic[i].spk_chan)
+        {
+            tr_bt_manager_audio_source_stream_set_notify_cb(tr_usound->mic[i].spk_chan, NULL);
+            tr_usound->mic[i].spk_chan = NULL;
+        }
+
+        if (tr_usound->mic[i].source_stream) {
+            stream_close(tr_usound->mic[i].source_stream);
+            stream_destroy(tr_usound->mic[i].source_stream);
+            tr_usound->mic[i].source_stream = NULL;
+        }
+    }
+
+	return 0;
+}
+#endif
+
+int tr_usound_mic_dev_del(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+#if (CONFIG_BT_TRANS_SUPPORT_CIS_NUMBER == 2)
+    tr_usound_mic_dev_ready_check(chan, 1);
+	if(tr_usound->remote_mic_num == 2)
+	{
+		tr_usound->chan_reconf = 1;
+	}
+#endif
+
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan == chan)
+		{
+#if (defined CONFIG_GUI) && (defined CONFIG_LED)
+            if(i == 0)
+            {
+                ui_message_send_async(MAIN_VIEW,MSG_VIEW_PAINT, UI_EVENT_BT_DISCONNECTED);
+            }
+            if(i == 1)
+            {
+                ui_message_send_async(MAIN_VIEW,MSG_VIEW_PAINT, UI_EVENT_BT1_DISCONNECTED);
+            }
+#endif
+            tr_bt_manager_audio_sink_stream_set_notify_cb(tr_usound->mic[i].mic_chan, NULL);
+			tr_bt_manager_audio_sink_stream_set(tr_usound->mic[i].mic_chan, NULL);
+			tr_usound->mic[i].mic_chan = NULL;
+			tr_usound->remote_mic_num--;
+#if (CONFIG_USB_AUDIO_UPLOAD_CHANNEL_NUM == 2)
+            tr_usound_set_post_soft_by_mix_mod();
+#endif
+			return 0;
+		}
+	}
+	
+	return -ENODEV;
+}
+
+int tr_usound_mic_dev_num(void)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	
+	return tr_usound->remote_mic_num;
+}
+
+#ifdef CONFIG_GUI
+//单连接下，获取连接设备是左声道还是右声道
+int tr_usound_mic_dev_index_get(void)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan)
+		{
+            return i;
+		}
+	}
+
+    return -1;
+}
+#endif
+
+#ifdef CONFIG_DOWNLOAD_SHARE_ME_EN
+bool tr_usound_mic_dev_find_spk_chan(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].spk_chan == chan)
+		{
+			return true;
+		}
+	}
+
+	return false;
+
+}
+#endif
+
+bool tr_usound_mic_dev_find(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan == chan)
+		{
+			return true;
+		}
+	}
+
+	return false;
+
+}
+
+int tr_usound_mic_dev_get_index(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan == chan)
+		{
+			return i;
+		}
+	}
+
+	return 0;
+}
+
+int tr_usound_mic_dev_num_check(void *chan)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan == chan)
+		{
+			return i;
+		}
+	}
+
+	return -1;
+}
+
+void tr_usound_mic_dev_set_gain(u8_t bt_mic_gain, int mic_dev_num)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+    switch(mic_dev_num)
+    {
+        case 0:
+	    if(tr_usound->mic[0].mic_chan)
+	    {
+		    tr_bt_manager_audio_stream_update(tr_usound->mic[0].mic_chan, NULL, &bt_mic_gain);
+	    }
+        break;
+        case 1:
+	    if(tr_usound->mic[1].mic_chan)
+	    {
+		    tr_bt_manager_audio_stream_update(tr_usound->mic[1].mic_chan, NULL, &bt_mic_gain);
+	    }
+        break;
+        default:
+        break;
+    }
+}
+
+void * tr_usound_mic_dev_get_valid_chan(struct bt_audio_chan_info *info)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+    timeline_t *othertl = NULL;
+    timeline_t *tl = timeline_get_by_type(TIMELINE_TYPE_BLUETOOTH_LE_RX);
+
+    if(tl)
+    {
+        othertl = timeline_get_by_type_others(tl, TIMELINE_TYPE_BLUETOOTH_LE_RX);
+    }
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan)
+		{
+			if(tl)
+			{
+                if(tl->user_data == (u32_t)(tr_usound->mic[i].mic_chan))
+                {
+                    if(!bt_manager_audio_stream_info(tr_usound->mic[i].mic_chan, info))
+                        return tr_usound->mic[i].mic_chan;
+                }
+                else if(othertl && othertl->user_data == (u32_t)(tr_usound->mic[i].mic_chan))
+                {
+                    if(!bt_manager_audio_stream_info(tr_usound->mic[i].mic_chan, info))
+                        return tr_usound->mic[i].mic_chan;
+                }
+			}
+			else
+			{
+				return tr_usound->mic[i].mic_chan;
+			}
+		}
+	}
+
+	return NULL;
+}
+
+int tr_usound_mic_dev_create_cache_stream(void)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+    u8_t remote_mic_num = tr_usound->remote_mic_num;
+#if (CONFIG_BT_TRANS_SUPPORT_CIS_NUMBER == 2)
+    remote_mic_num = 2;
+#endif
+	int i;
+	void *buf = media_mem_get_cache_pool(INPUT_PLAYBACK_CACHE, AUDIO_STREAM_TR_USOUND);
+	int buf_size = media_mem_get_cache_pool_size(INPUT_PLAYBACK_CACHE, AUDIO_STREAM_TR_USOUND);
+	int buf_len = CONFIG_BT_LE_AUDIO_PAYLOAD_SIZE_1CH;
+	int buf_len_align_4 = (buf_len + 3) / 4 * 4;
+	io_stream_t sink_cache_stream;
+
+	if(buf_size < buf_len_align_4 * remote_mic_num)
+		return -ENOMEM;
+
+	for(i = 0; i < remote_mic_num; i++)
+	{
+        if(!tr_usound->mic[i].sink_cache_stream)
+        {
+		    sink_cache_stream = ringbuff_stream_create_ext(buf + (i * buf_len_align_4), buf_len);
+		    if(sink_cache_stream == NULL)
+			    goto err;
+		
+		    if (stream_open(sink_cache_stream, MODE_IN_OUT)) {
+			    stream_destroy(sink_cache_stream);
+			    goto err;
+		    }
+
+		    tr_usound->mic[i].sink_cache_stream = sink_cache_stream;
+        }
+	}
+
+	for(i = 0; i < remote_mic_num; i++)
+	{
+       	tr_bt_manager_audio_sink_stream_set(tr_usound->mic[i].mic_chan, tr_usound->mic[i].sink_cache_stream);
+	}
+	
+	return 0;
+	
+err:
+	for(i = 0; i < remote_mic_num; i++)
+	{
+		if(tr_usound->mic[i].sink_cache_stream)
+		{
+			stream_close(tr_usound->mic[i].sink_cache_stream);
+			stream_destroy(tr_usound->mic[i].sink_cache_stream);
+			tr_usound->mic[i].sink_cache_stream = NULL;
+		}
+	}
+	
+	return -ENOMEM;
+}
+
+void tr_usound_mic_dev_delete_cache_stream(void)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan)
+		{
+			tr_bt_manager_audio_sink_stream_set(tr_usound->mic[i].mic_chan, NULL);
+		}
+		
+		if(tr_usound->mic[i].sink_cache_stream)
+		{
+			stream_close(tr_usound->mic[i].sink_cache_stream);
+			stream_destroy(tr_usound->mic[i].sink_cache_stream);
+			tr_usound->mic[i].sink_cache_stream = NULL;
+		}
+	}
+}
+
+void tr_usound_mic_dev_set_rx_callback(void (*cb)(void *, uint32_t))
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan)
+		{
+			tr_bt_manager_audio_sink_stream_set_notify_cb(tr_usound->mic[i].mic_chan, cb);
+		}
+	}
+}
+
+
+void tr_usound_mic_dev_clear_rx_callback(void)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+	
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++)
+	{
+		if(tr_usound->mic[i].mic_chan)
+		{
+			tr_bt_manager_audio_sink_stream_set_notify_cb(tr_usound->mic[i].mic_chan, NULL);
+		}
+	}
+}
+
+void tr_usound_mic_dev_stream_start_or_stop(int start_or_stop)
+{
+	struct tr_usound_app_t *tr_usound = tr_usound_get_app();
+	int i;
+
+	for(i = 0; i < ARRAY_SIZE(tr_usound->mic); i++) 
+	{
+		if(tr_usound->mic[i].mic_chan)
+		{
+			if(start_or_stop == 1)
+			{
+		        tr_bt_manager_audio_stream_start(tr_usound->mic[i].mic_chan);
+			}
+		    else
+	    	{
+		        tr_bt_manager_audio_stream_stop(tr_usound->mic[i].mic_chan);
+		    }
+		}
+	}
+}
+

@@ -1,0 +1,1 @@
+obj-$(CONFIG_OTA_FOREGROUND) = ota_app_foreground.o ota_tws_sppble_stream.o ota_tws_slave_stream.o ota_tws_transmit.o

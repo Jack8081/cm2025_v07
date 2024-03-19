@@ -1,0 +1,7 @@
+# drivers configuration options
+
+# Copyright (c) 2015 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+source "drivers/test/i2c/Kconfig"
+source "drivers/test/spi/Kconfig"

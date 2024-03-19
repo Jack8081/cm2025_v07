@@ -1,0 +1,57 @@
+#
+# Copyright (c) 2020 Actions Semiconductor
+#
+# SPDX-License-Identifier: LicenseRef-BSD-5-Clause-Actions
+#
+
+target_include_directories(acts_bluetooth INTERFACE
+    .
+)
+
+add_subdirectory(btmgr_tws)
+
+zephyr_library_sources(bt_manager.c)
+zephyr_library_sources(bt_manager_base.c)
+zephyr_library_sources(bt_manager_config.c)
+zephyr_library_sources(bt_manager_check_mac_name.c)
+zephyr_library_sources(bt_manager_pair.c)
+zephyr_library_sources(bt_manager_connect.c)
+zephyr_library_sources(bt_manager_event.c)
+zephyr_library_sources(bt_manager_dev_info.c)
+zephyr_library_sources_ifdef(CONFIG_BT_A2DP bt_manager_a2dp.c)
+zephyr_library_sources_ifdef(CONFIG_BT_AVRCP bt_manager_avrcp.c)
+zephyr_library_sources_ifdef(CONFIG_BT_HFP_HF bt_manager_hfp.c)
+zephyr_library_sources(bt_manager_sco.c)
+zephyr_library_sources(bt_stream_manager.c)
+zephyr_library_sources(bt_manager_audio.c)
+
+zephyr_library_sources_ifdef(CONFIG_BT_LE_AUDIO bt_manager_le_audio.c)
+
+zephyr_library_sources_ifdef(CONFIG_BT_HFP_AG bt_manager_hfp_ag.c)
+zephyr_library_sources_ifdef(CONFIG_BT_SPP bt_manager_spp.c)
+zephyr_library_sources_ifdef(CONFIG_BT_PBAP_CLIENT bt_manager_pbap.c)
+zephyr_library_sources_ifdef(CONFIG_BT_MAP_CLIENT bt_manager_map.c)
+zephyr_library_sources_ifdef(CONFIG_BT_HID bt_manager_hid.c)
+zephyr_library_sources_ifdef(CONFIG_BT_BLE bt_manager_ble.c)
+zephyr_library_sources_ifdef(CONFIG_BT_SPP bt_manager_sppble_stream.c)
+zephyr_library_sources_ifdef(CONFIG_BT_BLE bt_manager_sppble_stream.c)
+zephyr_library_sources_ifdef(CONFIG_BT_PTS_TEST bt_manager_pts_test.c)
+zephyr_library_sources_ifdef(CONFIG_MGR_TEST_SAMPLE bt_manager_test_sample.c)
+
+add_subdirectory_ifdef(CONFIG_BT_LE_AUDIO audio_service)
+
+zephyr_library_sources_ifdef(CONFIG_BT_ADV_MANAGER bt_manager_adv.c)
+
+
+zephyr_library_sources_ifdef(CONFIG_BT_BLE_BQB bt_manager_ble_bqb.c)
+zephyr_library_sources_ifdef(CONFIG_APP_TRANSMITTER tr_bt_manager_ble_client.c)
+zephyr_library_sources_ifdef(CONFIG_XEAR_LED_CTRL tr_bt_manager_ble_client.c)
+zephyr_library_sources_ifdef(CONFIG_BT_TRANSCEIVER tr_bt_manager.c)
+zephyr_library_sources_ifdef(CONFIG_BT_TRANSCEIVER tr_btmanager_shell.c)
+
+zephyr_library_sources_ifdef(CONFIG_BT_BR_TRANSCEIVER tr_bt_manager_trs.c)
+zephyr_library_sources_ifdef(CONFIG_BT_BR_TRANSCEIVER tr_bt_manager_trs_conn.c)
+zephyr_library_sources_ifdef(CONFIG_BT_BR_TRANSCEIVER tr_bt_manager_trs_shell.c)
+zephyr_library_sources_ifdef(CONFIG_BT_BR_TRANSCEIVER tr_bt_manager_user_api.c)
+
+zephyr_library_sources_ifdef(CONFIG_LE_AUDIO_BQB bt_manager_ble_client_pts.c)

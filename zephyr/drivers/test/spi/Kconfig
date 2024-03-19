@@ -1,0 +1,16 @@
+# drivers configuration options
+
+# Copyright (c) 2015 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+config TEST_SPI_MASTER
+	bool "Enable Asynchronous call support"
+	default n
+	help
+	  This option enable spi master test.
+
+config TEST_SPI_SLAVE
+	bool "Enable Asynchronous call support"
+	default n
+	help
+	  This option enable spi slave test.

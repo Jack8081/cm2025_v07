@@ -1,0 +1,71 @@
+# Copyright (c) 2016 Linaro Limited.
+# SPDX-License-Identifier: Apache-2.0
+
+choice
+	prompt "CUCKOO MCU Selection"
+	depends on SOC_SERIES_CUCKOO
+
+config SOC_CUCKOO
+	bool "CUCKOO"
+
+endchoice
+
+if SOC_CUCKOO
+
+config SOC_SPI0_USE_CK64M
+	bool
+	prompt "enable cpu spi0 to use CK64M clock source"
+	default y
+	help
+		enable cpu spi0 to use CK64M clock source
+
+config IRQ_VECTOR_IN_SRAM
+	bool
+	prompt "enable irq vector copy to sram"
+	default n
+	help
+		enable irq vector copy to sram
+
+config SOC_EP_MODE
+	bool
+	prompt "indicate ep mode"
+	default n
+	help
+		prompt "indicate ep mode
+		
+config SOC_CPU_USE_CK64M
+	bool
+	prompt "enable cpu to use CK64M clock source"
+	default y
+	help
+		enable cpu to use CK64M clock source		
+		
+config SOC_CPU_USE_CK128M
+	bool
+	prompt "enable cpu to use CK64M clock source"
+	default n
+	help
+		enable cpu to use CK128M clock source		
+
+config SOC_DSP_FIX_USE_COREPLL
+	bool
+	prompt "enable dsp to fix use Corepll clock source"
+	default y
+	help
+		enable dsp to fix use Corepll clock source				
+
+config SOC_USE_SYS_ROM_CODE
+	bool
+	prompt "use system rom code"
+	default n
+	help
+		enable use of system rom code
+
+config SOC_USE_RINGBUF_ROM_CODE
+	bool
+	prompt "use ringbuf rom code"
+	default n
+	help
+		enable use of ringbuf rom code
+
+endif

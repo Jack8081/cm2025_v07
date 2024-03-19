@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config_file version="ZS303A_V1.0" size="57" num_cfgs="2">
+
+<category num_items="1">
+	<item name="SYSTEM"         title="系统"       parent="" />
+</category>
+
+<enum name="TYPE_BOOL" title="TYPE_BOOL" num_items="2">
+	<item name="YES" title="是" value="0x1" />
+	<item name="NO"  title="否" value="0x0" />
+</enum>
+
+<config name="Version" title="版本" cfg_id="0x01" offs="0x18" size="32" num_items="1" category="SYSTEM" attr="readonly" >
+	<item type="uint8" name="Version" title="版本信息" offs="0" size="32" range="" array="32" attr="string" />
+</config>
+
+<config name="Upgrade_Settings" title="固件烧录设置" cfg_id="0x02" offs="0x38" size="1" num_items="1" category="SYSTEM">
+	<item type="uint8" name="Erase_Entire_Storage"  title="烧录前擦除所有数据"   offs="0" size="1" refer="TYPE_BOOL" />
+</config>
+
+</config_file>
+

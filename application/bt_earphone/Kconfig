@@ -1,0 +1,89 @@
+# Kconfig - ACTIONS primitive options for sdk version 2.0
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+mainmenu "BT Box App"
+
+source "Kconfig.zephyr"
+
+menu "App Configuration"
+
+config APP_PRIORITY
+    int
+    prompt "App Thread Priority"
+    default 10
+    help
+    This option set app thread priority
+
+config APP_STACKSIZE
+    int
+    prompt "App Thread Stack Size"
+    default 2048
+    help
+    This option set stack size for app thread
+
+config APP_TRANSMITTER
+	bool
+	prompt "set firmware to transmitter mode"
+	default y
+	select MEDIA_MEM_DONGLE
+	help
+	This option set firmware to transmitter mode
+
+rsource "src/main/Kconfig"
+
+rsource "src/btmusic/Kconfig"
+
+rsource "src/btcall/Kconfig"
+
+rsource "src/ota/Kconfig"
+
+rsource "src/tool/Kconfig"
+
+rsource "src/att/Kconfig"
+
+rsource "src/le_audio/Kconfig"
+
+rsource "src/tr_usound/Kconfig"
+
+rsource "src/usound/Kconfig"
+
+rsource "src/tr_usound/usb_audio_sourcesink/Kconfig"
+
+rsource "src/audio_input/Kconfig"
+
+rsource "src/user_comm/Kconfig"
+
+orsource "src/gma/Kconfig"
+
+orsource "src/tme/Kconfig"
+
+orsource "src/netease/Kconfig"
+
+orsource "src/nativevoice/Kconfig"
+
+orsource "src/tuya/Kconfig"
+
+orsource "src/libsrc/consumer_eq/Kconfig"
+
+orsource "src/tr_linein/Kconfig"
+
+orsource "src/usound_bqb/Kconfig"
+endmenu
+
+
+

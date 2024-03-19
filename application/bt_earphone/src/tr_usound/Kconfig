@@ -1,0 +1,151 @@
+
+# Kconfig - ACTIONS primitive options for sdk version 2.0
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+config TR_USOUND_APP
+	bool
+	prompt "TR_USOUND App Support"
+	depends on USB_AUDIO_SOURCESINK && USB_DEVICE_HID
+	depends on  MEDIA_PLAYER
+	select STREAM
+	select RINGBUFF_STREAM
+	select USB_APP_AUDIO_DEVICE 
+	default n
+	help
+	This option enables or disable the usb audio app.
+
+config TR_USOUND_SPEAKER
+	bool
+	prompt "TR_USOUND IN"
+	depends on TR_USOUND_APP
+	select SUPPORT_USB_AUDIO_SINK 
+	default n
+	help
+	This option enables or disable the usb audio in.
+
+config TR_USOUND_MIC
+	bool
+	prompt "TR_USOUND OUT"
+	depends on TR_USOUND_APP
+	select SUPPORT_USB_AUDIO_SOURCE 
+	default n
+	help
+	This option enables or disable the usb audio out.
+
+config TR_USOUND_DOUBLE_SOUND_CARD
+	bool
+	prompt "TR_USOUND supprot double sound card"
+	depends on TR_USOUND_APP
+	default n
+	help
+	This option enables or disable the usb audio support double sound card.
+
+config TR_USOUND_START_STOP_CIS_DETECT
+	bool
+	prompt "TR_USOUND supprot detect cis start stop"
+	depends on TR_USOUND_APP
+	default n
+	help
+	This option enable detect start or stop cis.
+
+config USOUND_DISCONNECT_CIS_WAIT_TIME
+	int "usound disconnect cis timeout"
+	default 30000
+	help
+	This option specific usound app disconnect cis audio timeout.
+	
+config TR_USOUND_LISTENED_VIA_AOUT 
+	bool
+	prompt "listened via aout"
+	depends on TR_USOUND_APP
+	default n
+	help
+	This option enables or disable listened via aout.
+
+config TR_USOUND_AUTO_OPEN_LISTENED_VIA_AOUT 
+	bool
+	prompt "auto open listened via aout"
+	depends on TR_USOUND_LISTENED_VIA_AOUT
+	default n
+	help
+	This option enables or disable auto open listened via aout.
+
+config TR_USOUND_UPLOAD_EFX_EN
+	bool
+	prompt "audio in app enanble upload music effect"
+	depends on VOICE_EFFECT 
+	default n
+	help
+	This option enables or disenables upload music effect
+
+config EXTERNAL_DSP 
+	bool
+	prompt "support external dsp process"
+	depends on TR_USOUND_APP
+	default n
+	help
+	This option support external dsp process.
+
+config SUPPORT_MUTE_SHORTCUT_KEY_PAIR 
+	bool
+	prompt "support mute/unmute shortcut key"
+	depends on TR_USOUND_APP
+	default n
+	help
+	This option support mute/unmute shortcut key.
+
+config SUPPORT_VOL_SYNC_HOST_TO_DEV 
+    bool                                                                                 
+    prompt "dongle support vol sync host to device"
+    depends on TR_USOUND_APP        
+    default n                                                                            
+    help                                                                                 
+    This option support vol sync host to device.
+
+config EXTERNAL_DSP_AUDIO_CHANNEL_MODE
+	int
+	prompt "USB audio channel mode when external dsp"
+	default 0
+	help
+	  USB audio channel mode when external dsp.
+
+config USB_IOS_IAP2_SUPPORT
+	bool
+	prompt "Enable USB ios iap2 protocol"
+	default n
+
+config USB_DOWNLOAD_LISTEN_SUPPORT
+	bool
+	prompt "Enable USB download listen support"
+	depends on TR_USOUND_LISTENED_VIA_AOUT
+	default n
+
+config TR_USOUND_SELECT_SPDIFRX_DOWNLOAD
+	bool
+	prompt "support gain adjust"
+	default n
+	help
+	This option enables or disable gain adjust.
+
+config DONGLE_SUPPORT_TWS
+	bool
+	prompt "dongle support tws mode"
+	default n
+	help
+	This option enables or disable dongle tws mode.
+

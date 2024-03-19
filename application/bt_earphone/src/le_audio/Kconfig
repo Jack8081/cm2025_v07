@@ -1,0 +1,68 @@
+# Kconfig - ACTIONS primitive options for sdk version 2.0
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+config LE_AUDIO_APP
+	bool
+	prompt "LE Audio App Support"
+	depends on MEDIA_PLAYER
+	default n
+	select STREAM
+	select RINGBUFF_STREAM
+	help
+	  This option enables the LE Audio app.
+
+config LE_AUDIO_PHONE
+	bool
+	prompt "Connect LE Audio with phone"
+	depends on LE_AUDIO_APP
+	default n
+	help
+		This option for connect le audio with phone.
+
+config LE_AUDIO_BACKGROUD_IN_BTCALL
+    bool
+    prompt "support le audio backgroud in btcall"
+    depends on BT_CALL_APP && BT_LE_AUDIO
+    default n
+    help
+    This option support le audio backgroud in btcall
+
+config LE_AUDIO_DISPLAY_MULTI_FREQ_BAND_DETECT
+    bool
+    prompt "support le audio download music multi freq band energe detect."
+    depends on LE_AUDIO_APP
+    default n
+    help
+    This option support le audio download music multi freq band energe detect.
+
+config LE_AUDIO_DISPLAY_TIME_ENERGE_DETECT
+    bool
+    prompt "support le audio download music time domain energe detect."
+    depends on LE_AUDIO_APP
+    default n
+    help
+    This option support le audio download music time domain energe detect.
+
+config LE_AUDIO_DOUBLE_SOUND_CARD
+	bool
+	prompt "LE_AUDIO supprot double sound card"
+    depends on LE_AUDIO_APP
+	default n
+	help
+	This option enables or disable the le audio support double sound card.
+

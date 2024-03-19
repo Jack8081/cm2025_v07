@@ -1,0 +1,32 @@
+# Kconfig - FM DRV configuration options
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# FM DRV options
+#
+config FM
+	bool "actions fm module support"
+	depends on I2C
+	default n
+	help
+	  enanle actions fm module
+	  
+config FM_AR1019
+	bool "fm AR1019 module support"
+	depends on FM
+	default n
+	help
+	  enable actions fm AR1019
+	  
+	  
+config FM_RDA5807
+	bool "fm RDA5807 module support"
+	depends on FM
+	default n
+	help
+	  enable actions fm RDA5807

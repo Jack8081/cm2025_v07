@@ -1,0 +1,12 @@
+#
+# Copyright (c) 2016 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config DISK_ACCESS_USB
+	bool "usb disk"
+	depends on USB_HOST_STORAGE
+	default n
+	help
+	usb disk is used for the file system.

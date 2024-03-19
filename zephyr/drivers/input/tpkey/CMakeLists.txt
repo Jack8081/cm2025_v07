@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: Apache-2.0
+
+zephyr_library_sources_ifdef(CONFIG_INPUT_DEV_ACTS_CST816S_TP_KEY cst816s_tpkey_acts.c)
+zephyr_library_sources_ifdef(CONFIG_INPUT_DEV_ACTS_CST816S_COB_TP_KEY cst816s_cob_tpkey_acts.c)
+zephyr_library_sources_ifdef(CONFIG_INPUT_DEV_ACTS_IT7259_TP_KEY it7259_tpkey_acts.c)
+zephyr_library_sources_ifdef(CONFIG_INPUT_DEV_ACTS_FT5X0X_TP_KEY ft5x0x_tpkey_acts.c)
+zephyr_library_sources(tpkey_acts_opt.c)

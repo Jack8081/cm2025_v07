@@ -1,0 +1,509 @@
+# Kconfig - ACTIONS primitive options for sdk version 2.0
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+config BT_TRANSCEIVER
+	bool
+	prompt "bt manager Support trs"
+	depends on BT_MANAGER
+	select BT_CONTROLER_USE_EXTERNAL_MEMORY
+	default y
+	help
+	This option enables bt trans mode.
+
+config BT_BLE_BQB
+	bool
+	prompt "bt manager Support ble bqb"
+	depends on BT_MANAGER
+	select BT_CONTROLER_USE_EXTERNAL_MEMORY
+	default n
+	help
+	This option enables ble bqb.
+
+config BT_BR_TRANSCEIVER
+	bool
+	prompt "bt manager Support br trs"
+	default n
+	help
+	This option enables bt br trans mode.
+
+config LE_AUDIO_BQB
+	bool
+	prompt "bt manager Support le audio bqb"
+	default n
+	help
+	This option enables le audio bqb.
+
+config LE_AUDIO_SR_BQB
+	bool
+	prompt "LE Audio BQB Server"
+	depends on LE_AUDIO_BQB
+	default n
+	help
+	This option for LE Audio BQB Server.
+
+config TR_BT_HOST_BQB
+	bool
+	prompt "bt manager Support br trs host bqb"
+	default n
+	help
+	This option enables bt br trans mode host bqb.
+
+config DEFAULT_TRANSCEIVE_MODE
+	int
+	prompt "set default receiver mode(0) or transmitter mode(1)"
+	default 1
+	help
+	This option set default receiver mode(0) or transmitter mode(1)
+
+config BT_TRANS_MAX_DEV_NUMBER
+	int "bluetooth max devices num in transmitter mode"
+	depends on BT_TRANSCEIVER
+	range 1 2
+	default 2
+	help
+	This option specifies the Max devices num in transmitter mode.
+
+config BT_TRANS_SUPPORT_DEV_NUMBER
+	int "bluetooth devices num in transmitter mode"
+	depends on BT_TRANSCEIVER
+	range 1 BT_TRANS_MAX_DEV_NUMBER
+	default 1
+	help
+	This option specifies the devices num in transmitter mode.
+	
+config BT_TRANS_SUPPORT_CIS_NUMBER
+	int "bluetooth cis devices num in transmitter mode"
+	depends on BT_TRANSCEIVER
+	range 1 BT_TRANS_MAX_DEV_NUMBER
+	default 1
+	help
+	This option specifies the cis devices num in transmitter mode.
+	
+config BT_TRANS_MULTI_DEV_PAIR_TIMEOUT
+	int "bluetooth multi-dev pairing timeout in ms, default 60 seconds, is set to 0, always pairing"
+	default 60000
+	help
+	This option specifies bluetooth multi-dev pairing timeout in ms.
+
+config BT_TRANS_SUPPORT_DEV_PAIRLIST_NUMBER
+	int "bluetooth devices pairlist num"
+	depends on BT_TRANSCEIVER
+	range 1 8 
+	default 8
+	help
+	This option specifies the devices pairlist num .
+
+config BT_TRANS_MAX_LINKKEY_SAVED_DEV_NUMBER
+	int "bluetooth max devices linkkey num saved in nvram for transmitter mode"
+	depends on BT_TRANSCEIVER
+	default BT_TRANS_SUPPORT_DEV_NUMBER
+	help
+	This option specifies the max devices linkkey num saved in nvram for transmitter mode.
+
+config BT_DEFAULT_BITPOOL
+	int
+	prompt "set transmitter default bitpool"
+	default 48
+	help
+	This option set transmitter default bitpool
+
+config BT_ADJUST_BITPOOL
+	int
+	prompt "set transmitter adjust bitpool"
+	default 35
+	help
+	This option set transmitter adjust bitpool
+
+config TRANSMITTER_LOW_LANTENCY
+	bool
+	prompt "enable transmitter low lantency mode"
+	default n
+	help
+	This option enable transmitter low lantency mode
+
+config TRANSMITTER_LOW_LANTENCY_FIX_BITPOOL
+	bool
+	prompt "set transmitter low lantency fix bitpool"
+	default n
+	help
+	This option set transmitter low lantency fix bitpool
+
+config TRANSMITTER_LOW_LANTENCY_FRAME_NUM
+	int
+	prompt "set transmitter low lantency frame num per package"
+	range 2 7
+	default 4
+	help
+	This option set transmitter low lantency frame num per package
+
+config TRANSMITTER_LOW_LANTENCY_TIMEOUT_SLOTS
+	int
+	prompt "set transmitter low lantency timeout slots"
+	range 0 31
+	default 16
+	help
+	This option set transmitter low lantency timeout slots
+
+config TRANSMITTER_LANTENCY_DETECT_ENABLE
+	bool
+	prompt "enable transmitter lantency detect function"
+	default n
+	help
+	This option enable transmitter lantency detect function
+
+config BT_TRANS_MULTI_DEV_RE_ALIGN
+	bool
+	prompt "enable re-align multi-devices a2dp playing position"
+	default n
+	help
+	This option enable re-align multi-devices a2dp playing position.
+
+config BT_TRANS_A2DP_48K_EN
+	bool
+	prompt "support 48k"
+	default n
+	help
+	This option enable or disable 48k bt transmitter
+
+config BT_ORG_LINKEY_PRINT_ENABLE
+	bool
+	prompt "print original linkey instead of encrypt one"
+	default n
+	help
+	This option enable print original linkey instead of encrypt one
+
+config TR_BT_MAX_PENDING_PKT_NUM
+	int
+	prompt "set transmitter max package num pending in bt con tx fifo"
+	range 0 6
+	default 4
+	help
+	This option set transmitter max package num pending in bt con tx fifo
+
+config BT_TRANS_AUTO_INQUIRY_AND_CONNECT
+    bool
+    prompt "support transmitter inquiry and connect automaticlly"
+    default n
+    help
+    This option enable or disable transmitter inquiry and connect automaticlly
+
+config BT_TRANS_AUTO_SWITCH_AUDIOSOURCE_EN
+    bool
+    prompt "support transmitter to switch audio source automatically"
+    default n
+    help
+    This option enable or disable transmitter auto to switch audio source
+    
+config BT_AUTO_INQUIRY_NUM
+	int
+	prompt "inquiry dev num"
+	default 5
+	help
+	This option set transmitter auto inquiry dev num
+
+config BT_AUTO_INQUIRY_TIME
+	int
+	prompt "inquiry time"
+	default 3
+	help
+	This option set transmitter auto inquiry dev time
+
+config BT_AUTO_CONNECT_RSSI_THRESHOLD
+	int
+	prompt "select dev to connect rssi threshold"
+	default -55
+	help
+	This option set transmitter auto to connect dev rssi threshold
+
+config BT_AUTO_CONNECT_DEV_FULL_NAME
+	string
+	prompt "select name to connect"
+	default NULL
+	help
+	This optionset transmitter auto to connect dev name
+	
+config BT_AUTO_CONNECT_COUNTS
+	int
+	prompt "auto connect dev counts"
+	default 5
+	help
+	This option set transmitter auto to connect dev acl counts
+
+config BT_AUTO_CONNECT_PROFILE_COUNTS
+	int
+	prompt "select dev to connect profile"
+	default 5
+	help
+	This option set transmitter auto to connect dev profile counts
+
+config BT_AUTO_RECONNECT_COUNTS
+	int
+	prompt "auto reconnect dev counts when acl disconnect by reason 0x08"
+	default 60
+	help
+	This option set transmitter auto reconnect dev counts when acl disconnect by reason 0x08
+
+config BT_AUTO_CONNECT_WAIT_RECONN_TIME
+	int
+	prompt "during connecting, set wait reconnecion time, unit:seconds"
+	default 3
+	help
+	This option set transmitter auto to connect dev wait reconnection time
+
+config BT_AUTO_CONNECT_PDL_COUNTS
+	int
+	prompt "auto connect paired list dev counts"
+	default 5
+	help
+	This option set transmitter auto to connect paired list dev acl counts
+
+config BT_AUTO_CONNECT_PDL_PROFILE_COUNTS
+	int
+	prompt "select dev to connect paired list profile"
+	default 5
+	help
+	This option set transmitter auto to connect paired list dev profile counts
+
+config BT_AUTO_CONNECT_STARTUP_MODE
+	int
+	prompt "select dev action when start up"
+	default 1
+	help
+	This option set transmitter auto to connect paired list or inquiry
+
+config BT_AUTO_CONNECT_DISCONNECT_MODE
+	int
+	prompt "select dev action when disconnect"
+	default 1
+	help
+	This option set transmitter auto to connect paired list or inquiry
+
+config BT_AUTO_CONNECT_DISCONNECT_SLEEP_TIME
+	int
+	prompt "when disconnect, set sleep time, then start actions, unit:seconds"
+	default 5
+	help
+	This option set transmitter auto sleep time after disconnect
+
+config BT_AUTO_CONNECT_INQU_RESULT_FAIL_STANDARD_MODE
+	int
+	prompt "select dev action when inquiry result fail the standard mode"
+	default 1
+	help
+	This option set transmitter auto to connect paired list or inquiry
+	
+config BT_TRANS_DEVICE_CLASS
+    hex "bluetooth device class"
+    default 0x2f042c
+    help
+  	This option specifies the bluetooth device class
+
+config BT_AUTO_CONNECT_SUPPORT_DEVICE_WITHOUT_A2DP
+    bool
+    prompt "auto connect can connect devices without a2dp"
+    default n
+	help
+	This option enable auto connect can connect devices without a2dp
+
+config BT_AUTO_CONNECT_SUPPORT_USB_BINDING_ADDR
+    bool
+    prompt "auto connect can write bt addr to nvram and connect"
+    default n
+	help
+	This option enable auto connect can write bt addr to nvram and connect
+
+config BT_TRANS_NOT_ALLOW_SWITCH_ROLE_WHEN_CONNECT_OUT
+	bool
+	prompt "not allow switch role when we connect to peer"
+	default n
+	help
+	This option not allow switch role when we connect to peer
+
+config TRANSMITTER_A2DP_SOURCE_SEND_BYPASS_HCI_TX_THREAD
+    bool
+    prompt "enable transmitter a2dp source send by pass tx thread"
+    default y
+    help
+    This option enable transmitter a2dp source send by pass tx thread
+
+config SPPBLE_DATA_CHAN
+    bool
+    prompt "enable sppble data channel for transmit user data"
+    default n
+    help
+    This option enable sppble data channel for transmit user data
+
+config BT_SEARCH_TIMEOUT
+	int "bluetooth multi-dev pairing timeout in s, default 60 seconds, is set to 0, always scan"
+	default 60
+	help
+	This option specifies bluetooth multi-dev pairing timeout in s.
+
+config BT_TRANS_BLEDATA_SERVER_FAREND
+	bool
+	prompt "trans far end support ble data server"
+	default n
+	help
+	This option enable trans far end support ble data server.
+
+config BT_TRANS_BLE_APK_TEST_MODE
+	bool
+	prompt "trans far end simulate apk for testing"
+	default n
+	help
+	This option enable trans far end support simulate apk for testing.
+
+config BT_LEAUDIO_ADDR_SAVE_ALL
+	bool
+	prompt "trans saving for all info"
+	default n
+	help
+	This option enable le audio bind addr saving for all info.
+
+
+config BT_LE_AUDIO_DOWN_SAMPLE_RATE
+    int
+    prompt "le audio sink sample rate"
+    default 48000
+    help
+    This option set le audio sink sample rate.
+
+config BT_LE_AUDIO_DOWN_CHANNEL_NUM
+    int
+    prompt "le audio sink channel num"
+    default 2
+    help
+    This option set le audio sink channel num.
+
+config BT_LE_AUDIO_DOWN_BIT_DEPTH
+	int
+	prompt "le audio sink data bit depth"
+	default 16
+	help
+	This option set le audio sink data bit depth.
+
+config BT_LE_AUDIO_UP_SAMPLE_RATE
+    int
+    prompt "le audio source sample rate"
+    default 48000
+    help
+    This option set le audio source sample rate.
+
+config BT_LE_AUDIO_UP_CHANNEL_NUM
+    int
+    prompt "le audio source channel num"
+    default 1
+    help
+    This option set le audio source channel num.
+
+config BT_LE_AUDIO_UP_BIT_DEPTH
+	int
+	prompt "le audio source data bit depth"
+	default BT_LE_AUDIO_DOWN_BIT_DEPTH
+	help
+	This option set le audio source data bit depth.
+
+config BT_LE_AUDIO_MODE
+	int
+	prompt "le audio mode(0:wireless mic, 1:game earphone)"
+	default 0
+	help
+	This option set le audio mode.
+
+config BT_LE_AUDIO_SAMPLE_SIZE
+	int
+	prompt "le audio one sample pcm size"
+	default 2 if (BT_LE_AUDIO_DOWN_BIT_DEPTH = 16)
+	default 4 if (BT_LE_AUDIO_DOWN_BIT_DEPTH = 24)
+	help
+	  This option set le audio one sample pcm size.
+
+config BT_LE_AUDIO_2CH_PCM_UNIT_SIZE
+    int
+    prompt "le audio 2 channels pcm size per unit"
+    default 192 if (BT_LE_AUDIO_DOWN_BIT_DEPTH = 16)
+	default 384 if (BT_LE_AUDIO_DOWN_BIT_DEPTH = 24)
+    help
+      This option set le audio 2 channels pcm size per unit.
+
+config BT_LE_AUDIO_1CH_PCM_UNIT_SIZE
+    int
+    prompt "le audio 1 channel pcm size per unit"
+    default 96  if (BT_LE_AUDIO_UP_BIT_DEPTH = 16)
+	default 192 if (BT_LE_AUDIO_UP_BIT_DEPTH = 24)
+    help
+      This option set le audio 1 channel pcm size per unit.
+
+config BT_LE_AUDIO_US_PER_INTERVAL
+    int
+    prompt "le audio microseconds per interval"
+    default 10000
+    help
+      This option set le audio microseconds per interval.
+
+
+
+config BT_LE_AUDIO_2CH_PCM_SIZE
+    int
+    default 480  if (BT_LE_AUDIO_US_PER_INTERVAL = 2500 && BT_LE_AUDIO_DOWN_BIT_DEPTH = 16)
+    default 960  if (BT_LE_AUDIO_US_PER_INTERVAL = 5000 && BT_LE_AUDIO_DOWN_BIT_DEPTH = 16)
+    default 1440 if (BT_LE_AUDIO_US_PER_INTERVAL = 7500 && BT_LE_AUDIO_DOWN_BIT_DEPTH = 16)
+    default 1920 if (BT_LE_AUDIO_US_PER_INTERVAL = 10000&& BT_LE_AUDIO_DOWN_BIT_DEPTH = 16)
+    
+	default 960  if (BT_LE_AUDIO_US_PER_INTERVAL = 2500 && BT_LE_AUDIO_DOWN_BIT_DEPTH = 24)
+	default 1920 if (BT_LE_AUDIO_US_PER_INTERVAL = 5000 && BT_LE_AUDIO_DOWN_BIT_DEPTH = 24)
+	default 2880 if (BT_LE_AUDIO_US_PER_INTERVAL = 7500 && BT_LE_AUDIO_DOWN_BIT_DEPTH = 24)
+	default 3840 if (BT_LE_AUDIO_US_PER_INTERVAL = 10000&& BT_LE_AUDIO_DOWN_BIT_DEPTH = 24)
+
+config BT_LE_AUDIO_1CH_PCM_SIZE
+    int
+    default 240  if (BT_LE_AUDIO_US_PER_INTERVAL = 2500 && BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+    default 480  if (BT_LE_AUDIO_US_PER_INTERVAL = 5000 && BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+    default 720  if (BT_LE_AUDIO_US_PER_INTERVAL = 7500 && BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+    default 960  if (BT_LE_AUDIO_US_PER_INTERVAL = 10000&& BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+    
+	default 480  if (BT_LE_AUDIO_US_PER_INTERVAL = 2500 && BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+	default 960  if (BT_LE_AUDIO_US_PER_INTERVAL = 5000 && BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+	default 1440 if (BT_LE_AUDIO_US_PER_INTERVAL = 7500 && BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+	default 1920 if (BT_LE_AUDIO_US_PER_INTERVAL = 10000&& BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 48000)
+
+	default 160  if (BT_LE_AUDIO_US_PER_INTERVAL = 2500 && BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	default 320  if (BT_LE_AUDIO_US_PER_INTERVAL = 5000 && BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	default 480  if (BT_LE_AUDIO_US_PER_INTERVAL = 7500 && BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	default 640  if (BT_LE_AUDIO_US_PER_INTERVAL = 10000&& BT_LE_AUDIO_UP_BIT_DEPTH = 16 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	
+	default 320  if (BT_LE_AUDIO_US_PER_INTERVAL = 2500 && BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	default 640  if (BT_LE_AUDIO_US_PER_INTERVAL = 5000 && BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	default 960  if (BT_LE_AUDIO_US_PER_INTERVAL = 7500 && BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+	default 1280 if (BT_LE_AUDIO_US_PER_INTERVAL = 10000&& BT_LE_AUDIO_UP_BIT_DEPTH = 24 && BT_LE_AUDIO_UP_SAMPLE_RATE = 32000)
+
+config BT_LE_AUDIO_PAYLOAD_DROP_HEADER_SIZE
+    int
+    prompt "le audio payload header drop size"
+    default 4
+    help
+    This option set le audio payload header drop size.
+
+config SPPBLE_DATA_CHAN
+	bool
+	prompt "enable le data channel"
+	default n
+	help
+	This option enable le data channel
+
+

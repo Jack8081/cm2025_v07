@@ -1,0 +1,25 @@
+# Kconfig - FM DRV configuration options
+
+#
+# Copyright (c) 2015 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# PA DRV options
+#
+config PA
+    bool "actions pa module support"
+    depends on I2C
+    default n
+    help
+      enanle actions pa module
+      
+config PA_ACM8625
+    bool "pa ACM8625 module support"
+    depends on PA
+    default n
+    help
+      enable actions pa ACM8625
+      

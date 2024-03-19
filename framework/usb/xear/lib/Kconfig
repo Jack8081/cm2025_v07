@@ -1,0 +1,23 @@
+# Kconfig - Actions power manager
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config XEAR_AUTHENTICATION
+	bool
+	prompt "xear authentication"
+	depends on XEAR
+	default y
+	help
+	This option enables xear authentication.
+
+config XEAR_HID_PROTOCOL
+	bool
+	prompt "xear hid protocol"
+	depends on XEAR
+	default y
+	help
+	This option enables xear hid protocol.

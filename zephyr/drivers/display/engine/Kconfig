@@ -1,0 +1,77 @@
+# Configuration options for Actions Display Accelerator
+
+# Copyright (c) 2020 Actions Technology Co., Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig DISPLAY_ENGINE
+	bool "Display Engine"
+	help
+	  Enable display engine
+
+if DISPLAY_ENGINE
+
+module = DISPLAY_ENGINE
+module-str = display_engine
+source "subsys/logging/Kconfig.template.log_config"
+
+config DISPLAY_ENGINE_INSTANCE_NUM
+	int "Display Engine Instance Number"
+	default 3
+	help
+	  Set display engine maximum instances to support
+
+config DISPLAY_ENGINE_HIHG_PRIO_INSTANCE
+	bool "Support Display Engine High Priority Instance"
+	help
+	  Support display engine high priority instance
+
+config DISPLAY_ENGINE_DRAW_COMMAND_NUM
+	int "Display Engine Command Number Per Instance"
+	default 10
+	help
+	  Set display engine maximum instances commands to support
+
+config DISPLAY_ENGINE_POST_COMMAND_NUM
+	int "Display Engine Command Number Per Instance"
+	default 3
+	help
+	  Set display engine maximum instances commands to support
+
+config DISPLAY_ENGINE_PROCESS_COMMAND_IN_ISR
+	bool "Display Engine Process Next Command in Queue in ISR"
+	default y
+	help
+	  Enable display engine process next command in queue in ISR.
+
+config DISPLAY_ENGINE_COMPOSE_ON_VSYNC
+	bool "Display Engine Compose Command Waiting for Display Vsync Signal"
+	depends on DISPLAY_ENGINE_PROCESS_COMMAND_IN_ISR
+	help
+	  Enable display engine compose command waiting for display vsync signal
+
+config DISPLAY_ENGINE_COMMAND_TIMEOUT_MS
+	int "Display Engine Command Timeout in Milliseconds"
+	default 500
+	help
+	  Set display engine command timeout in milliseconds
+
+config DISPLAY_ENGINE_DITHER
+	bool "Dither"
+	help
+	  Enable display engine dither.
+
+choice DISPLAY_ENGINE_DITHER_STRENGH
+	prompt "Dither Strengh"
+	default DISPLAY_ENGINE_DITHER_4X4
+	depends on DISPLAY_ENGINE_DITHER
+	help
+	  Set display engine dither strengh.
+
+	config DISPLAY_ENGINE_DITHER_4X4
+		bool "Strengh 4x4"
+
+	config DISPLAY_ENGINE_DITHER_8X8
+		bool "Strengh 8x8"
+endchoice
+
+endif # DISPLAY_ENGINE

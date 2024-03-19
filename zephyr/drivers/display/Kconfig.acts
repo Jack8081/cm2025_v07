@@ -1,0 +1,8 @@
+# Configuration options for Actions Display
+
+# Copyright (c) 2020 Actions Technology Co., Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+orsource "engine/Kconfig"
+rsource "controller/Kconfig"
+rsource "panel/Kconfig"

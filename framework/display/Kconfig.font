@@ -1,0 +1,58 @@
+# Kconfig - Actions font manager
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config BITMAP_FONT
+	bool "bitmap font library"
+	help
+	  This option enables the bitmap font library.
+
+if BITMAP_FONT
+
+config BITMAP_FONT_USE_HIGH_FREQ_CACHE
+	bool "bitmap font high freq cache"
+	help
+	  This option enables bitmap font high freqency cache.
+
+config BITMAP_FONT_HIGH_FREQ_CACHE_SIZE
+	int "high freq char cache size"
+	default 1536000
+	help
+	   This option set max font cache size for high freq Hanzi chars
+
+config BITMAP_PER_FONT_CACHE_SIZE
+	int "cache size per font size"
+	default 65536
+	help
+	   This option set cache size for each font size
+
+config BITMAP_FONT_MAX_OPENED_FONT
+	int "max fonts can be opened"
+	default 2
+	help
+	  This option set max num of opened fonts
+
+config BITMAP_FONT_SUPPORT_EMOJI
+	bool "bitmap font emoji support"
+	help
+	  This option enables bitmap font emoji support.	  
+
+endif # BITMAP_FONT
+
+config FREETYPE_FONT
+	bool "freetype font library"
+	help
+	  This option enables the freetype font library.
+
+if FREETYPE_FONT
+
+config FREETYPE_MEM_POOL_USER
+	bool "freetype use mem pool"
+	help
+	  This option enables the freetype mem pool.
+
+endif # FREETYPE_FONT

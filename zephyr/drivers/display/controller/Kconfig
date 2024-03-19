@@ -1,0 +1,19 @@
+# Configuration options for Actions Display Controller
+
+# Copyright (c) 2020 Actions Technology Co., Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig DISPLAY_CONTROLLER
+	bool "Display Controller"
+	help
+	  Enable display controller
+
+if DISPLAY_CONTROLLER
+
+config DISPLAY_LCDC
+	bool "Display LCD Controller"
+	default y
+	help
+	  Enable LCD display controller
+
+endif # DISPLAY_CONTROLLER

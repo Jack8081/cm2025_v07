@@ -1,0 +1,14 @@
+# Kconfig - Actions memory manager
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config GUI_TEXT_IMG_CACHE_SIZE
+	int "Size of text image cache for GUI."
+	default 0
+	help
+	  Set the size of text image cache, which cache the text as alpha image,
+	  and the cached images may be accelearted.

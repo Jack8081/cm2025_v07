@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<firmware>
+	<descirption>Firmware layout for LARK</descirption>
+	<disk_size>0x200000</disk_size>
+
+	<firmware_version>
+		<version_code>$(ver_code)</version_code>
+		<version_name>$(ver_num)_$(build_time)</version_name>
+	</firmware_version>
+
+	<partitions>
+
+		<partition>
+			<address>0x0</address>
+			<size>0x1000</size>
+			<type>BOOT</type>
+			<name>fw0_boot</name>
+			<file_id>1</file_id>
+			<file_name>mbrec.bin</file_name>
+			<file_address>0x0</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>true</enable_ota>
+			<enable_raw>true</enable_raw>
+			<enable_dfu>true</enable_dfu>
+			<storage_id>0</storage_id>
+			<mirror_id>0</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x1000</address>
+			<size>0x1000</size>
+			<type>SYS_PARAM</type>
+			<name>fw0_param</name>
+			<file_id>2</file_id>
+			<file_name>param.bin</file_name>
+			<file_address>0x1000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>true</enable_ota>
+			<enable_raw>true</enable_raw>
+			<enable_dfu>true</enable_dfu>
+			<storage_id>0</storage_id>
+			<mirror_id>0</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x2000</address>
+			<size>0x1000</size>
+			<type>BOOT</type>
+			<name>fw1_boot</name>
+			<file_id>1</file_id>
+			<file_address>0x2000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>false</enable_ota>
+			<enable_raw>false</enable_raw>
+			<enable_dfu>false</enable_dfu>
+			<mirror_id>1</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x3000</address>
+			<size>0x1000</size>
+			<type>SYS_PARAM</type>
+			<name>fw1_param</name>
+			<file_id>2</file_id>
+			<file_address>0x3000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>false</enable_ota>
+			<enable_raw>false</enable_raw>
+			<enable_dfu>false</enable_dfu>
+			<mirror_id>1</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x4000</address>
+			<size>0x4000</size>
+			<type>RECOVERY</type>
+			<name>fw0_rec</name>
+			<file_id>3</file_id>
+			<file_name>recovery.bin</file_name>
+			<file_address>0x4000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>false</enable_ota>
+			<enable_raw>true</enable_raw>
+			<enable_dfu>true</enable_dfu>
+			<storage_id>0</storage_id>
+			<mirror_id>0</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x8000</address>
+			<size>0x129000</size>
+			<type>SYSTEM</type>
+			<name>fw0_sys</name>
+			<file_id>4</file_id>
+			<file_name>app.bin</file_name>
+			<file_address>0x8000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>true</enable_ota>
+			<enable_raw>true</enable_raw>
+			<enable_dfu>true</enable_dfu>
+			<storage_id>0</storage_id>
+			<mirror_id>0</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x131000</address>
+			<size>0xA9000</size>
+			<type>SYSTEM</type>
+			<name>fw1_sys</name>
+			<file_id>4</file_id>
+			<file_address>0x131000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>false</enable_ota>
+			<enable_raw>false</enable_raw>
+			<enable_dfu>false</enable_dfu>
+			<storage_id>0</storage_id>
+			<mirror_id>1</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x1DA000</address>
+			<size>0x1E000</size>
+			<type>DATA</type>
+			<name>fw0_sdfs</name>
+			<file_id>39</file_id>
+			<file_name>tone.bin</file_name>
+			<file_address>0x1DA000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>true</enable_encryption>
+			<enable_ota>true</enable_ota>
+			<enable_raw>true</enable_raw>
+			<enable_dfu>true</enable_dfu>
+			<storage_id>0</storage_id>
+			<mirror_id>0</mirror_id>
+		</partition>
+
+		<partition>
+			<address>0x1F8000</address>
+			<size>0x3000</size>
+			<type>DATA</type>
+			<name>nvram_factory_rw</name>
+			<file_id>7</file_id>
+			<file_address>0x1F8000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>false</enable_encryption>
+			<enable_ota>false</enable_ota>
+			<enable_raw>false</enable_raw>
+			<enable_dfu>false</enable_dfu>
+			<storage_id>0</storage_id>
+			</partition>
+
+		<partition>
+			<address>0x1FB000</address>
+			<size>0x5000</size>
+			<type>DATA</type>
+			<name>nvram_user</name>
+			<file_id>8</file_id>
+			<file_address>0x1FB000</file_address>
+			<enable_crc>false</enable_crc>
+			<enable_encryption>false</enable_encryption>
+			<enable_ota>false</enable_ota>
+			<enable_raw>false</enable_raw>
+			<enable_dfu>false</enable_dfu>
+			</partition>
+
+		</partitions>
+
+</firmware>

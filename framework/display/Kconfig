@@ -1,0 +1,160 @@
+# Kconfig - Actions system manager
+
+#
+# Copyright (c) 2016 Actions Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if ACTIONS_FRAMEWORK
+
+menuconfig DISPLAY
+	bool "Display Support"
+	imply UI_MANAGER
+	help
+	  This option enables actions system manager.
+
+config LED_MANAGER
+	bool "LED Manager Support"
+#	depends on LED
+	help
+	  This option enables actions led manager.
+
+config SEG_LED_MANAGER
+	bool "SEG LED Manager Support"
+	depends on SEG_LED
+	help
+	  This option enables actions seg led  manager.
+
+config UI_MANAGER
+	bool "Ui Manager Support"
+	help
+	  This option enables actions app manager.
+
+config UI_SERVICE
+	bool "UI Service"
+	depends on UI_MANAGER
+	select DISPLAY_COMPOSER
+	help
+	  This option enables actions UI service.
+
+if UI_SERVICE
+
+config UISRV_PRIORITY
+	int "UI Service Thread Priority"
+	default 1
+	help
+	  This option set ui service thread priority
+
+config UISRV_STACKSIZE
+	int "UI Service Thread Stack Size"
+	default 2536
+	help
+	  This option set stack size for ui service thread
+
+config UISRV_VIEW_PAUSED_SNAPSHOT
+	bool "UI View Snapshot when Paused"
+	help
+	  This option take snapshot of view surface buffer when view paused,
+	  When enabled, the surface buffer can be restored quickly when resumed.
+
+config UISRV_KEY_EVENT_BYPASS
+	bool "UI Input Key Event Bypass View"
+	default y
+	help
+	  This option enables UI input key event bypass view, and sent directly
+	  to foreground application, which may impove the view switching speed.
+
+config UI_INPUT_RECORDER
+	bool "UI Input TP Event Recorder"
+	help
+	  This option enables UI input TP event recorder.
+
+config UI_CUSTOM_GESTURE_DETECTION
+	bool "UI Software Gesture Detection"
+	help
+	  This option enable software gesture detection, which will override the
+	  tpkey hardware gesture value if exists.
+
+config VIEW_CACHE_LEVEL
+	int "cache level for view cache"
+	default 1
+	help
+	  This option set cache level for view cache
+
+config VIEW_STACK_LEVEL
+	int "maximum number of elements in view stack"
+	default 5
+	help
+	  This option set maximum number of elements in view stack
+
+config NUM_MSGBOX_POPUPS
+	int "Maximum number of in-flight msgbox popups"
+	default 3
+	help
+	  Set maximum number of in-flight msgbox popups.
+
+endif # UI_SERVICE
+
+choice
+	prompt "Surface Buffer Swap Mode"
+	default SURFACE_DOUBLE_BUFFER
+	depends on UI_SERVICE
+
+config SURFACE_DOUBLE_BUFFER
+	bool "Double Buffer"
+
+config SURFACE_SINGLE_BUFFER
+	bool "Single Buffer"
+
+config SURFACE_ZERO_BUFFER
+	bool "Buffer Less"
+
+endchoice
+
+config SURFACE_MAX_BUFFER_COUNT
+	int
+	range 0 2
+	default 0 if SURFACE_ZERO_BUFFER
+	default 1 if SURFACE_SINGLE_BUFFER
+	default 2 if SURFACE_DOUBLE_BUFFER
+
+config RES_MANAGER
+	bool "res_manager library"
+	help
+	  This option enables the res_manager library.
+
+config SIMPLE_RES_MANAGER
+	bool "simple res_manager library"
+	help
+	  This option enables the simple res_manager library.
+
+config RES_MEM_POOL_MAX_BLOCK_NUMBER
+	int "max block number for res manager psram memory"
+	default 2380
+	help
+	  This option set max block number for res manager psram memory allocation
+
+config RES_MEM_POOL_SCENE_MAX_BLOCK_NUMBER
+	int "max block number for res manager scene cache memory"
+	default 96
+	help
+	  This option set max block number for res manager scene cache memory allocation
+
+config RES_MANAGER_DISABLE_AUTO_SEARCH_FILES
+	bool "disable auto search for updated res files"
+	default n
+	help
+	  This option disables auto search for updated res files on incremental update
+
+config RES_MANAGER_USE_SDFS
+	bool "use sdfs instead of fatfs to read res files"
+	default n
+	help
+	  This option make res manager to use sdfs to read res files	
+
+orsource "Kconfig.font"	  
+orsource "Kconfig.lvgl"
+rsource "memory/Kconfig"
+
+endif # ACTIONS_FRAMEWORK

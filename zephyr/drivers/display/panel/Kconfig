@@ -1,0 +1,13 @@
+# Configuration options for Actions Display Panel
+
+# Copyright (c) 2020 Actions Technology Co., Ltd
+# SPDX-License-Identifier: Apache-2.0
+
+if DISPLAY_LCDC
+
+rsource "Kconfig.panel_gc9c01"
+rsource "Kconfig.panel_jd9854"
+rsource "Kconfig.panel_rm69090"
+rsource "Kconfig.panel_st7789v2"
+rsource "Kconfig.panel_gc9307"
+endif # DISPLAY_LCDC

@@ -1,0 +1,13 @@
+obj-y += aes_mw/aes_mw.o
+obj-y += ap_record/record_app_event.o
+obj-y += ap_record/record_app_main.o
+obj-y += ap_record/record_app_media.o
+obj-y += ap_record/record_app_uploadstream.o
+obj-y += ap_status/ap_status.o
+obj-y += sys_comm/sys_comm.o
+obj-y += ota_transmit/ap_ota_stream.o
+obj-y += ota_transmit/ap_ota_backend.o
+obj-y += ota_transmit/ota_mw.o
+obj-y += ota_transmit/ap_ota_transmit.o
+obj-y += ota_transmit/ap_ota_head_splice.o
+obj-y += ap_role_switch/ap_role_switch.o

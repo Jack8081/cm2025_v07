@@ -1,0 +1,95 @@
+# The west manifest file for upstream Zephyr.
+#
+# The per-installation west configuration file, .west/config, sets the
+# path to the project containing this file in the [manifest] section's
+# "path" variable.
+#
+# You are free to create your own manifest files and put them in any
+# repository you want, to create your own custom Zephyr installations.
+# For example, you could create a manifest file in your own out of
+# tree application directory, which would pull this zephyr repository
+# in as an ordinary project.
+#
+# You can pass your manifest repositories to west init when creating a
+# new Zephyr installation. See the west documentation for more
+# information.
+
+manifest:
+  defaults:
+    remote: origin
+
+  remotes:
+    - name: origin
+      url-base: git@192.168.122.5:HF/CUCKOO/zs303ah
+      
+  #
+  # Please add items below based on alphabetical order
+  projects:
+    - name: cmsis
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+      repo-path: ZSDK_HAL_CMSIS
+      path: thirdparty/hal/cmsis
+    - name: fatfs
+      repo-path: ZSDK_FS_FATFS
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+      path: thirdparty/fs/fatfs
+#    - name: lvgl
+#      revision: hotfix_e12_game_1.0_1b1965_20230315
+#      repo-path: ZSDK_LIB_LVGL
+#      path: thirdparty/lib/gui/lvgl
+#    - name: mbedtls
+#      revision: hotfix_e12_game_1.0_1b1965_20230315
+#      repo-path: ZSDK_CRYPTO_MBEDTLS
+#      path: thirdparty/crypto/mbedtls
+    - name: segger
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+      repo-path: ZSDK_DBG_SEGGER
+      path: thirdparty/debug/segger
+    - name: tinycrypt
+      repo-path: ZSDK_CRYPTO_TINYCRYPT
+      path: thirdparty/crypto/tinycrypt
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: littlefs
+      repo-path: ZSDK_FS_LITTLEFS
+      path: thirdparty/fs/littlefs
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: framework_base
+      repo-path: ZSDK_LIB_FRAMEWORK_BASE
+      path: framework/base
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: framework_system
+      repo-path: ZSDK_LIB_SYSTEM
+      path: framework/system
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: audio
+      repo-path: ZSDK_LIB_AUDIO
+      path: framework/audio
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: media
+      repo-path: ZSDK_LIB_MEDIA_BASE
+      path: framework/media
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: ota
+      repo-path: ZSDK_LIB_OTA
+      path: framework/ota
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: bluetooth
+      repo-path: ZSDK_LIB_BLUETOOTH
+      path: framework/bluetooth
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: display
+      repo-path: ZSDK_LIB_DISPLAY
+      path: framework/display
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: usb
+      repo-path: ZSDK_LIB_USB
+      path: framework/usb
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+    - name: bt_earphone
+      repo-path: ZSDK_APPLICATION_BT_EARPHONE
+      path: application/bt_earphone
+      revision: hotfix_e12_game_1.0_1b1965_20230315
+
+  self:
+    path: zephyr
+    west-commands: scripts/west-commands.yml
